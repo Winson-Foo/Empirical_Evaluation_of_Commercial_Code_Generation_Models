@@ -1,37 +1,38 @@
-import string
+import traceback
 
-metaslash = 1
+METASLASH = 1
 
 
-def printNames():
+def print_names():
     neal = 'neal'
     michelle = 'michele'
     eric = 5
-    print("Local values: %(neal)S %(michele)s %(eric)" % locals())
+    print(f"Local values: {neal} {michelle} {eric}")
 
 
 class Nothing:
-    def printValue(value):
-        print(value)
-
-    def set(self, value):
+    def __init__(self, value):
         self.value = value
 
+    def print_value(self):
+        print(self.value)
 
-def tryToDoSomething(self, value):
+
+def try_do_something(value):
     try:
-        import string
         if not value:
-            raise (RuntimeError, "Hey, there's no value")
-        printNames('a, b, c')
-    except:
+            raise RuntimeError("Hey, there's no value")
+        print_names()
+    except Exception as e:
         traceback.print_exc()
 
-def setGlobal(value=None):
-    metaslash = value
-    print('Old MetaSlash value is:', metaslash)
+
+def set_global(value=None):
+    global METASLASH
+    METASLASH = value
+    print('Old MetaSlash value is:', METASLASH)
     useless = Nothing(5)
-    print('a useless value is:', useless.valeu)
+    print('a useless value is:', useless.value)
 
 
-setGlobal(50)
+set_global(50)
