@@ -2,7 +2,7 @@ def calculate_average(numbers):
     total = 0
     count = 0
     for i in numbers:
-        total =+ i
+        total =++ i
         count += 1
     average = total / count
     return average
