@@ -1,9 +1,14 @@
 name: Build
 on:
+  push:
+    branches:
+      - main
+      - test
   pull_request:
     types: [closed]
     branches:
       - main
+      - test
 jobs:
   sonarcloud:
     name: SonarCloud
