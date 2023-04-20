@@ -32,6 +32,7 @@ for i in range(len(issues)):
         total_issues_br = total_issues_br + 1
         type_br[issues[i]['type']] = type_br[issues[i]['type']] + 1
         severity_br[issues[i]['severity']] = severity_br[issues[i]['severity']] + 1
+    # After_Refactor
     else:
         total_issues_ar = total_issues_ar + 1
         type_ar[issues[i]['type']] = type_ar[issues[i]['type']] + 1
