@@ -51,9 +51,6 @@ def file_filer():
                   filename.close()
                   # Move into Selected_files folder
                   shutil.copy(os.path.join(root, f), r"C:\Users\Sylv3r\Documents\FIT4701\FYP\Selected_files")
-                  # Rename the file format:(foldername_filename)
-                  new_root = r"C:\Users\Sylv3r\Documents\FIT4701\FYP\Selected_files"
-                  os.rename(os.path.join(new_root, f), os.path.join(new_root, "{}_{}".format(prefix, f)))
 
 def code_evaluation():
   # Process to run the selected files through chatgpt
@@ -78,5 +75,5 @@ def code_evaluation():
   new_file.close()
 
 
-# file_filer()
-code_evaluation()
+file_filer()
+# code_evaluation()
