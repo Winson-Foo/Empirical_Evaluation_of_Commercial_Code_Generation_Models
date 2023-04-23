@@ -4,11 +4,11 @@ import os,glob
 import shutil
 
 def openai_api(code_snippet, new_file):
-    openai.api_key = ("Insert key here")
+    openai.api_key = ("API Key")
     response = openai.ChatCompletion.create(
       model="gpt-3.5-turbo",
       messages=[
-        {"role": "user", "content": "How can I eliminate code smells in this codebase? Provide me the refactored code.\n" + code_snippet}
+        {"role": "user", "content": "How can I improve the maintainability of this codebase? Provide me the refactored code. \n" + code_snippet}
       ]
     )
     new_file.write(str(response.choices[0].message.content + "\n"))
@@ -31,7 +31,7 @@ def tokeniser(file, model_name = "gpt-3.5-turbo"):
 
 def file_filer():
   # Process of Filtering data, renaming and moving the selected data into Selected_files (Check if its python file and less than 2k tokens)
-  for root, dirs, files in os.walk(r"C:\Users\tan weijin\Desktop\FYP\Dataset"):
+  for root, dirs, files in os.walk(r"C:\Users\Sylv3r\Downloads\FYP\Dataset"):
       if not files:
           continue
       prefix = os.path.basename(root)
@@ -44,14 +44,15 @@ def file_filer():
                 if tokeniser(text) <= 2000:
                   # Close the file
                   filename.close()
-                  # Rename the file format:(foldername_filename)
-                  os.rename(os.path.join(root, f), os.path.join(root, "{}_{}".format(prefix, f)))
                   # Move into Selected_files folder
-                  shutil.move(os.path.join(root, "{}_{}".format(prefix, f)), r"C:\Users\tan weijin\Desktop\FYP\Selected_files")
+                  shutil.copy(os.path.join(root, f), r"C:\Users\Sylv3r\Downloads\FYP\Selected_files")
+                  # Rename the file format:(foldername_filename)
+                  new_root = r"C:\Users\Sylv3r\Downloads\FYP\Selected_files"
+                  os.rename(os.path.join(new_root, f), os.path.join(new_root, "{}_{}".format(prefix, f)))
 
 def code_evaluation():
   # Process to run the selected files through chatgpt
-  folder_path = r'C:\Users\tan weijin\Desktop\FYP\Selected_files'
+  folder_path = r'C:\Users\Sylv3r\Downloads\FYP\Selected_files'
   refactored_files = []
   new_file = open("evaluation_4.txt", "a")
   # Get every python file in the folder
@@ -71,4 +72,6 @@ def code_evaluation():
   print(refactored_files)
   new_file.close()
 
+
+file_filer()
 code_evaluation()
