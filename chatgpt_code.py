@@ -6,7 +6,7 @@ import time
 
 def openai_api(code_snippet, new_file):
     try:
-        openai.api_key = ("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")
+        openai.api_key = ("API Key")
         response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
