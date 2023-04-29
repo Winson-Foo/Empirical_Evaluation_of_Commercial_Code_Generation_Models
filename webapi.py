@@ -5,6 +5,8 @@ follow the guide of webApi by SonarCloud
 https://docs.sonarcloud.io/advanced-setup/web-api/
 '''
 import requests
+import os
+
 # get the auth key
 with open ("key.txt", "r") as myfile:
     auth_token = myfile.read().splitlines()[0]
@@ -37,8 +39,15 @@ for i in range(len(FILE_NAME)):
 
 # displaying all the value
 for i in range(len(FILE_NAME)):
+    count = 0
+
+    for root_dir, cur_dir, files in os.walk(os.getcwd() + str('\') + FILE_NAME[i]):
+        count += len(files)
+    print('file count : ', count)
+
     print(FILE_NAME[i])
     print("Total number of issues : " + str(issues_matrix[i][0]))
     print("Type of issues : " + str(issues_matrix[i][1]))
     print("Severity of issues : " + str(issues_matrix[i][2]))
     print("-----")
+# %%
