@@ -22,7 +22,7 @@ issues_matrix = []
 for i in range(len(FILE_NAME)):
     issues_matrix.append([0,{"BUG":0 , "CODE_SMELL":0 , "VULNERABILITY":0},{"INFO":0 , "MINOR":0 , "MAJOR":0 , "CRITICAL":0 , "BLOCKER":0}])
 
-
+# going through the each folder
 for i in range(len(FILE_NAME)):
     param = {'componentKeys' : 'Winson-Foo_Empirical_Evaluation_of_Commercial_Code_Generation_Models:' + FILE_NAME[i], 'resolved':'false','branch':'test','ps':'500'}
     response = requests.get(url, headers=hed, params=param)
