@@ -14,7 +14,18 @@ def CountFiles(folder_name, file_name):
         file_count += len(files)
     return file_count
 
-# get the auth key
+def ReadFiles():
+    repo = []
+    workbook = openpyxl.load_workbook('repo.xlsx')
+    worksheet = workbook.active
+    # iterate through the column
+    for column in worksheet.iter_cols(min_col=1, max_col=1):
+        for cell in column:
+            repo.append(cell.value)
+
+    return repo
+    
+# get the auth key from SonarCloud
 with open ("key.txt", "r") as myfile:
     auth_token = myfile.read().splitlines()[0]
 
@@ -22,7 +33,7 @@ SUM_FILENAME = 'summary.xlsx'
 # Create a new workbook object
 HEADER_ARR = ["fileName","File Count","Issues","BUG","CODE_SMELL","VULNERABILITY","INFO","MINOR","MAJOR","CRITICAL","BLOCKER"]
 FOLDER_NAME = ["Before_Refactor","After_Refactor_1","After_Refactor_2","After_Refactor_3"]
-FILE_NAME = ["DeepRL","DeepSpeech","koursaros_ai","videoflow"]
+REPO_NAME = ReadFiles()
 
 row_count = 2
 # adding header and parameter
@@ -38,13 +49,15 @@ for i in range(len(HEADER_ARR)):
     row_alpha = 65 + i
     worksheet[chr(row_alpha) + "1"] = HEADER_ARR[i]
 
+# going through the results
 for i in range(len(FOLDER_NAME)):
+    # 
     worksheet['A' + str(row_count)] = FOLDER_NAME[i]
     row_count = row_count + 1
-    for j in range(len(FILE_NAME)):
+    for j in range(len(REPO_NAME)):
         # variable for storring 
         issues_matrix = [0,{"BUG":0 , "CODE_SMELL":0 , "VULNERABILITY":0},{"INFO":0 , "MINOR":0 , "MAJOR":0 , "CRITICAL":0 , "BLOCKER":0}]
-        param = {'componentKeys' : 'Winson-Foo_Empirical_Evaluation_of_Commercial_Code_Generation_Models:' + FOLDER_NAME[i] + '/' +FILE_NAME[j], 'resolved':'false','branch':'test','ps':'500'}
+        param = {'componentKeys' : 'Winson-Foo_Empirical_Evaluation_of_Commercial_Code_Generation_Models:' + FOLDER_NAME[i] + '/' +REPO_NAME[j], 'resolved':'false','branch':'test','ps':'500'}
         response = requests.get(url, headers=hed, params=param)
         all_issues = response.json()['issues']
         # going through all of the issus
@@ -58,8 +71,8 @@ for i in range(len(FOLDER_NAME)):
 
         # writting it into the array and adding it to the excel file
         xsls_arr = []
-        xsls_arr.append(FILE_NAME[j])
-        xsls_arr.append(CountFiles(FOLDER_NAME[i],FILE_NAME[j]))
+        xsls_arr.append(REPO_NAME[j])
+        xsls_arr.append(CountFiles(FOLDER_NAME[i],REPO_NAME[j]))
         xsls_arr.append(issues_matrix[0])
         type_list = list(issues_matrix[1].values())
 
