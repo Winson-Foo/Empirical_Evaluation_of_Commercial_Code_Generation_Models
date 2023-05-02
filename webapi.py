@@ -39,13 +39,11 @@ for i in range(len(FILE_NAME)):
 
 # displaying all the value
 for i in range(len(FILE_NAME)):
-    count = 0
-
-    for root_dir, cur_dir, files in os.walk(os.getcwd() + str('\') + FILE_NAME[i]):
-        count += len(files)
-    print('file count : ', count)
-
+    file_count = 0
     print(FILE_NAME[i])
+    for root_dir, cur_dir, files in os.walk(os.getcwd() + '\\' + FILE_NAME[i]):
+        file_count += len(files)
+    print('File Count : ', file_count)
     print("Total number of issues : " + str(issues_matrix[i][0]))
     print("Type of issues : " + str(issues_matrix[i][1]))
     print("Severity of issues : " + str(issues_matrix[i][2]))
