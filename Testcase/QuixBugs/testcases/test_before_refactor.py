@@ -1,4 +1,5 @@
 # %%
+### To run this file type pytest Testcase in python
 import pytest
 from .load_testdata import load_json_testcases
 from .test_node import Node

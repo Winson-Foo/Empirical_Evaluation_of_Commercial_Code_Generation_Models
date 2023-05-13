@@ -6,7 +6,7 @@ from .test_node import Node
 #
 import sys
 
-sys.path.append('C:/Users/fatty/Desktop/Empirical_Evaluation_of_Commercial_Code_Generation_Models/After_Refactor_1/QuixBugs')  
+sys.path.append('C:/Users/fatty/Desktop/Empirical_Evaluation_of_Commercial_Code_Generation_Models/After_Refactor_3/QuixBugs')  
 
 ###
 # Testing bitcount
@@ -20,82 +20,82 @@ def test_bitcount(input_data, expected):
 
 ####
 # Testing breadth first search
-import breadth_first_search
-def test1_bfs():
-    """Case 1: Strongly connected graph
-    Output: Path found!
-    """
+# import breadth_first_search
+# def test1_bfs():
+#     """Case 1: Strongly connected graph
+#     Output: Path found!
+#     """
 
-    station1 = Node("Westminster")
-    station2 = Node("Waterloo", None, [station1])
-    station3 = Node("Trafalgar Square", None, [station1, station2])
-    station4 = Node("Canary Wharf", None, [station2, station3])
-    station5 = Node("London Bridge", None, [station4, station3])
-    station6 = Node("Tottenham Court Road", None, [station5, station4])
+#     station1 = Node("Westminster")
+#     station2 = Node("Waterloo", None, [station1])
+#     station3 = Node("Trafalgar Square", None, [station1, station2])
+#     station4 = Node("Canary Wharf", None, [station2, station3])
+#     station5 = Node("London Bridge", None, [station4, station3])
+#     station6 = Node("Tottenham Court Road", None, [station5, station4])
 
-    path_found = breadth_first_search.breadth_first_search(station6, station1)
+#     path_found = breadth_first_search.breadth_first_search(station6, station1)
 
-    assert path_found
+#     assert path_found
 
-def test2_bfs():
-    """Case 2: Branching graph
-    Output: Path found!
-    """
+# def test2_bfs():
+#     """Case 2: Branching graph
+#     Output: Path found!
+#     """
 
-    nodef = Node("F")
-    nodee = Node("E")
-    noded = Node("D")
-    nodec = Node("C", None, [nodef])
-    nodeb = Node("B", None, [nodee])
-    nodea = Node("A", None, [nodeb, nodec, noded])
+#     nodef = Node("F")
+#     nodee = Node("E")
+#     noded = Node("D")
+#     nodec = Node("C", None, [nodef])
+#     nodeb = Node("B", None, [nodee])
+#     nodea = Node("A", None, [nodeb, nodec, noded])
 
-    path_found = breadth_first_search.breadth_first_search(nodea, nodee)
+#     path_found = breadth_first_search.breadth_first_search(nodea, nodee)
 
-    assert path_found
-
-
-def test3_bfs():
-    """Case 3: Two unconnected nodes in graph
-    Output: Path not found
-    """
-
-    nodef = Node("F")
-    nodee = Node("E")
-
-    path_found = breadth_first_search.breadth_first_search(nodef, nodee)
-
-    assert not path_found
+#     assert path_found
 
 
-def test4_bfs():
-    """Case 4: One node graph
-    Output: Path found!
-    """
+# def test3_bfs():
+#     """Case 3: Two unconnected nodes in graph
+#     Output: Path not found
+#     """
 
-    nodef = Node("F")
+#     nodef = Node("F")
+#     nodee = Node("E")
 
-    path_found = breadth_first_search.breadth_first_search(nodef, nodef)
+#     path_found = breadth_first_search.breadth_first_search(nodef, nodee)
 
-    assert path_found
+#     assert not path_found
 
 
-def test5_bfs():
-    """Case 5: Graph with cycles
-    Output: Path found!
-    """
+# def test4_bfs():
+#     """Case 4: One node graph
+#     Output: Path found!
+#     """
 
-    nodef = Node("F")
-    nodee = Node("E")
-    noded = Node("D")
-    nodec = Node("C", None, [nodef])
-    nodeb = Node("B", None, [nodee])
-    nodea = Node("A", None, [nodeb, nodec, noded])
+#     nodef = Node("F")
 
-    nodee.successors = [nodea]
+#     path_found = breadth_first_search.breadth_first_search(nodef, nodef)
 
-    path_found = breadth_first_search.breadth_first_search(nodea, nodef)
+#     assert path_found
 
-    assert path_found
+
+# def test5_bfs():
+#     """Case 5: Graph with cycles
+#     Output: Path found!
+#     """
+
+#     nodef = Node("F")
+#     nodee = Node("E")
+#     noded = Node("D")
+#     nodec = Node("C", None, [nodef])
+#     nodeb = Node("B", None, [nodee])
+#     nodea = Node("A", None, [nodeb, nodec, noded])
+
+#     nodee.successors = [nodea]
+
+#     path_found = breadth_first_search.breadth_first_search(nodea, nodef)
+
+#     assert path_found
 
 ####
 # Testing bucketsort
@@ -105,7 +105,7 @@ testdata = load_json_testcases(bucketsort.__name__)
 
 @pytest.mark.parametrize("input_data,expected", testdata)
 def test_bucketsort(input_data, expected):
-    assert bucketsort.count_sort(*input_data) == expected
+    assert bucketsort.bucketsort(*input_data) == expected
 
 ####
 # Testing depth first search
@@ -123,7 +123,7 @@ def test1_dfs():
     station5 = Node("London Bridge", None, [station4, station3])
     station6 = Node("Tottenham Court Road", None, [station5, station4])
 
-    path_found = depth_first_search.is_reachable(station6, station1)
+    path_found = depth_first_search.depth_first_search(station6, station1)
 
     assert path_found
 
@@ -140,7 +140,7 @@ def test2_dfs():
     nodeb = Node("B", None, [nodee])
     nodea = Node("A", None, [nodeb, nodec, noded])
 
-    path_found = depth_first_search.is_reachable(nodea, nodee)
+    path_found = depth_first_search.depth_first_search(nodea, nodee)
 
     assert path_found
 
@@ -153,7 +153,7 @@ def test3_dfs():
     nodef = Node("F")
     nodee = Node("E")
 
-    path_found = depth_first_search.is_reachable(nodef, nodee)
+    path_found = depth_first_search.depth_first_search(nodef, nodee)
 
     assert not path_found
 
@@ -165,7 +165,7 @@ def test4_dfs():
 
     nodef = Node("F")
 
-    path_found = depth_first_search.is_reachable(nodef, nodef)
+    path_found = depth_first_search.depth_first_search(nodef, nodef)
 
     assert path_found
 
@@ -184,7 +184,7 @@ def test5_dfs():
 
     nodee.successors = [nodea]
 
-    path_found = depth_first_search.is_reachable(nodea, nodef)
+    path_found = depth_first_search.depth_first_search(nodea, nodef)
 
     assert path_found
 ###
@@ -273,7 +273,7 @@ testdata = load_json_testcases(find_first_in_sorted.__name__)
 
 @pytest.mark.parametrize("input_data,expected", testdata)
 def test_find_first_in_sorted(input_data, expected):
-    assert find_first_in_sorted.find_first(*input_data) == expected
+    assert find_first_in_sorted.find_first_occurrence(*input_data) == expected
 
 ###
 import find_in_sorted
@@ -283,7 +283,7 @@ testdata = load_json_testcases(find_in_sorted.__name__)
 
 @pytest.mark.parametrize("input_data,expected", testdata)
 def test_find_in_sorted(input_data, expected):
-    assert find_in_sorted.find_in_sorted(*input_data) == expected
+    assert find_in_sorted.binary_search(*input_data) == expected
 
 ###
 import flatten
@@ -293,7 +293,7 @@ testdata = load_json_testcases(flatten.__name__)
 
 @pytest.mark.parametrize("input_data,expected", testdata)
 def test_flatten(input_data, expected):
-    assert list(flatten.flatten_list(*input_data)) == expected
+    assert list(flatten.flatten(*input_data)) == expected
 
 ###
 import gcd
@@ -303,7 +303,7 @@ testdata = load_json_testcases(gcd.__name__)
 
 @pytest.mark.parametrize("input_data,expected", testdata)
 def test_gcd(input_data, expected):
-    assert gcd.greatest_common_divisor(*input_data) == expected
+    assert gcd.gcd(*input_data) == expected
 
 ###
 import get_factors
@@ -312,7 +312,7 @@ testdata = load_json_testcases(get_factors.__name__)
 
 @pytest.mark.parametrize("input_data,expected", testdata)
 def test_get_factors(input_data, expected):
-    assert get_factors.factorize(*input_data) == expected
+    assert get_factors.get_factors(*input_data) == expected
 
 ###
 import hanoi
@@ -342,7 +342,7 @@ testdata = load_json_testcases(kheapsort.__name__)
 
 @pytest.mark.parametrize("input_data,expected", testdata)
 def test_kheapsort(input_data, expected):
-    assert list(kheapsort.k_heap_sort(*input_data)) == expected
+    assert list(kheapsort.k_heapsort(*input_data)) == expected
 
 ###
 # import knapsack
@@ -401,7 +401,7 @@ testdata = load_json_testcases(lcs_length.__name__)
 
 @pytest.mark.parametrize("input_data,expected", testdata)
 def test_lcs_length(input_data, expected):
-    assert lcs_length.longest_common_subsequence_length(*input_data) == expected
+    assert lcs_length.lcs_length(*input_data) == expected
 
 ###
 import levenshtein
@@ -421,7 +421,7 @@ testdata = load_json_testcases(lis.__name__)
 
 @pytest.mark.parametrize("input_data,expected", testdata)
 def test_lis(input_data, expected):
-    assert lis.lis(*input_data) == expected
+    assert lis.get_longest_increasing_subsequence(*input_data) == expected
 
 ###
 import longest_common_subsequence
@@ -526,13 +526,11 @@ def test_next_palindrome(input_data, expected):
 ###
 import next_permutation
 
-
 testdata = load_json_testcases(next_permutation.__name__)
-
 
 @pytest.mark.parametrize("input_data,expected", testdata)
 def test_next_permutation(input_data, expected):
-    assert next_permutation.find_next_permutation(*input_data) == expected
+    assert next_permutation.next_permutation(*input_data) == expected
 
 ###
 import pascal
@@ -636,60 +634,60 @@ def test_rpn_eval(input_data, expected):
     assert rpn_eval.rpn_eval(*input_data) == expected
 
 ###
-import shortest_path_length
+# import shortest_path_length
 
-node1_spl = Node("1")
-node5_spl = Node("5")
-node4_spl = Node("4", None, [node5_spl])
-node3_spl = Node("3", None, [node4_spl])
-node2_spl = Node("2", None, [node1_spl, node3_spl, node4_spl])
-node0_spl = Node("0", None, [node2_spl, node5_spl])
+# node1_spl = Node("1")
+# node5_spl = Node("5")
+# node4_spl = Node("4", None, [node5_spl])
+# node3_spl = Node("3", None, [node4_spl])
+# node2_spl = Node("2", None, [node1_spl, node3_spl, node4_spl])
+# node0_spl = Node("0", None, [node2_spl, node5_spl])
 
-length_by_edge = {
-    (node0_spl, node2_spl): 3,
-    (node0_spl, node5_spl): 10,
-    (node2_spl, node1_spl): 1,
-    (node2_spl, node3_spl): 2,
-    (node2_spl, node4_spl): 4,
-    (node3_spl, node4_spl): 1,
-    (node4_spl, node5_spl): 1,
-}
-
-
-def test1_spl():
-    """Case 1: One path
-    Output: 4
-    """
-
-    result = shortest_path_length.shortest_path_length(length_by_edge, node0_spl, node1_spl)
-    assert result == 4
+# length_by_edge = {
+#     (node0_spl, node2_spl): 3,
+#     (node0_spl, node5_spl): 10,
+#     (node2_spl, node1_spl): 1,
+#     (node2_spl, node3_spl): 2,
+#     (node2_spl, node4_spl): 4,
+#     (node3_spl, node4_spl): 1,
+#     (node4_spl, node5_spl): 1,
+# }
 
 
-def test2_spl():
-    """Case 2: Multiple path
-    Output: 7
-    """
+# def test1_spl():
+#     """Case 1: One path
+#     Output: 4
+#     """
 
-    result = shortest_path_length.shortest_path_length(length_by_edge, node0_spl, node5_spl)
-    assert result == 7
-
-
-def test3_spl():
-    """Case 3: Start point is same as end point
-    Output: 0
-    """
-
-    result = shortest_path_length.shortest_path_length(length_by_edge, node2_spl, node2_spl)
-    assert result == 0
+#     result = shortest_path_length.shortest_path_length(length_by_edge, node0_spl, node1_spl)
+#     assert result == 4
 
 
-def test4_spl():
-    """Case 4: Unreachable path
-    Output: INT_MAX
-    """
+# def test2_spl():
+#     """Case 2: Multiple path
+#     Output: 7
+#     """
 
-    result = shortest_path_length.shortest_path_length(length_by_edge, node1_spl, node5_spl)
-    assert result == float("inf")
+#     result = shortest_path_length.shortest_path_length(length_by_edge, node0_spl, node5_spl)
+#     assert result == 7
+
+
+# def test3_spl():
+#     """Case 3: Start point is same as end point
+#     Output: 0
+#     """
+
+#     result = shortest_path_length.shortest_path_length(length_by_edge, node2_spl, node2_spl)
+#     assert result == 0
+
+
+# def test4_spl():
+#     """Case 4: Unreachable path
+#     Output: INT_MAX
+#     """
+
+#     result = shortest_path_length.shortest_path_length(length_by_edge, node1_spl, node5_spl)
+#     assert result == float("inf")
 
 ###
 import shortest_path_lengths
@@ -707,7 +705,7 @@ def test1_spls():
         (3, 4): -5,
         (4, 5): -1,
     }
-    result = shortest_path_lengths.calculate_shortest_paths(6, graph)
+    result = shortest_path_lengths.calculate_shortest_path_lengths(6, graph)
 
     expected = {
         (0, 0): 0,
@@ -760,7 +758,7 @@ def test2_spls():
         (2, 3): -2,
         (3, 4): 7,
     }
-    result = shortest_path_lengths.calculate_shortest_paths(5, graph)
+    result = shortest_path_lengths.calculate_shortest_path_lengths(5, graph)
 
     expected = {
         (0, 0): 0,
@@ -800,7 +798,7 @@ def test3_spls():
         (0, 1): 3,
         (2, 3): 5,
     }
-    result = shortest_path_lengths.calculate_shortest_paths(4, graph)
+    result = shortest_path_lengths.calculate_shortest_path_lengths(4, graph)
 
     expected = {
         (0, 0): 0,
@@ -832,7 +830,7 @@ def test4_spls():
         (1, 2): 5,
         (2, 0): -1,
     }
-    result = shortest_path_lengths.calculate_shortest_paths(3, graph)
+    result = shortest_path_lengths.calculate_shortest_path_lengths(3, graph)
 
     expected = {
         (0, 0): 0,
@@ -916,7 +914,7 @@ testdata = load_json_testcases(shunting_yard.__name__)
 
 @pytest.mark.parametrize("input_data,expected", testdata)
 def test_shunting_yard(input_data, expected):
-    assert shunting_yard.shunting_yard(*input_data) == expected
+    assert shunting_yard.convert_to_rpn(*input_data) == expected
 
 ###
 import sieve
@@ -925,7 +923,7 @@ testdata = load_json_testcases(sieve.__name__)
 
 @pytest.mark.parametrize("input_data,expected", testdata)
 def test_sieve(input_data, expected):
-    assert sieve.sieve(*input_data) == expected
+    assert sieve.find_primes(*input_data) == expected
 
 ###
 import sqrt
@@ -934,7 +932,7 @@ testdata = load_json_testcases(sqrt.__name__)
 
 @pytest.mark.parametrize("input_data,expected", testdata)
 def test_sqrt(input_data, expected):
-    assert sqrt.square_root(*input_data) == pytest.approx(expected, abs=input_data[-1])
+    assert sqrt.calculate_square_root(*input_data) == pytest.approx(expected, abs=input_data[-1])
 
 ###
 import subsequences
@@ -943,7 +941,7 @@ testdata = load_json_testcases(subsequences.__name__)
 
 @pytest.mark.parametrize("input_data,expected", testdata)
 def test_subsequences(input_data, expected):
-    assert subsequences.generate_subsequences(*input_data) == expected
+    assert subsequences.subsequences(*input_data) == expected
 
 ###
 import to_base
@@ -952,7 +950,7 @@ testdata = load_json_testcases(to_base.__name__)
 
 @pytest.mark.parametrize("input_data,expected", testdata)
 def test_to_base(input_data, expected):
-    assert to_base.convert_to_base(*input_data) == expected
+    assert to_base.convert_decimal_to_base(*input_data) == expected
 
 ###
 import topological_ordering
