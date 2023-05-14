@@ -89,7 +89,6 @@ for i in range(len(FOLDER_NAME)):
     # adding one more row for cleanliness
     row_count = row_count + 1
 
-
 # Save the changes to the XLSX file
 workbook.save(SUM_FILENAME)
 workbook.close()
