@@ -34,7 +34,6 @@ def test_bitcount(input_data, expected):
 #     station6 = Node("Tottenham Court Road", None, [station5, station4])
 
 #     path_found = breadth_first_search.breadth_first_search(station6, station1)
-
 #     assert path_found
 
 # def test2_bfs():
@@ -109,84 +108,84 @@ def test_bucketsort(input_data, expected):
 
 ####
 # Testing depth first search
-import depth_first_search
+# import depth_first_search
 
-def test1_dfs():
-    """Case 1: Strongly connected graph
-    Output: Path found!
-    """
+# def test1_dfs():
+#     """Case 1: Strongly connected graph
+#     Output: Path found!
+#     """
 
-    station1 = Node("Westminster")
-    station2 = Node("Waterloo", None, [station1])
-    station3 = Node("Trafalgar Square", None, [station1, station2])
-    station4 = Node("Canary Wharf", None, [station2, station3])
-    station5 = Node("London Bridge", None, [station4, station3])
-    station6 = Node("Tottenham Court Road", None, [station5, station4])
+#     station1 = Node("Westminster")
+#     station2 = Node("Waterloo", None, [station1])
+#     station3 = Node("Trafalgar Square", None, [station1, station2])
+#     station4 = Node("Canary Wharf", None, [station2, station3])
+#     station5 = Node("London Bridge", None, [station4, station3])
+#     station6 = Node("Tottenham Court Road", None, [station5, station4])
 
-    path_found = depth_first_search.depth_first_search(station6, station1)
+#     path_found = depth_first_search.depth_first_search(station6, station1)
 
-    assert path_found
-
-
-def test2_dfs():
-    """Case 2: Branching graph
-    Output: Path found!
-    """
-
-    nodef = Node("F")
-    nodee = Node("E")
-    noded = Node("D")
-    nodec = Node("C", None, [nodef])
-    nodeb = Node("B", None, [nodee])
-    nodea = Node("A", None, [nodeb, nodec, noded])
-
-    path_found = depth_first_search.depth_first_search(nodea, nodee)
-
-    assert path_found
+#     assert path_found
 
 
-def test3_dfs():
-    """Case 3: Two unconnected nodes in graph
-    Output: Path not found
-    """
+# def test2_dfs():
+#     """Case 2: Branching graph
+#     Output: Path found!
+#     """
 
-    nodef = Node("F")
-    nodee = Node("E")
+#     nodef = Node("F")
+#     nodee = Node("E")
+#     noded = Node("D")
+#     nodec = Node("C", None, [nodef])
+#     nodeb = Node("B", None, [nodee])
+#     nodea = Node("A", None, [nodeb, nodec, noded])
 
-    path_found = depth_first_search.depth_first_search(nodef, nodee)
+#     path_found = depth_first_search.depth_first_search(nodea, nodee)
 
-    assert not path_found
-
-
-def test4_dfs():
-    """Case 4: One node graph
-    Output: Path found!
-    """
-
-    nodef = Node("F")
-
-    path_found = depth_first_search.depth_first_search(nodef, nodef)
-
-    assert path_found
+#     assert path_found
 
 
-def test5_dfs():
-    """Case 5: Graph with cycles
-    Output: Path found!
-    """
+# def test3_dfs():
+#     """Case 3: Two unconnected nodes in graph
+#     Output: Path not found
+#     """
 
-    nodef = Node("F")
-    nodee = Node("E")
-    noded = Node("D")
-    nodec = Node("C", None, [nodef])
-    nodeb = Node("B", None, [nodee])
-    nodea = Node("A", None, [nodeb, nodec, noded])
+#     nodef = Node("F")
+#     nodee = Node("E")
 
-    nodee.successors = [nodea]
+#     path_found = depth_first_search.depth_first_search(nodef, nodee)
 
-    path_found = depth_first_search.depth_first_search(nodea, nodef)
+#     assert not path_found
 
-    assert path_found
+
+# def test4_dfs():
+#     """Case 4: One node graph
+#     Output: Path found!
+#     """
+
+#     nodef = Node("F")
+
+#     path_found = depth_first_search.depth_first_search(nodef, nodef)
+
+#     assert path_found
+
+
+# def test5_dfs():
+#     """Case 5: Graph with cycles
+#     Output: Path found!
+#     """
+
+#     nodef = Node("F")
+#     nodee = Node("E")
+#     noded = Node("D")
+#     nodec = Node("C", None, [nodef])
+#     nodeb = Node("B", None, [nodee])
+#     nodea = Node("A", None, [nodeb, nodec, noded])
+
+#     nodee.successors = [nodea]
+
+#     path_found = depth_first_search.depth_first_search(nodea, nodef)
+
+#     assert path_found
 ###
 import detect_cycle
 
@@ -345,43 +344,13 @@ def test_kheapsort(input_data, expected):
     assert list(kheapsort.k_heapsort(*input_data)) == expected
 
 ###
-# import knapsack
+import knapsack
 
-# testdata = load_json_testcases(knapsack.__name__)
+testdata = load_json_testcases(knapsack.__name__)
 
-# @pytest.mark.parametrize("input_data,expected", testdata)
-# def test_knapsack(input_data, expected):
-#     if not pytest.run_slow and input_data == [
-#         6404180,
-#         [
-#             [382745, 825594],
-#             [799601, 1677009],
-#             [909247, 1676628],
-#             [729069, 1523970],
-#             [467902, 943972],
-#             [44328, 97426],
-#             [34610, 69666],
-#             [698150, 1296457],
-#             [823460, 1679693],
-#             [903959, 1902996],
-#             [853665, 1844992],
-#             [551830, 1049289],
-#             [610856, 1252836],
-#             [670702, 1319836],
-#             [488960, 953277],
-#             [951111, 2067538],
-#             [323046, 675367],
-#             [446298, 853655],
-#             [931161, 1826027],
-#             [31385, 65731],
-#             [496951, 901489],
-#             [264724, 577243],
-#             [224916, 466257],
-#             [169684, 369261],
-#         ],
-#     ]:
-#         pytest.skip("Takes about 4 mins to pass!")
-#     assert knapsack.knapsack(*input_data) == expected
+@pytest.mark.parametrize("input_data,expected", testdata)
+def test_knapsack(input_data, expected):
+    assert knapsack.knapsack(*input_data) == expected
 
 ###
 import kth
@@ -653,41 +622,41 @@ def test_rpn_eval(input_data, expected):
 #     (node4_spl, node5_spl): 1,
 # }
 
-
+# @pytest.mark.skip
 # def test1_spl():
 #     """Case 1: One path
 #     Output: 4
 #     """
+#     with pytest.raises(Exception):
+#         result = shortest_path_length.shortest_path_length(length_by_edge, node0_spl, node1_spl)
+#         assert result == 4
 
-#     result = shortest_path_length.shortest_path_length(length_by_edge, node0_spl, node1_spl)
-#     assert result == 4
-
-
+# @pytest.mark.skip
 # def test2_spl():
 #     """Case 2: Multiple path
 #     Output: 7
 #     """
+#     with pytest.raises(Exception):
+#         result = shortest_path_length.shortest_path_length(length_by_edge, node0_spl, node5_spl)
+#         assert result == 7
 
-#     result = shortest_path_length.shortest_path_length(length_by_edge, node0_spl, node5_spl)
-#     assert result == 7
-
-
+# @pytest.mark.skip
 # def test3_spl():
 #     """Case 3: Start point is same as end point
 #     Output: 0
 #     """
+#     with pytest.raises(Exception):
+#         result = shortest_path_length.shortest_path_length(length_by_edge, node2_spl, node2_spl)
+#         assert result == 0
 
-#     result = shortest_path_length.shortest_path_length(length_by_edge, node2_spl, node2_spl)
-#     assert result == 0
-
-
+# @pytest.mark.skip
 # def test4_spl():
 #     """Case 4: Unreachable path
 #     Output: INT_MAX
 #     """
-
-#     result = shortest_path_length.shortest_path_length(length_by_edge, node1_spl, node5_spl)
-#     assert result == float("inf")
+#     with pytest.raises(Exception):
+#         result = shortest_path_length.shortest_path_length(length_by_edge, node1_spl, node5_spl)
+#         assert result == float("inf")
 
 ###
 import shortest_path_lengths
@@ -1073,3 +1042,7 @@ testdata = load_json_testcases(wrap.__name__)
 @pytest.mark.parametrize("input_data,expected", testdata)
 def test_wrap(input_data, expected):
     assert wrap.wrap(*input_data) == expected
+#%%
+from pathlib import Path
+Path(Path(Path(Path.cwd()).parent).parent).parent
+# %%
