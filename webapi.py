@@ -93,4 +93,3 @@ for i in range(len(FOLDER_NAME)):
 # Save the changes to the XLSX file
 workbook.save(SUM_FILENAME)
 workbook.close()
-# %%
