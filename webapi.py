@@ -39,8 +39,9 @@ row_count = 2
 hed = {'Authorization': 'Bearer ' + auth_token}
 main_url = 'https://sonarcloud.io/api/'
 url = main_url + "issues/search"
-workbook = openpyxl.Workbook()
+
 # Get the active worksheet and clear its contents
+workbook = openpyxl.Workbook()
 worksheet = workbook.active
 
 # adding header to the excel file
