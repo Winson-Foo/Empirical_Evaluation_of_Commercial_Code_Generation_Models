@@ -1,35 +1,3 @@
-// languages.js
-export const languages = {
-  en: { label: 'English', dir: 'ltr' },
-  es: { label: 'Espa�ol', dir: 'ltr' },
-  // add more languages here
-};
-
-// PopupTrigger.js
-import { PopupTrigger as BasicsPopupTrigger } from 'react-basics';
-
-export default BasicsPopupTrigger;
-
-// Button.js
-import { Button as BasicsButton } from 'react-basics';
-
-export default BasicsButton;
-
-// Icon.js
-import { Icon as BasicsIcon } from 'react-basics';
-
-export default BasicsIcon;
-
-// Popup.js
-import { Popup as BasicsPopup } from 'react-basics';
-
-export default BasicsPopup;
-
-// Text.js
-import { Text as BasicsText } from 'react-basics';
-
-export default BasicsText;
-
 import { Icon, Button, PopupTrigger, Popup, Text } from 'react-basics';
 import classNames from 'classnames';
 import { languages } from 'lib/lang';

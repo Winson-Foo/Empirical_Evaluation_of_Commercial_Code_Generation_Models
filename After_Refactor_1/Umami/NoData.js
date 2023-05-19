@@ -20,9 +20,3 @@ export function NoData({ className }) {
 }
 
 export default NoData;
-
-// NoData.module.css
-.noDataContainer {
-  // add styles here
-}
-

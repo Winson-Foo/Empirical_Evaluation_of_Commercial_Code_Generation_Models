@@ -32,17 +32,3 @@ WebsiteSelect.propTypes = {
 };
 
 export default WebsiteSelect;
-
-And here's the updated `useWebsiteApi` hook:
-
-import useApi from 'hooks/useApi';
-
-function useWebsiteApi() {
-  const { get, useQuery } = useApi();
-  const { data } = useQuery(['websites:me'], () => get('/me/websites'));
-
-  return { data };
-}
-
-export default useWebsiteApi;
-

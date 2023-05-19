@@ -28,12 +28,3 @@ export async function getServerSideProps() {
     return { props: { disabled: false } };
   }
 }
-
-// index.jsx
-
-import LoginPage from 'pages/LoginPage';
-import { getServerSideProps } from 'pages/getServerSideProps';
-
-export { getServerSideProps };
-
-export default LoginPage;

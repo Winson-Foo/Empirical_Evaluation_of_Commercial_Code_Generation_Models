@@ -4,8 +4,6 @@ const countryNames = {
   'en-US': enUS,
 };
 
-export default countryNames;
-
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { get } from 'next-basics';

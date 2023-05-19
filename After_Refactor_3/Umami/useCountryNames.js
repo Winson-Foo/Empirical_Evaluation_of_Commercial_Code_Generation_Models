@@ -1,10 +1,3 @@
-// countryNames.js
-import enUS from 'public/intl/country/en-US.json';
-
-export default {
-  'en-US': enUS,
-};
-
 // useCountryNames.js
 import { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/router';

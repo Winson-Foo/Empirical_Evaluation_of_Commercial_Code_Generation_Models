@@ -57,7 +57,3 @@ export function setConfig(config) {
 export function setDateRange(dateRange) {
   store.setState({ dateRange });
 }
-
-// index.js
-export * from './actions';
-export { default } from './state';
