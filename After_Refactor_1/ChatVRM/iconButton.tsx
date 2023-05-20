@@ -38,30 +38,3 @@ export const IconButton = ({
     </button>
   );
 };
-
-// IconButton.module.css
-.Button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-.Button:hover {
-  opacity: 0.8;
-}
-.Button:active {
-  transform: scale(0.95);
-}
-.Button:disabled {
-  opacity: 0.5;
-}
-.Label {
-  margin-left: 0.5rem;
-  font-family: "M PLUS 2", sans-serif;
-  font-size: 0.875rem;
-  font-weight: bold;
-  color: white;
-}
-

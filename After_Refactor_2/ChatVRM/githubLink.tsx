@@ -28,26 +28,3 @@ export const GitHubLink = () => {
     </div>
   );
 };
-
-And in `GitHubLink.module.css`:
-
-.container {
-  right: 0;
-  z-index: 10;
-  margin: 24px;
-}
-
-.button {
-  background-color: #1f2328;
-  &:hover {
-    background-color: #33383e;
-  }
-  &:active {
-    background-color: #565a60;
-  }
-}
-
-.text {
-  color: white;
-}
-
