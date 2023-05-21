@@ -1,11 +1,10 @@
-// canvasReducer.js
+// actionTypes.js
+
+export const SET_DIRTY = 'SET_DIRTY';
+export const REMOVE_DIRTY = 'REMOVE_DIRTY';
+export const SET_CHATFLOW = 'SET_CHATFLOW';
 
 import * as actionTypes from '../actionTypes';
-
-const initialState = {
-    isDirty: false,
-    chatflow: null
-}
 
 const canvasReducer = (state = initialState, action) => {
     const { type, chatflow } = action;
@@ -20,5 +19,3 @@ const canvasReducer = (state = initialState, action) => {
             return state;
     }
 };
-
-export default canvasReducer;

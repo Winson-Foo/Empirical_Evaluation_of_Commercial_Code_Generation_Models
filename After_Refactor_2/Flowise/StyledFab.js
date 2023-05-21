@@ -12,8 +12,3 @@ const Button = styled(Fab)(({ theme, color = 'primary' }) => ({
 }))
 
 export default Button
-
-// Usage
-import Button from './Button'
-
-<Button color="secondary">Click me</Button>
