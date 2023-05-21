@@ -38,20 +38,3 @@ CodeEditor.propTypes = {
 }
 
 export default CodeEditor
-
-// JavaScriptEditor.js
-import CodeEditor from './CodeEditor'
-import 'prismjs/components/prism-clike'
-import 'prismjs/components/prism-javascript'
-
-const JavaScriptEditor = props => <CodeEditor {...props} type='javascript' />
-
-export default JavaScriptEditor
-
-// JsonEditor.js
-import CodeEditor from './CodeEditor'
-import 'prismjs/components/prism-json'
-
-const JsonEditor = props => <CodeEditor {...props} type='json' />
-
-export default JsonEditor

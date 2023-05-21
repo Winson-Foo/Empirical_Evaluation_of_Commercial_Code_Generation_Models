@@ -1,6 +1,3 @@
-// constants
-const EVENT_COLORS = [...]; // define colors for different events here
-
 // components
 function EventsChart({ websiteId, className, token }) {
   const { get, useQuery } = useApi();
