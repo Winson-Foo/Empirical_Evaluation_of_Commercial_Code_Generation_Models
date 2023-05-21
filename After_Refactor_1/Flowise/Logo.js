@@ -27,18 +27,3 @@ FlowiseLogo.propTypes = {
 };
 
 export default FlowiseLogo;
-
-// flowiseLogo.module.css
-
-.logoContainer {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-}
-
-.logoImage {
-  object-fit: contain;
-  height: auto;
-  width: 150px;
-}
-
