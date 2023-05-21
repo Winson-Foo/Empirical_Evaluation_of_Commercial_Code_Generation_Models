@@ -1,8 +1,3 @@
-// constants.js
-export const ISO_COUNTRIES = {...};
-export const THEME_COLORS = {...};
-export const MAP_FILE = 'world-50m.json';
-
 // WorldMap.jsx
 import { useState, useMemo } from 'react';
 import { useRouter } from 'next/router';
