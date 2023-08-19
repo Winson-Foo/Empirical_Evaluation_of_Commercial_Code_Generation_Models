@@ -9,6 +9,14 @@ import isPalindrome from '../../../Before_Refactor/javascript-algorithms/isPalin
 import knightTour from '../../../Before_Refactor/javascript-algorithms/knightTour';
 import knuthMorrisPratt from '../../../Before_Refactor/javascript-algorithms/knuthMorrisPratt';
 import levenshteinDistance from '../../../Before_Refactor/javascript-algorithms/levenshteinDistance';
+import PolynomialHash from '../../../Before_Refactor/javascript-algorithms/PolynomialHash';
+import { encodeRailFenceCipher, decodeRailFenceCipher } from '../../../Before_Refactor/javascript-algorithms/railFenceCipher';
+import recursiveStaircaseMEM from '../../../Before_Refactor/javascript-algorithms/recursiveStaircaseMEM';
+import regularExpressionMatching from '../../../Before_Refactor/javascript-algorithms/regularExpressionMatching';
+import sieveOfEratosthenes from '../../../Before_Refactor/javascript-algorithms/sieveOfEratosthenes';
+import SimplePolynomialHash from '../../../Before_Refactor/javascript-algorithms/SimplePolynomialHash';
+import squareMatrixRotation from '../../../Before_Refactor/javascript-algorithms/squareMatrixRotation';
+import weightedRandom from '../../../Before_Refactor/javascript-algorithms/weightedRandom';
 
 describe('zAlgorithm', () => {
   test('should find word positions in given text', () => { expect(zAlgorithm('abcbcglx', 'abca')).toEqual([]) });
@@ -287,3 +295,323 @@ describe('levenshteinDistance', () => {
   // Needs to substitute the first 5 chars: INTEN by EXECU
   it('should calculate edit distance between two strings', () => {expect(levenshteinDistance('intention', 'execution')).toBe(5);});
 });
+
+
+describe('PolynomialHash', () => {
+  it('should calculate new hash based on previous one', () => {
+    const bases = [3, 79, 101, 3251, 13229, 122743, 3583213];
+    const mods = [79, 101];
+    const frameSizes = [5, 20];
+
+    const text = 'Lorem Ipsum is simply dummy text of the printing and '
+      + 'typesetting industry. Lorem Ipsum has been the industry\'s standard '
+      + 'galley of type and \u{ffff} scrambled it to make a type specimen book. It '
+      + 'electronic 耀 typesetting, remaining essentially unchanged. It was '
+      // + 'popularised in the \u{20005} \u{20000}1960s with the release of Letraset sheets '
+      + 'publishing software like Aldus PageMaker 耀 including versions of Lorem.';
+
+    // Check hashing for different prime base.
+    bases.forEach((base) => {
+      mods.forEach((modulus) => {
+        const polynomialHash = new PolynomialHash({ base, modulus });
+
+        // Check hashing for different word lengths.
+        frameSizes.forEach((frameSize) => {
+          let previousWord = text.substr(0, frameSize);
+          let previousHash = polynomialHash.hash(previousWord);
+
+          // Shift frame through the whole text.
+          for (let frameShift = 1; frameShift < (text.length - frameSize); frameShift += 1) {
+            const currentWord = text.substr(frameShift, frameSize);
+            const currentHash = polynomialHash.hash(currentWord);
+            const currentRollingHash = polynomialHash.roll(previousHash, previousWord, currentWord);
+
+            // Check that rolling hash is the same as directly calculated hash.
+            expect(currentRollingHash).toBe(currentHash);
+
+            previousWord = currentWord;
+            previousHash = currentHash;
+          }
+        });
+      });
+    });
+  });
+  const polynomialHash = new PolynomialHash({ modulus: 100 });
+  it('should generate numeric hashed less than 100', () => {expect(polynomialHash.hash('Some long text that is used as a key')).toBe(41)});
+  it('should generate numeric hashed less than 100', () => {expect(polynomialHash.hash('Test')).toBe(92)});
+  it('should generate numeric hashed less than 100', () => {expect(polynomialHash.hash('a')).toBe(97)});
+  it('should generate numeric hashed less than 100', () => {expect(polynomialHash.hash('b')).toBe(98)});
+  it('should generate numeric hashed less than 100', () => {expect(polynomialHash.hash('c')).toBe(99)});
+  it('should generate numeric hashed less than 100', () => {expect(polynomialHash.hash('d')).toBe(0)});
+  it('should generate numeric hashed less than 100', () => {expect(polynomialHash.hash('e')).toBe(1)});
+  it('should generate numeric hashed less than 100', () => {expect(polynomialHash.hash('ab')).toBe(87)});
+  it('should generate numeric hashed less than 100', () => {expect(polynomialHash.hash('\u{20000}')).toBe(92)});
+});
+
+describe('railFenceCipher', () => {
+  it('encodes a string correctly for base=3', () => {
+    expect(encodeRailFenceCipher('', 3)).toBe('');
+    expect(encodeRailFenceCipher('12345', 3)).toBe(
+      '15243',
+    );
+    expect(encodeRailFenceCipher('WEAREDISCOVEREDFLEEATONCE', 3)).toBe(
+      'WECRLTEERDSOEEFEAOCAIVDEN',
+    );
+    expect(encodeRailFenceCipher('Hello, World!', 3)).toBe(
+      'Hoo!el,Wrdl l',
+    );
+  });
+
+  it('decodes a string correctly for base=3', () => {
+    expect(decodeRailFenceCipher('', 3)).toBe('');
+    expect(decodeRailFenceCipher('WECRLTEERDSOEEFEAOCAIVDEN', 3)).toBe(
+      'WEAREDISCOVEREDFLEEATONCE',
+    );
+    expect(decodeRailFenceCipher('Hoo!el,Wrdl l', 3)).toBe(
+      'Hello, World!',
+    );
+    expect(decodeRailFenceCipher('15243', 3)).toBe(
+      '12345',
+    );
+  });
+
+  it('encodes a string correctly for base=4', () => {
+    expect(encodeRailFenceCipher('', 4)).toBe('');
+    expect(encodeRailFenceCipher('THEYAREATTACKINGFROMTHENORTH', 4)).toBe(
+      'TEKOOHRACIRMNREATANFTETYTGHH',
+    );
+  });
+
+  it('decodes a string correctly for base=4', () => {
+    expect(decodeRailFenceCipher('', 4)).toBe('');
+    expect(decodeRailFenceCipher('TEKOOHRACIRMNREATANFTETYTGHH', 4)).toBe(
+      'THEYAREATTACKINGFROMTHENORTH',
+    );
+  });
+});
+
+describe('recursiveStaircaseMEM', () => {
+  it('should calculate number of variants using Brute Force with Memoization', () => {expect(recursiveStaircaseMEM(-1)).toBe(0)});
+  it('should calculate number of variants using Brute Force with Memoization', () => {expect(recursiveStaircaseMEM(0)).toBe(0)});
+  it('should calculate number of variants using Brute Force with Memoization', () => {expect(recursiveStaircaseMEM(1)).toBe(1)});
+  it('should calculate number of variants using Brute Force with Memoization', () => {expect(recursiveStaircaseMEM(2)).toBe(2)});
+  it('should calculate number of variants using Brute Force with Memoization', () => {expect(recursiveStaircaseMEM(3)).toBe(3)});
+  it('should calculate number of variants using Brute Force with Memoization', () => {expect(recursiveStaircaseMEM(4)).toBe(5)});
+  it('should calculate number of variants using Brute Force with Memoization', () => {expect(recursiveStaircaseMEM(5)).toBe(8)});
+  it('should calculate number of variants using Brute Force with Memoization', () => {expect(recursiveStaircaseMEM(6)).toBe(13)});
+  it('should calculate number of variants using Brute Force with Memoization', () => {expect(recursiveStaircaseMEM(7)).toBe(21)});
+  it('should calculate number of variants using Brute Force with Memoization', () => {expect(recursiveStaircaseMEM(8)).toBe(34)});
+  it('should calculate number of variants using Brute Force with Memoization', () => {expect(recursiveStaircaseMEM(9)).toBe(55)});
+  it('should calculate number of variants using Brute Force with Memoization', () => {expect(recursiveStaircaseMEM(10)).toBe(89)});
+});
+
+
+describe('regularExpressionMatching', () => {
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('', '')).toBe(true)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('a', 'a')).toBe(true)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('aa', 'aa')).toBe(true)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('aab', 'aab')).toBe(true)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('aab', 'aa.')).toBe(true)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('aab', '.a.')).toBe(true)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('aab', '...')).toBe(true)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('a', 'a*')).toBe(true)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('aaa', 'a*')).toBe(true)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('aaab', 'a*b')).toBe(true)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('aaabb', 'a*b*')).toBe(true)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('aaabb', 'a*b*c*')).toBe(true)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('', 'a*')).toBe(true)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('xaabyc', 'xa*b.c')).toBe(true)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('aab', 'c*a*b*')).toBe(true)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('mississippi', 'mis*is*.p*.')).toBe(true)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('ab', '.*')).toBe(true)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('', 'a')).toBe(false)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('a', '')).toBe(false)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('aab', 'aa')).toBe(false)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('aab', 'baa')).toBe(false)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('aabc', '...')).toBe(false)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('aaabbdd', 'a*b*c*')).toBe(false)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('mississippi', 'mis*is*p*.')).toBe(false)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('ab', 'a*')).toBe(false)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('abba', 'a*b*.c')).toBe(false)});
+  it('should match regular expressions in a string', () => {expect(regularExpressionMatching('abba', '.*c')).toBe(false)});
+});
+
+describe('sieveOfEratosthenes', () => {
+  it('should find all primes less than or equal to n', () => {
+    expect(sieveOfEratosthenes(5)).toEqual([2, 3, 5]);
+    expect(sieveOfEratosthenes(10)).toEqual([2, 3, 5, 7]);
+    expect(sieveOfEratosthenes(100)).toEqual([
+      2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41,
+      43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97,
+    ]);
+  });
+});
+
+describe('SimplePolynomialHash', () => {
+  it('should calculate new hash based on previous one', () => {
+    const bases = [3, 5];
+    const frameSizes = [5, 10];
+
+    const text = 'Lorem Ipsum is simply dummy text of the printing and '
+      + 'typesetting industry. Lorem Ipsum has been the industry\'s standard '
+      + 'galley of type and \u{ffff} scrambled it to make a type specimen book. It '
+      + 'electronic 耀 typesetting, remaining essentially unchanged. It was '
+      + 'popularised in the 1960s with the release of Letraset sheets '
+      + 'publishing software like Aldus 耀 PageMaker including versions of Lorem.';
+
+    // Check hashing for different prime base.
+    bases.forEach((base) => {
+      const polynomialHash = new SimplePolynomialHash(base);
+
+      // Check hashing for different word lengths.
+      frameSizes.forEach((frameSize) => {
+        let previousWord = text.substr(0, frameSize);
+        let previousHash = polynomialHash.hash(previousWord);
+
+        // Shift frame through the whole text.
+        for (let frameShift = 1; frameShift < (text.length - frameSize); frameShift += 1) {
+          const currentWord = text.substr(frameShift, frameSize);
+          const currentHash = polynomialHash.hash(currentWord);
+          const currentRollingHash = polynomialHash.roll(previousHash, previousWord, currentWord);
+
+          // Check that rolling hash is the same as directly calculated hash.
+          expect(currentRollingHash).toBe(currentHash);
+
+          previousWord = currentWord;
+          previousHash = currentHash;
+        }
+      });
+    });
+  });
+  const polynomialHash = new SimplePolynomialHash();
+
+  it('should generate numeric hashed', () => {expect(polynomialHash.hash('Test')).toBe(604944)});
+  it('should generate numeric hashed', () => {expect(polynomialHash.hash('a')).toBe(97)});
+  it('should generate numeric hashed', () => {expect(polynomialHash.hash('b')).toBe(98)});
+  it('should generate numeric hashed', () => {expect(polynomialHash.hash('c')).toBe(99)});
+  it('should generate numeric hashed', () => {expect(polynomialHash.hash('d')).toBe(100)});
+  it('should generate numeric hashed', () => {expect(polynomialHash.hash('e')).toBe(101)});
+  it('should generate numeric hashed', () => {expect(polynomialHash.hash('ab')).toBe(1763)});
+  it('should generate numeric hashed', () => {expect(polynomialHash.hash('abc')).toBe(30374)});
+});
+
+
+describe('squareMatrixRotation', () => {
+  it('should rotate matrix #0 in-place', () => {
+    const matrix = [[1]];
+
+    const rotatedMatrix = [[1]];
+
+    expect(squareMatrixRotation(matrix)).toEqual(rotatedMatrix);
+  });
+
+  it('should rotate matrix #1 in-place', () => {
+    const matrix = [
+      [1, 2],
+      [3, 4],
+    ];
+
+    const rotatedMatrix = [
+      [3, 1],
+      [4, 2],
+    ];
+
+    expect(squareMatrixRotation(matrix)).toEqual(rotatedMatrix);
+  });
+
+  it('should rotate matrix #2 in-place', () => {
+    const matrix = [
+      [1, 2, 3],
+      [4, 5, 6],
+      [7, 8, 9],
+    ];
+
+    const rotatedMatrix = [
+      [7, 4, 1],
+      [8, 5, 2],
+      [9, 6, 3],
+    ];
+
+    expect(squareMatrixRotation(matrix)).toEqual(rotatedMatrix);
+  });
+
+  it('should rotate matrix #3 in-place', () => {
+    const matrix = [
+      [5, 1, 9, 11],
+      [2, 4, 8, 10],
+      [13, 3, 6, 7],
+      [15, 14, 12, 16],
+    ];
+
+    const rotatedMatrix = [
+      [15, 13, 2, 5],
+      [14, 3, 4, 1],
+      [12, 6, 8, 9],
+      [16, 7, 10, 11],
+    ];
+
+    expect(squareMatrixRotation(matrix)).toEqual(rotatedMatrix);
+  });
+});
+
+describe('weightedRandom', () => {
+  it('should throw an error when the number of weights does not match the number of items', () => {
+    const getWeightedRandomWithInvalidInputs = () => {
+      weightedRandom(['a', 'b', 'c'], [10, 0]);
+    };
+    expect(getWeightedRandomWithInvalidInputs).toThrow('Items and weights must be of the same size');
+  });
+
+  it('should throw an error when the number of weights or items are empty', () => {
+    const getWeightedRandomWithInvalidInputs = () => {
+      weightedRandom([], []);
+    };
+    expect(getWeightedRandomWithInvalidInputs).toThrow('Items must not be empty');
+  });
+
+  it('should correctly do random selection based on wights in straightforward cases', () => {expect(weightedRandom(['a', 'b', 'c'], [1, 0, 0])).toEqual({ index: 0, item: 'a' })});
+  it('should correctly do random selection based on wights in straightforward cases', () => {expect(weightedRandom(['a', 'b', 'c'], [0, 1, 0])).toEqual({ index: 1, item: 'b' })});
+  it('should correctly do random selection based on wights in straightforward cases', () => {expect(weightedRandom(['a', 'b', 'c'], [0, 0, 1])).toEqual({ index: 2, item: 'c' })});
+  it('should correctly do random selection based on wights in straightforward cases', () => {expect(weightedRandom(['a', 'b', 'c'], [0, 1, 1])).not.toEqual({ index: 0, item: 'a' })});
+  it('should correctly do random selection based on wights in straightforward cases', () => {expect(weightedRandom(['a', 'b', 'c'], [1, 0, 1])).not.toEqual({ index: 1, item: 'b' })});
+  it('should correctly do random selection based on wights in straightforward cases', () => {expect(weightedRandom(['a', 'b', 'c'], [1, 1, 0])).not.toEqual({ index: 2, item: 'c' });});
+
+  it('should correctly do random selection based on wights', () => {
+    // Number of times we're going to select the random items based on their weights.
+    const ATTEMPTS_NUM = 1000;
+    // The +/- delta in the number of times each item has been actually selected.
+    // I.e. if we want the item 'a' to be selected 300 times out of 1000 cases (30%)
+    // then 267 times is acceptable since it is bigger that 250 (which is 300 - 50)
+    // ans smaller than 350 (which is 300 + 50)
+    const THRESHOLD = 50;
+
+    const items = ['a', 'b', 'c']; // The actual items values don't matter.
+    const weights = [0.1, 0.3, 0.6];
+
+    const counter = [];
+    for (let i = 0; i < ATTEMPTS_NUM; i += 1) {
+      const randomItem = weightedRandom(items, weights);
+      if (!counter[randomItem.index]) {
+        counter[randomItem.index] = 1;
+      } else {
+        counter[randomItem.index] += 1;
+      }
+    }
+
+    for (let itemIndex = 0; itemIndex < items.length; itemIndex += 1) {
+      /*
+        i.e. item with the index of 0 must be selected 100 times (ideally)
+        or with the threshold of [100 - 50, 100 + 50] times.
+
+        i.e. item with the index of 1 must be selected 300 times (ideally)
+        or with the threshold of [300 - 50, 300 + 50] times.
+
+        i.e. item with the index of 2 must be selected 600 times (ideally)
+        or with the threshold of [600 - 50, 600 + 50] times.
+       */
+      expect(counter[itemIndex]).toBeGreaterThan(ATTEMPTS_NUM * weights[itemIndex] - THRESHOLD);
+      expect(counter[itemIndex]).toBeLessThan(ATTEMPTS_NUM * weights[itemIndex] + THRESHOLD);
+    }
+  });
+});
+
