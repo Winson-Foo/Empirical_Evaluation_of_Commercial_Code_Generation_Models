@@ -1,5 +1,6 @@
 {
   "name": "javascript-algorithms-and-data-structures",
+  "type": "module",
   "version": "0.0.4",
   "description": "Algorithms and data-structures implemented on JavaScript",
   "repository": {

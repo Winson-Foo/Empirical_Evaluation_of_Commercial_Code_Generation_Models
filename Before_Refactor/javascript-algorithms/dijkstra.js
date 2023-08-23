@@ -1,4 +1,4 @@
-import PriorityQueue from '../../../data-structures/priority-queue/PriorityQueue';
+import PriorityQueue from '../../CONSTANT/javascript-algorithms/PriorityQueue';
 
 /**
  * @typedef {Object} ShortestPaths

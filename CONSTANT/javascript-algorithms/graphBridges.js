@@ -1,4 +1,4 @@
-import depthFirstSearch from './depthFirstSearch';
+import depthFirstSearch from '../../Before_Refactor/javascript-algorithms/depthFirstSearch';
 
 /**
  * Helper class for visited vertex metadata.
