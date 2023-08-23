@@ -1,4 +1,4 @@
-import * as mtrx from '../../math/matrix/Matrix';
+import * as mtrx from '../../CONSTANT/javascript-algorithms/Matrix';
 
 // The code of an 'A' character (equals to 65).
 const alphabetCodeShift = 'A'.codePointAt(0);

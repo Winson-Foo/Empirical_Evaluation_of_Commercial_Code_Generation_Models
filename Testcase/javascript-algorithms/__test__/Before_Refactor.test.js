@@ -31,6 +31,21 @@ import eulerianPath from '../../../Before_Refactor/javascript-algorithms/euleria
 import fastFourierTransform from '../../../Before_Refactor/javascript-algorithms/fastFourierTransform';
 import floydWarshall from '../../../Before_Refactor/javascript-algorithms/floydWarshall';
 import graphBridges from '../../../Before_Refactor/javascript-algorithms/graphBridges';
+import hamiltonianCycle from '../../../Before_Refactor/javascript-algorithms/hamiltonianCycle';
+import hanoiTower from '../../../Before_Refactor/javascript-algorithms/hanoiTower';
+import HeapSort from '../../../Before_Refactor/javascript-algorithms/HeapSort';
+import { hillCipherEncrypt, hillCipherDecrypt } from '../../../Before_Refactor/javascript-algorithms/hillCipher';
+import jumpSearch from '../../../Before_Refactor/javascript-algorithms/jumpSearch';
+import KMeans from '../../../Before_Refactor/javascript-algorithms/kMeans';
+import kruskal from '../../../Before_Refactor/javascript-algorithms/kruskal';
+import MergeSort from '../../../Before_Refactor/javascript-algorithms/MergeSort';
+import nQueens from '../../../Before_Refactor/javascript-algorithms/nQueens';
+import prim from '../../../Before_Refactor/javascript-algorithms/prim';
+import QuickSort from '../../../Before_Refactor/javascript-algorithms/QuickSort';
+import RadixSort from '../../../Before_Refactor/javascript-algorithms/RadixSort';
+import stronglyConnectedComponents from '../../../Before_Refactor/javascript-algorithms/stronglyConnectedComponents';
+import topologicalSort from '../../../Before_Refactor/javascript-algorithms/topologicalSort';
+import uniquePaths from '../../../Before_Refactor/javascript-algorithms/uniquePaths';
 
 import {
   equalArr,
@@ -43,6 +58,7 @@ import Graph from '../../../CONSTANT/javascript-algorithms/Graph'
 import GraphEdge from '../../../CONSTANT/javascript-algorithms/GraphEdge'
 import GraphVertex from '../../../CONSTANT/javascript-algorithms/GraphVertex'
 import ComplexNumber from '../../../CONSTANT/javascript-algorithms/ComplexNumber';
+import Stack from '../../../CONSTANT/javascript-algorithms/Stack'
 
 describe('zAlgorithm', () => {
   test('should find word positions in given text', () => { expect(zAlgorithm('abcbcglx', 'abca')).toEqual([]) });
@@ -2249,5 +2265,834 @@ describe('graphBridges', () => {
 
     expect(bridges.length).toBe(1);
     expect(bridges[0].getKey()).toBe(edgeCD.getKey());
+  });
+});
+
+describe('hamiltonianCycle', () => {
+  it('should find hamiltonian paths in graph', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+    const vertexD = new GraphVertex('D');
+    const vertexE = new GraphVertex('E');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+    const edgeAE = new GraphEdge(vertexA, vertexE);
+    const edgeAC = new GraphEdge(vertexA, vertexC);
+    const edgeBE = new GraphEdge(vertexB, vertexE);
+    const edgeBC = new GraphEdge(vertexB, vertexC);
+    const edgeBD = new GraphEdge(vertexB, vertexD);
+    const edgeCD = new GraphEdge(vertexC, vertexD);
+    const edgeDE = new GraphEdge(vertexD, vertexE);
+
+    const graph = new Graph();
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeAE)
+      .addEdge(edgeAC)
+      .addEdge(edgeBE)
+      .addEdge(edgeBC)
+      .addEdge(edgeBD)
+      .addEdge(edgeCD)
+      .addEdge(edgeDE);
+
+    const hamiltonianCycleSet = hamiltonianCycle(graph);
+
+    expect(hamiltonianCycleSet.length).toBe(8);
+
+    expect(hamiltonianCycleSet[0][0].getKey()).toBe(vertexA.getKey());
+    expect(hamiltonianCycleSet[0][1].getKey()).toBe(vertexB.getKey());
+    expect(hamiltonianCycleSet[0][2].getKey()).toBe(vertexE.getKey());
+    expect(hamiltonianCycleSet[0][3].getKey()).toBe(vertexD.getKey());
+    expect(hamiltonianCycleSet[0][4].getKey()).toBe(vertexC.getKey());
+
+    expect(hamiltonianCycleSet[1][0].getKey()).toBe(vertexA.getKey());
+    expect(hamiltonianCycleSet[1][1].getKey()).toBe(vertexB.getKey());
+    expect(hamiltonianCycleSet[1][2].getKey()).toBe(vertexC.getKey());
+    expect(hamiltonianCycleSet[1][3].getKey()).toBe(vertexD.getKey());
+    expect(hamiltonianCycleSet[1][4].getKey()).toBe(vertexE.getKey());
+
+    expect(hamiltonianCycleSet[2][0].getKey()).toBe(vertexA.getKey());
+    expect(hamiltonianCycleSet[2][1].getKey()).toBe(vertexE.getKey());
+    expect(hamiltonianCycleSet[2][2].getKey()).toBe(vertexB.getKey());
+    expect(hamiltonianCycleSet[2][3].getKey()).toBe(vertexD.getKey());
+    expect(hamiltonianCycleSet[2][4].getKey()).toBe(vertexC.getKey());
+
+    expect(hamiltonianCycleSet[3][0].getKey()).toBe(vertexA.getKey());
+    expect(hamiltonianCycleSet[3][1].getKey()).toBe(vertexE.getKey());
+    expect(hamiltonianCycleSet[3][2].getKey()).toBe(vertexD.getKey());
+    expect(hamiltonianCycleSet[3][3].getKey()).toBe(vertexB.getKey());
+    expect(hamiltonianCycleSet[3][4].getKey()).toBe(vertexC.getKey());
+  });
+
+  it('should return false for graph without Hamiltonian path', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+    const vertexD = new GraphVertex('D');
+    const vertexE = new GraphVertex('E');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+    const edgeAE = new GraphEdge(vertexA, vertexE);
+    const edgeBE = new GraphEdge(vertexB, vertexE);
+    const edgeBC = new GraphEdge(vertexB, vertexC);
+    const edgeBD = new GraphEdge(vertexB, vertexD);
+    const edgeCD = new GraphEdge(vertexC, vertexD);
+
+    const graph = new Graph();
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeAE)
+      .addEdge(edgeBE)
+      .addEdge(edgeBC)
+      .addEdge(edgeBD)
+      .addEdge(edgeCD);
+
+    const hamiltonianCycleSet = hamiltonianCycle(graph);
+
+    expect(hamiltonianCycleSet.length).toBe(0);
+  });
+});
+
+describe('hanoiTower', () => {
+  it('should solve tower of hanoi puzzle with 2 discs', () => {
+    const moveCallback = jest.fn();
+    const numberOfDiscs = 2;
+
+    const fromPole = new Stack();
+    const withPole = new Stack();
+    const toPole = new Stack();
+
+    hanoiTower({
+      numberOfDiscs,
+      moveCallback,
+      fromPole,
+      withPole,
+      toPole,
+    });
+
+    expect(moveCallback).toHaveBeenCalledTimes((2 ** numberOfDiscs) - 1);
+
+    expect(fromPole.toArray()).toEqual([]);
+    expect(toPole.toArray()).toEqual([1, 2]);
+
+    expect(moveCallback.mock.calls[0][0]).toBe(1);
+    expect(moveCallback.mock.calls[0][1]).toEqual([1, 2]);
+    expect(moveCallback.mock.calls[0][2]).toEqual([]);
+
+    expect(moveCallback.mock.calls[1][0]).toBe(2);
+    expect(moveCallback.mock.calls[1][1]).toEqual([2]);
+    expect(moveCallback.mock.calls[1][2]).toEqual([]);
+
+    expect(moveCallback.mock.calls[2][0]).toBe(1);
+    expect(moveCallback.mock.calls[2][1]).toEqual([1]);
+    expect(moveCallback.mock.calls[2][2]).toEqual([2]);
+  });
+
+  it('should solve tower of hanoi puzzle with 3 discs', () => {
+    const moveCallback = jest.fn();
+    const numberOfDiscs = 3;
+
+    hanoiTower({
+      numberOfDiscs,
+      moveCallback,
+    });
+
+    expect(moveCallback).toHaveBeenCalledTimes((2 ** numberOfDiscs) - 1);
+  });
+
+  it('should solve tower of hanoi puzzle with 6 discs', () => {
+    const moveCallback = jest.fn();
+    const numberOfDiscs = 6;
+
+    hanoiTower({
+      numberOfDiscs,
+      moveCallback,
+    });
+
+    expect(moveCallback).toHaveBeenCalledTimes((2 ** numberOfDiscs) - 1);
+  });
+});
+
+describe('HeapSort', () => {
+  // Complexity constants.
+  // These numbers don't take into account up/dow heapifying of the heap.
+  // Thus these numbers are higher in reality.
+  const SORTED_ARRAY_VISITING_COUNT = 40;
+  const NOT_SORTED_ARRAY_VISITING_COUNT = 40;
+  const REVERSE_SORTED_ARRAY_VISITING_COUNT = 40;
+  const EQUAL_ARRAY_VISITING_COUNT = 40;
+
+  it('should sort array', () => {
+    SortTester.testSort(HeapSort);
+  });
+
+  it('should sort array with custom comparator', () => {
+    SortTester.testSortWithCustomComparator(HeapSort);
+  });
+
+  it('should sort negative numbers', () => {
+    SortTester.testNegativeNumbersSort(HeapSort);
+  });
+
+  it('should visit EQUAL array element specified number of times', () => {
+    SortTester.testAlgorithmTimeComplexity(
+      HeapSort,
+      equalArr,
+      EQUAL_ARRAY_VISITING_COUNT,
+    );
+  });
+
+  it('should visit SORTED array element specified number of times', () => {
+    SortTester.testAlgorithmTimeComplexity(
+      HeapSort,
+      sortedArr,
+      SORTED_ARRAY_VISITING_COUNT,
+    );
+  });
+
+  it('should visit NOT SORTED array element specified number of times', () => {
+    SortTester.testAlgorithmTimeComplexity(
+      HeapSort,
+      notSortedArr,
+      NOT_SORTED_ARRAY_VISITING_COUNT,
+    );
+  });
+
+  it('should visit REVERSE SORTED array element specified number of times', () => {
+    SortTester.testAlgorithmTimeComplexity(
+      HeapSort,
+      reverseArr,
+      REVERSE_SORTED_ARRAY_VISITING_COUNT,
+    );
+  });
+});
+
+describe('hillCipher', () => {
+  it('should throw an exception when trying to decipher', () => {
+    expect(hillCipherDecrypt).toThrowError('This method is not implemented yet');
+  });
+
+  it('should throw an error when message or keyString contains none letter character', () => {
+    const invalidCharacterInMessage = () => {
+      hillCipherEncrypt('hell3', 'helloworld');
+    };
+    const invalidCharacterInKeyString = () => {
+      hillCipherEncrypt('hello', 'hel12world');
+    };
+    expect(invalidCharacterInMessage).toThrowError(
+      'The message and key string can only contain letters',
+    );
+    expect(invalidCharacterInKeyString).toThrowError(
+      'The message and key string can only contain letters',
+    );
+  });
+
+  it('should throw an error when the length of the keyString has a square root which is not integer', () => {
+    const invalidLengthOfKeyString = () => {
+      hillCipherEncrypt('ab', 'ab');
+    };
+    expect(invalidLengthOfKeyString).toThrowError(
+      'Invalid key string length. The square root of the key string must be an integer',
+    );
+  });
+
+  it('should throw an error when the length of the keyString does not equal to the power of length of the message', () => {
+    const invalidLengthOfKeyString = () => {
+      hillCipherEncrypt('ab', 'aaabbbccc');
+    };
+    expect(invalidLengthOfKeyString).toThrowError(
+      'Invalid key string length. The key length must be a square of message length',
+    );
+  });
+
+  it('should encrypt passed message using Hill Cipher', () => {
+    expect(hillCipherEncrypt('ACT', 'GYBNQKURP')).toBe('POH');
+    expect(hillCipherEncrypt('CAT', 'GYBNQKURP')).toBe('FIN');
+    expect(hillCipherEncrypt('GFG', 'HILLMAGIC')).toBe('SWK');
+  });
+});
+
+describe('jumpSearch', () => {
+  it('should search for an element in sorted array', () => {
+    expect(jumpSearch([], 1)).toBe(-1);
+    expect(jumpSearch([1], 2)).toBe(-1);
+    expect(jumpSearch([1], 1)).toBe(0);
+    expect(jumpSearch([1, 2], 1)).toBe(0);
+    expect(jumpSearch([1, 2], 1)).toBe(0);
+    expect(jumpSearch([1, 1, 1], 1)).toBe(0);
+    expect(jumpSearch([1, 2, 5, 10, 20, 21, 24, 30, 48], 2)).toBe(1);
+    expect(jumpSearch([1, 2, 5, 10, 20, 21, 24, 30, 48], 0)).toBe(-1);
+    expect(jumpSearch([1, 2, 5, 10, 20, 21, 24, 30, 48], 0)).toBe(-1);
+    expect(jumpSearch([1, 2, 5, 10, 20, 21, 24, 30, 48], 7)).toBe(-1);
+    expect(jumpSearch([1, 2, 5, 10, 20, 21, 24, 30, 48], 5)).toBe(2);
+    expect(jumpSearch([1, 2, 5, 10, 20, 21, 24, 30, 48], 20)).toBe(4);
+    expect(jumpSearch([1, 2, 5, 10, 20, 21, 24, 30, 48], 30)).toBe(7);
+    expect(jumpSearch([1, 2, 5, 10, 20, 21, 24, 30, 48], 48)).toBe(8);
+  });
+
+  it('should search object in sorted array', () => {
+    const sortedArrayOfObjects = [
+      { key: 1, value: 'value1' },
+      { key: 2, value: 'value2' },
+      { key: 3, value: 'value3' },
+    ];
+
+    const comparator = (a, b) => {
+      if (a.key === b.key) return 0;
+      return a.key < b.key ? -1 : 1;
+    };
+
+    expect(jumpSearch([], { key: 1 }, comparator)).toBe(-1);
+    expect(jumpSearch(sortedArrayOfObjects, { key: 4 }, comparator)).toBe(-1);
+    expect(jumpSearch(sortedArrayOfObjects, { key: 1 }, comparator)).toBe(0);
+    expect(jumpSearch(sortedArrayOfObjects, { key: 2 }, comparator)).toBe(1);
+    expect(jumpSearch(sortedArrayOfObjects, { key: 3 }, comparator)).toBe(2);
+  });
+});
+
+describe('kMeans', () => {
+  it('should throw an error on invalid data', () => {
+    expect(() => {
+      KMeans();
+    }).toThrowError('The data is empty');
+  });
+
+  it('should throw an error on inconsistent data', () => {
+    expect(() => {
+      KMeans([[1, 2], [1]], 2);
+    }).toThrowError('Matrices have different shapes');
+  });
+
+  it('should find the nearest neighbour', () => {
+    const data = [[1, 1], [6, 2], [3, 3], [4, 5], [9, 2], [2, 4], [8, 7]];
+    const k = 2;
+    const expectedClusters = [0, 1, 0, 1, 1, 0, 1];
+    expect(KMeans(data, k)).toEqual(expectedClusters);
+
+    expect(KMeans([[0, 0], [0, 1], [10, 10]], 2)).toEqual(
+      [0, 0, 1],
+    );
+  });
+
+  it('should find the clusters with equal distances', () => {
+    const dataSet = [[0, 0], [1, 1], [2, 2]];
+    const k = 3;
+    const expectedCluster = [0, 1, 2];
+    expect(KMeans(dataSet, k)).toEqual(expectedCluster);
+  });
+
+  it('should find the nearest neighbour in 3D space', () => {
+    const dataSet = [[0, 0, 0], [0, 1, 0], [2, 0, 2]];
+    const k = 2;
+    const expectedCluster = [1, 1, 0];
+    expect(KMeans(dataSet, k)).toEqual(expectedCluster);
+  });
+});
+
+describe('kruskal', () => {
+  it('should fire an error for directed graph', () => {
+    function applyPrimToDirectedGraph() {
+      const graph = new Graph(true);
+
+      kruskal(graph);
+    }
+
+    expect(applyPrimToDirectedGraph).toThrowError();
+  });
+
+  it('should find minimum spanning tree', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+    const vertexD = new GraphVertex('D');
+    const vertexE = new GraphVertex('E');
+    const vertexF = new GraphVertex('F');
+    const vertexG = new GraphVertex('G');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB, 2);
+    const edgeAD = new GraphEdge(vertexA, vertexD, 3);
+    const edgeAC = new GraphEdge(vertexA, vertexC, 3);
+    const edgeBC = new GraphEdge(vertexB, vertexC, 4);
+    const edgeBE = new GraphEdge(vertexB, vertexE, 3);
+    const edgeDF = new GraphEdge(vertexD, vertexF, 7);
+    const edgeEC = new GraphEdge(vertexE, vertexC, 1);
+    const edgeEF = new GraphEdge(vertexE, vertexF, 8);
+    const edgeFG = new GraphEdge(vertexF, vertexG, 9);
+    const edgeFC = new GraphEdge(vertexF, vertexC, 6);
+
+    const graph = new Graph();
+
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeAD)
+      .addEdge(edgeAC)
+      .addEdge(edgeBC)
+      .addEdge(edgeBE)
+      .addEdge(edgeDF)
+      .addEdge(edgeEC)
+      .addEdge(edgeEF)
+      .addEdge(edgeFC)
+      .addEdge(edgeFG);
+
+    expect(graph.getWeight()).toEqual(46);
+
+    const minimumSpanningTree = kruskal(graph);
+
+    expect(minimumSpanningTree.getWeight()).toBe(24);
+    expect(minimumSpanningTree.getAllVertices().length).toBe(graph.getAllVertices().length);
+    expect(minimumSpanningTree.getAllEdges().length).toBe(graph.getAllVertices().length - 1);
+    expect(minimumSpanningTree.toString()).toBe('E,C,A,B,D,F,G');
+  });
+
+  it('should find minimum spanning tree for simple graph', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+    const vertexD = new GraphVertex('D');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB, 1);
+    const edgeAD = new GraphEdge(vertexA, vertexD, 3);
+    const edgeBC = new GraphEdge(vertexB, vertexC, 1);
+    const edgeBD = new GraphEdge(vertexB, vertexD, 3);
+    const edgeCD = new GraphEdge(vertexC, vertexD, 1);
+
+    const graph = new Graph();
+
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeAD)
+      .addEdge(edgeBC)
+      .addEdge(edgeBD)
+      .addEdge(edgeCD);
+
+    expect(graph.getWeight()).toEqual(9);
+
+    const minimumSpanningTree = kruskal(graph);
+
+    expect(minimumSpanningTree.getWeight()).toBe(3);
+    expect(minimumSpanningTree.getAllVertices().length).toBe(graph.getAllVertices().length);
+    expect(minimumSpanningTree.getAllEdges().length).toBe(graph.getAllVertices().length - 1);
+    expect(minimumSpanningTree.toString()).toBe('A,B,C,D');
+  });
+});
+
+describe('MergeSort', () => {
+  // Complexity constants.
+  const SORTED_ARRAY_VISITING_COUNT = 79;
+  const NOT_SORTED_ARRAY_VISITING_COUNT = 102;
+  const REVERSE_SORTED_ARRAY_VISITING_COUNT = 87;
+  const EQUAL_ARRAY_VISITING_COUNT = 79;
+
+  it('should sort array', () => {
+    SortTester.testSort(MergeSort);
+  });
+
+  it('should sort array with custom comparator', () => {
+    SortTester.testSortWithCustomComparator(MergeSort);
+  });
+
+  it('should do stable sorting', () => {
+    SortTester.testSortStability(MergeSort);
+  });
+
+  it('should sort negative numbers', () => {
+    SortTester.testNegativeNumbersSort(MergeSort);
+  });
+
+  it('should visit EQUAL array element specified number of times', () => {
+    SortTester.testAlgorithmTimeComplexity(
+      MergeSort,
+      equalArr,
+      EQUAL_ARRAY_VISITING_COUNT,
+    );
+  });
+
+  it('should visit SORTED array element specified number of times', () => {
+    SortTester.testAlgorithmTimeComplexity(
+      MergeSort,
+      sortedArr,
+      SORTED_ARRAY_VISITING_COUNT,
+    );
+  });
+
+  it('should visit NOT SORTED array element specified number of times', () => {
+    SortTester.testAlgorithmTimeComplexity(
+      MergeSort,
+      notSortedArr,
+      NOT_SORTED_ARRAY_VISITING_COUNT,
+    );
+  });
+
+  it('should visit REVERSE SORTED array element specified number of times', () => {
+    SortTester.testAlgorithmTimeComplexity(
+      MergeSort,
+      reverseArr,
+      REVERSE_SORTED_ARRAY_VISITING_COUNT,
+    );
+  });
+});
+
+describe('nQueens', () => {
+  it('should not hae solution for 3 queens', () => {
+    const solutions = nQueens(3);
+    expect(solutions.length).toBe(0);
+  });
+
+  it('should solve n-queens problem for 4 queens', () => {
+    const solutions = nQueens(4);
+    expect(solutions.length).toBe(2);
+
+    // First solution.
+    expect(solutions[0][0].toString()).toBe('0,1');
+    expect(solutions[0][1].toString()).toBe('1,3');
+    expect(solutions[0][2].toString()).toBe('2,0');
+    expect(solutions[0][3].toString()).toBe('3,2');
+
+    // Second solution (mirrored).
+    expect(solutions[1][0].toString()).toBe('0,2');
+    expect(solutions[1][1].toString()).toBe('1,0');
+    expect(solutions[1][2].toString()).toBe('2,3');
+    expect(solutions[1][3].toString()).toBe('3,1');
+  });
+
+  it('should solve n-queens problem for 6 queens', () => {
+    const solutions = nQueens(6);
+    expect(solutions.length).toBe(4);
+
+    // First solution.
+    expect(solutions[0][0].toString()).toBe('0,1');
+    expect(solutions[0][1].toString()).toBe('1,3');
+    expect(solutions[0][2].toString()).toBe('2,5');
+    expect(solutions[0][3].toString()).toBe('3,0');
+    expect(solutions[0][4].toString()).toBe('4,2');
+    expect(solutions[0][5].toString()).toBe('5,4');
+  });
+});
+
+describe('prim', () => {
+  it('should fire an error for directed graph', () => {
+    function applyPrimToDirectedGraph() {
+      const graph = new Graph(true);
+
+      prim(graph);
+    }
+
+    expect(applyPrimToDirectedGraph).toThrowError();
+  });
+
+  it('should find minimum spanning tree', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+    const vertexD = new GraphVertex('D');
+    const vertexE = new GraphVertex('E');
+    const vertexF = new GraphVertex('F');
+    const vertexG = new GraphVertex('G');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB, 2);
+    const edgeAD = new GraphEdge(vertexA, vertexD, 3);
+    const edgeAC = new GraphEdge(vertexA, vertexC, 3);
+    const edgeBC = new GraphEdge(vertexB, vertexC, 4);
+    const edgeBE = new GraphEdge(vertexB, vertexE, 3);
+    const edgeDF = new GraphEdge(vertexD, vertexF, 7);
+    const edgeEC = new GraphEdge(vertexE, vertexC, 1);
+    const edgeEF = new GraphEdge(vertexE, vertexF, 8);
+    const edgeFG = new GraphEdge(vertexF, vertexG, 9);
+    const edgeFC = new GraphEdge(vertexF, vertexC, 6);
+
+    const graph = new Graph();
+
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeAD)
+      .addEdge(edgeAC)
+      .addEdge(edgeBC)
+      .addEdge(edgeBE)
+      .addEdge(edgeDF)
+      .addEdge(edgeEC)
+      .addEdge(edgeEF)
+      .addEdge(edgeFC)
+      .addEdge(edgeFG);
+
+    expect(graph.getWeight()).toEqual(46);
+
+    const minimumSpanningTree = prim(graph);
+
+    expect(minimumSpanningTree.getWeight()).toBe(24);
+    expect(minimumSpanningTree.getAllVertices().length).toBe(graph.getAllVertices().length);
+    expect(minimumSpanningTree.getAllEdges().length).toBe(graph.getAllVertices().length - 1);
+    expect(minimumSpanningTree.toString()).toBe('A,B,C,E,D,F,G');
+  });
+
+  it('should find minimum spanning tree for simple graph', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+    const vertexD = new GraphVertex('D');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB, 1);
+    const edgeAD = new GraphEdge(vertexA, vertexD, 3);
+    const edgeBC = new GraphEdge(vertexB, vertexC, 1);
+    const edgeBD = new GraphEdge(vertexB, vertexD, 3);
+    const edgeCD = new GraphEdge(vertexC, vertexD, 1);
+
+    const graph = new Graph();
+
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeAD)
+      .addEdge(edgeBC)
+      .addEdge(edgeBD)
+      .addEdge(edgeCD);
+
+    expect(graph.getWeight()).toEqual(9);
+
+    const minimumSpanningTree = prim(graph);
+
+    expect(minimumSpanningTree.getWeight()).toBe(3);
+    expect(minimumSpanningTree.getAllVertices().length).toBe(graph.getAllVertices().length);
+    expect(minimumSpanningTree.getAllEdges().length).toBe(graph.getAllVertices().length - 1);
+    expect(minimumSpanningTree.toString()).toBe('A,B,C,D');
+  });
+});
+
+
+describe('QuickSort', () => {
+  // Complexity constants.
+  const SORTED_ARRAY_VISITING_COUNT = 190;
+  const NOT_SORTED_ARRAY_VISITING_COUNT = 62;
+  const REVERSE_SORTED_ARRAY_VISITING_COUNT = 190;
+  const EQUAL_ARRAY_VISITING_COUNT = 19;
+
+  it('should sort array', () => {
+    SortTester.testSort(QuickSort);
+  });
+
+  it('should sort array with custom comparator', () => {
+    SortTester.testSortWithCustomComparator(QuickSort);
+  });
+
+  it('should do stable sorting', () => {
+    SortTester.testSortStability(QuickSort);
+  });
+
+  it('should sort negative numbers', () => {
+    SortTester.testNegativeNumbersSort(QuickSort);
+  });
+
+  it('should visit EQUAL array element specified number of times', () => {
+    SortTester.testAlgorithmTimeComplexity(
+      QuickSort,
+      equalArr,
+      EQUAL_ARRAY_VISITING_COUNT,
+    );
+  });
+
+  it('should visit SORTED array element specified number of times', () => {
+    SortTester.testAlgorithmTimeComplexity(
+      QuickSort,
+      sortedArr,
+      SORTED_ARRAY_VISITING_COUNT,
+    );
+  });
+
+  it('should visit NOT SORTED array element specified number of times', () => {
+    SortTester.testAlgorithmTimeComplexity(
+      QuickSort,
+      notSortedArr,
+      NOT_SORTED_ARRAY_VISITING_COUNT,
+    );
+  });
+
+  it('should visit REVERSE SORTED array element specified number of times', () => {
+    SortTester.testAlgorithmTimeComplexity(
+      QuickSort,
+      reverseArr,
+      REVERSE_SORTED_ARRAY_VISITING_COUNT,
+    );
+  });
+});
+
+describe('RadixSort', () => {
+  // Complexity constants.
+  const ARRAY_OF_STRINGS_VISIT_COUNT = 24;
+  const ARRAY_OF_INTEGERS_VISIT_COUNT = 77;
+  it('should sort array', () => {
+    SortTester.testSort(RadixSort);
+  });
+
+  it('should visit array of strings n (number of strings) x m (length of longest element) times', () => {
+    SortTester.testAlgorithmTimeComplexity(
+      RadixSort,
+      ['zzz', 'bb', 'a', 'rr', 'rrb', 'rrba'],
+      ARRAY_OF_STRINGS_VISIT_COUNT,
+    );
+  });
+
+  it('should visit array of integers n (number of elements) x m (length of longest integer) times', () => {
+    SortTester.testAlgorithmTimeComplexity(
+      RadixSort,
+      [3, 1, 75, 32, 884, 523, 4343456, 232, 123, 656, 343],
+      ARRAY_OF_INTEGERS_VISIT_COUNT,
+    );
+  });
+});
+
+describe('stronglyConnectedComponents', () => {
+  it('should detect strongly connected components in simple graph', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+    const vertexD = new GraphVertex('D');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+    const edgeBC = new GraphEdge(vertexB, vertexC);
+    const edgeCA = new GraphEdge(vertexC, vertexA);
+    const edgeCD = new GraphEdge(vertexC, vertexD);
+
+    const graph = new Graph(true);
+
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeBC)
+      .addEdge(edgeCA)
+      .addEdge(edgeCD);
+
+    const components = stronglyConnectedComponents(graph);
+
+    expect(components).toBeDefined();
+    expect(components.length).toBe(2);
+
+    expect(components[0][0].getKey()).toBe(vertexA.getKey());
+    expect(components[0][1].getKey()).toBe(vertexC.getKey());
+    expect(components[0][2].getKey()).toBe(vertexB.getKey());
+
+    expect(components[1][0].getKey()).toBe(vertexD.getKey());
+  });
+
+  it('should detect strongly connected components in graph', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+    const vertexD = new GraphVertex('D');
+    const vertexE = new GraphVertex('E');
+    const vertexF = new GraphVertex('F');
+    const vertexG = new GraphVertex('G');
+    const vertexH = new GraphVertex('H');
+    const vertexI = new GraphVertex('I');
+    const vertexJ = new GraphVertex('J');
+    const vertexK = new GraphVertex('K');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+    const edgeBC = new GraphEdge(vertexB, vertexC);
+    const edgeCA = new GraphEdge(vertexC, vertexA);
+    const edgeBD = new GraphEdge(vertexB, vertexD);
+    const edgeDE = new GraphEdge(vertexD, vertexE);
+    const edgeEF = new GraphEdge(vertexE, vertexF);
+    const edgeFD = new GraphEdge(vertexF, vertexD);
+    const edgeGF = new GraphEdge(vertexG, vertexF);
+    const edgeGH = new GraphEdge(vertexG, vertexH);
+    const edgeHI = new GraphEdge(vertexH, vertexI);
+    const edgeIJ = new GraphEdge(vertexI, vertexJ);
+    const edgeJG = new GraphEdge(vertexJ, vertexG);
+    const edgeJK = new GraphEdge(vertexJ, vertexK);
+
+    const graph = new Graph(true);
+
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeBC)
+      .addEdge(edgeCA)
+      .addEdge(edgeBD)
+      .addEdge(edgeDE)
+      .addEdge(edgeEF)
+      .addEdge(edgeFD)
+      .addEdge(edgeGF)
+      .addEdge(edgeGH)
+      .addEdge(edgeHI)
+      .addEdge(edgeIJ)
+      .addEdge(edgeJG)
+      .addEdge(edgeJK);
+
+    const components = stronglyConnectedComponents(graph);
+
+    expect(components).toBeDefined();
+    expect(components.length).toBe(4);
+
+    expect(components[0][0].getKey()).toBe(vertexG.getKey());
+    expect(components[0][1].getKey()).toBe(vertexJ.getKey());
+    expect(components[0][2].getKey()).toBe(vertexI.getKey());
+    expect(components[0][3].getKey()).toBe(vertexH.getKey());
+
+    expect(components[1][0].getKey()).toBe(vertexK.getKey());
+
+    expect(components[2][0].getKey()).toBe(vertexA.getKey());
+    expect(components[2][1].getKey()).toBe(vertexC.getKey());
+    expect(components[2][2].getKey()).toBe(vertexB.getKey());
+
+    expect(components[3][0].getKey()).toBe(vertexD.getKey());
+    expect(components[3][1].getKey()).toBe(vertexF.getKey());
+    expect(components[3][2].getKey()).toBe(vertexE.getKey());
+  });
+});
+
+describe('topologicalSort', () => {
+  it('should do topological sorting on graph', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+    const vertexD = new GraphVertex('D');
+    const vertexE = new GraphVertex('E');
+    const vertexF = new GraphVertex('F');
+    const vertexG = new GraphVertex('G');
+    const vertexH = new GraphVertex('H');
+
+    const edgeAC = new GraphEdge(vertexA, vertexC);
+    const edgeBC = new GraphEdge(vertexB, vertexC);
+    const edgeBD = new GraphEdge(vertexB, vertexD);
+    const edgeCE = new GraphEdge(vertexC, vertexE);
+    const edgeDF = new GraphEdge(vertexD, vertexF);
+    const edgeEF = new GraphEdge(vertexE, vertexF);
+    const edgeEH = new GraphEdge(vertexE, vertexH);
+    const edgeFG = new GraphEdge(vertexF, vertexG);
+
+    const graph = new Graph(true);
+
+    graph
+      .addEdge(edgeAC)
+      .addEdge(edgeBC)
+      .addEdge(edgeBD)
+      .addEdge(edgeCE)
+      .addEdge(edgeDF)
+      .addEdge(edgeEF)
+      .addEdge(edgeEH)
+      .addEdge(edgeFG);
+
+    const sortedVertices = topologicalSort(graph);
+
+    expect(sortedVertices).toBeDefined();
+    expect(sortedVertices.length).toBe(graph.getAllVertices().length);
+    expect(sortedVertices).toEqual([
+      vertexB,
+      vertexD,
+      vertexA,
+      vertexC,
+      vertexE,
+      vertexH,
+      vertexF,
+      vertexG,
+    ]);
+  });
+});
+
+describe('uniquePaths', () => {
+  it('should find the number of unique paths on board', () => {
+    expect(uniquePaths(3, 2)).toBe(3);
+    expect(uniquePaths(7, 3)).toBe(28);
+    expect(uniquePaths(3, 7)).toBe(28);
+    expect(uniquePaths(10, 10)).toBe(48620);
+    expect(uniquePaths(100, 1)).toBe(1);
+    expect(uniquePaths(1, 100)).toBe(1);
   });
 });
