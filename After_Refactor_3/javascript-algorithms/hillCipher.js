@@ -10,7 +10,7 @@
 // Here is the refactored code:
 
 // ```javascript
-import * as matrixUtils from '../../math/matrix/Matrix';
+import * as mtrx from '../../CONSTANT/javascript-algorithms/Matrix';
 
 const ALPHABET_START_CODE = 'A'.codePointAt(0);
 const ENGLISH_ALPHABET_SIZE = 26;

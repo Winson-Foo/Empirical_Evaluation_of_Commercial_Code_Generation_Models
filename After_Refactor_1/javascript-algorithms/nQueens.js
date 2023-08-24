@@ -9,7 +9,7 @@
 // Here's the refactored code:
 
 // ```javascript
-import QueenPosition from './QueenPosition';
+import QueenPosition from '../../CONSTANT/javascript-algorithms/QueenPosition';
 
 /**
  * @param {QueenPosition[]} queensPositions

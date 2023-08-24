@@ -1,8 +1,8 @@
 // To improve the maintainability of the codebase, we can follow the SOLID principles and apply some refactoring techniques. Here is the refactored code:
 
 // ```javascript
-import Graph from '../../../data-structures/graph/Graph';
-import PriorityQueue from '../../../data-structures/priority-queue/PriorityQueue';
+import Graph from '../../CONSTANT/javascript-algorithms/Graph';
+import PriorityQueue from '../../CONSTANT/javascript-algorithms/PriorityQueue';
 
 export default function prim(graph) {
   validateInputGraph(graph);

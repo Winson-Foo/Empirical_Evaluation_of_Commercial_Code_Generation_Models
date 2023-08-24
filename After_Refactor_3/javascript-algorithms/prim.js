@@ -11,8 +11,8 @@
 // Here is the refactored code with the suggested improvements:
 
 // ```javascript
-import Graph from '../../../data-structures/graph/Graph';
-import PriorityQueue from '../../../data-structures/priority-queue/PriorityQueue';
+import Graph from '../../CONSTANT/javascript-algorithms/Graph';
+import PriorityQueue from '../../CONSTANT/javascript-algorithms/PriorityQueue';
 
 export class PrimAlgorithm {
   /**

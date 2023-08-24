@@ -7,7 +7,7 @@
 
 // Here is the refactored code:
 
-import QueenPosition from './QueenPosition';
+import QueenPosition from '../../CONSTANT/javascript-algorithms/QueenPosition';
 
 function isSafe(queensPositions, rowIndex, columnIndex) {
   const newQueenPosition = new QueenPosition(rowIndex, columnIndex);

@@ -1,7 +1,7 @@
 // To improve the maintainability of the codebase, you can consider the following refactored code:
 
 // ```javascript
-import euclideanDistance from '../../math/euclidean-distance/euclideanDistance';
+import euclideanDistance from '../../CONSTANT/javascript-algorithms/euclideanDistance';
 
 /**
  * Classifies the point in space based on k-Means algorithm.

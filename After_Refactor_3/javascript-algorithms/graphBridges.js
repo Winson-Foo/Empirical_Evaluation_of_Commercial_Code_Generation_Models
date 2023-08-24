@@ -3,6 +3,8 @@
 // 1. Separate the `dfsCallbacks` object from the main code. Move it to its own function called `createDfsCallbacks()`. This will make the code more readable and modular.
 
 // ```javascript
+import depthFirstSearch from '../../Before_Refactor/javascript-algorithms/depthFirstSearch';
+
 function createDfsCallbacks(visitedSet, bridges) {
   return {
     enterVertex: ({ currentVertex }) => {

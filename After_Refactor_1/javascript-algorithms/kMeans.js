@@ -7,8 +7,8 @@
 // Here's the refactored code:
 
 // ```javascript
-import * as mtrx from '../../math/matrix/Matrix';
-import euclideanDistance from '../../math/euclidean-distance/euclideanDistance';
+import * as mtrx from '../../CONSTANT/javascript-algorithms/Matrix';
+import euclideanDistance from '../../CONSTANT/javascript-algorithms/euclideanDistance';
 
 /**
  * Classifies the point in space based on k-Means algorithm.

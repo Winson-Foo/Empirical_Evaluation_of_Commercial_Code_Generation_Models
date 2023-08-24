@@ -8,7 +8,7 @@
 // Here is the refactored code:
 
 // ```javascript
-import graphBridges from "../bridges/graphBridges";
+import graphBridges from "../../CONSTANT/javascript-algorithms/graphBridges";
 
 /**
  * Finds Eulerian Path using Fleury's algorithm (visit all graph edges exactly once).

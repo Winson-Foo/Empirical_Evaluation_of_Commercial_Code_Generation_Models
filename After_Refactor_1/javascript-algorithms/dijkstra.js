@@ -5,7 +5,7 @@
 // Here is the refactored code:
 
 // ```
-import PriorityQueue from '../../../data-structures/priority-queue/PriorityQueue';
+import PriorityQueue from '../../CONSTANT/javascript-algorithms/PriorityQueue';
 
 class DijkstraAlgorithm {
   /**

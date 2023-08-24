@@ -9,7 +9,7 @@
 // Here's the refactored code:
 
 // ```javascript
-import pascalTriangle from '../../math/pascal-triangle/pascalTriangle';
+import pascalTriangle from '../../CONSTANT/javascript-algorithms/pascalTriangle';
 
 /**
  * Calculates the number of unique paths in a grid.

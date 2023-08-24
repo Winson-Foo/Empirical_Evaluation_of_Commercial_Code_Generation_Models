@@ -1,6 +1,6 @@
 // To improve the maintainability of the codebase, I would suggest the following refactored code:
 
-import graphBridges from '../bridges/graphBridges';
+import graphBridges from "../../CONSTANT/javascript-algorithms/graphBridges";
 
 /**
  * Fleury's algorithm of finding Eulerian Path (visit all graph edges exactly once).

@@ -8,7 +8,7 @@
 // Here is the refactored code:
 
 // ```javascript
-import depthFirstSearch from '../depth-first-search/depthFirstSearch';
+import depthFirstSearch from '../../Before_Refactor/javascript-algorithms/depthFirstSearch';
 
 /**
  * Detect cycle in a directed graph using Depth First Search.

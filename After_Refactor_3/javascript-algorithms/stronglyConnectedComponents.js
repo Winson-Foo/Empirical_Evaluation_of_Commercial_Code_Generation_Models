@@ -18,8 +18,8 @@
 // Here is the refactored code:
 
 // ```javascript
-import Stack from '../../../data-structures/stack/Stack';
-import depthFirstTraversal from '../depth-first-search/depthFirstSearch';
+import Stack from '../../CONSTANT/javascript-algorithms/Stack';
+import depthFirstSearch from '../../Before_Refactor/javascript-algorithms/depthFirstSearch';
 
 function enterVertex({ currentVertex, visitedVertices, notVisitedVertices }) {
   visitedVertices[currentVertex.getKey()] = currentVertex;

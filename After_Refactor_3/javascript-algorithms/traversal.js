@@ -15,7 +15,7 @@
 // Here's the refactored code:
 
 // ```javascript
-import LinkedList from './LinkedList';
+import LinkedList from '../../CONSTANT/javascript-algorithms/LinkedList';
 
 /**
  * @param {LinkedList} list

@@ -10,9 +10,9 @@
 
 // Here is the refactored code with the above improvements:
 
-import Graph from '../../../data-structures/graph/Graph';
-import QuickSort from '../../sorting/quick-sort/QuickSort';
-import DisjointSet from '../../../data-structures/disjoint-set/DisjointSet';
+import Graph from '../../CONSTANT/javascript-algorithms/Graph';
+import QuickSort from '../../Before_Refactor/javascript-algorithms/QuickSort';
+import DisjointSet from '../../CONSTANT/javascript-algorithms/DisjointSet';
 
 /**
  * Calculates the minimum spanning tree of an undirected graph using Kruskal's algorithm.

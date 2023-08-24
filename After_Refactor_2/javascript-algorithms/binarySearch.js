@@ -9,7 +9,7 @@
 // Here's the refactored code:
 
 // ```javascript
-import Comparator from '../../../utils/comparator/Comparator';
+import Comparator from '../../CONSTANT/javascript-algorithms/Comparator';
 
 /**
  * Binary search implementation.

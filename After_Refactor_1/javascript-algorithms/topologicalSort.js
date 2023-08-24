@@ -1,7 +1,7 @@
 // To improve the maintainability of the codebase, you can follow the SOLID principles and apply some code refactoring techniques. Here's a refactored version of the code:
 
-import Stack from '../../../data-structures/stack/Stack';
-import depthFirstSearch from '../depth-first-search/depthFirstSearch';
+import Stack from '../../CONSTANT/javascript-algorithms/Stack';
+import depthFirstSearch from '../../Before_Refactor/javascript-algorithms/depthFirstSearch';
 
 export default function topologicalSort(graph) {
   const unvisitedSet = new Set(graph.getAllVertices());

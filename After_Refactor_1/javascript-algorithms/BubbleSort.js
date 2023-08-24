@@ -9,7 +9,7 @@
 // Here's the refactored code:
 
 // ```javascript
-import Sort from '../Sort';
+import Sort from '../../CONSTANT/javascript-algorithms/Sort';
 
 export default class BubbleSort extends Sort {
   sort(originalArray) {

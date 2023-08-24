@@ -45,6 +45,7 @@ import QuickSort from '../../../Before_Refactor/javascript-algorithms/QuickSort'
 import RadixSort from '../../../Before_Refactor/javascript-algorithms/RadixSort';
 import stronglyConnectedComponents from '../../../Before_Refactor/javascript-algorithms/stronglyConnectedComponents';
 import topologicalSort from '../../../Before_Refactor/javascript-algorithms/topologicalSort';
+import traversal from '../../../Before_Refactor/javascript-algorithms/traversal';
 import uniquePaths from '../../../Before_Refactor/javascript-algorithms/uniquePaths';
 
 import {
@@ -59,6 +60,7 @@ import GraphEdge from '../../../CONSTANT/javascript-algorithms/GraphEdge'
 import GraphVertex from '../../../CONSTANT/javascript-algorithms/GraphVertex'
 import ComplexNumber from '../../../CONSTANT/javascript-algorithms/ComplexNumber';
 import Stack from '../../../CONSTANT/javascript-algorithms/Stack'
+import LinkedList from '../../../CONSTANT/javascript-algorithms/LinkedList';
 
 describe('zAlgorithm', () => {
   test('should find word positions in given text', () => { expect(zAlgorithm('abcbcglx', 'abca')).toEqual([]) });
@@ -3034,6 +3036,26 @@ describe('stronglyConnectedComponents', () => {
     expect(components[3][0].getKey()).toBe(vertexD.getKey());
     expect(components[3][1].getKey()).toBe(vertexF.getKey());
     expect(components[3][2].getKey()).toBe(vertexE.getKey());
+  });
+});
+
+describe('traversal', () => {
+  it('should traverse linked list', () => {
+    const linkedList = new LinkedList();
+
+    linkedList
+      .append(1)
+      .append(2)
+      .append(3);
+
+    const traversedNodeValues = [];
+    const traversalCallback = (nodeValue) => {
+      traversedNodeValues.push(nodeValue);
+    };
+
+    traversal(linkedList, traversalCallback);
+
+    expect(traversedNodeValues).toEqual([1, 2, 3]);
   });
 });
 

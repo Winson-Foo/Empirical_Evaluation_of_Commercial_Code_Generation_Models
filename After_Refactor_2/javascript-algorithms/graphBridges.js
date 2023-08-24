@@ -22,7 +22,7 @@ export default class VisitMetadata {
 
 
 // File: findBridges.js
-import depthFirstSearch from '../depth-first-search/depthFirstSearch';
+import depthFirstSearch from '../../Before_Refactor/javascript-algorithms/depthFirstSearch';
 import VisitMetadata from './VisitMetadata';
 
 /**
