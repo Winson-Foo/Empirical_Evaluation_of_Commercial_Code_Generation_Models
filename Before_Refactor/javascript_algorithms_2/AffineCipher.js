@@ -3,7 +3,7 @@
  * @see - [wiki](https://en.wikipedia.org/wiki/Affine_cipher)
  */
 
-import { CoPrimeCheck } from '../Maths/CoPrimeCheck'
+import { CoPrimeCheck } from '../../CONSTANT/javascript_algorithm_2/CoPrimeCheck'
 // Default key for Affine Cipher
 const key = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 

@@ -1,4 +1,4 @@
-import QueenPosition from '../../CONSTANT/javascript-algorithms/QueenPosition';
+import QueenPosition from '../../CONSTANT/javascript_algorithms/QueenPosition';
 
 /**
  * @param {QueenPosition[]} queensPositions

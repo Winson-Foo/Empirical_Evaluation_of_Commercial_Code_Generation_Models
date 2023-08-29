@@ -1,5 +1,5 @@
-import * as mtrx from '../../CONSTANT/javascript-algorithms/Matrix';
-import euclideanDistance from '../../CONSTANT/javascript-algorithms/euclideanDistance';
+import * as mtrx from '../../CONSTANT/javascript_algorithms/Matrix';
+import euclideanDistance from '../../CONSTANT/javascript_algorithms/euclideanDistance';
 
 /**
  * Classifies the point in space based on k-Means algorithm.

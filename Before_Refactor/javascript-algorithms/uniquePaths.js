@@ -1,4 +1,4 @@
-import pascalTriangle from '../../CONSTANT/javascript-algorithms/pascalTriangle';
+import pascalTriangle from '../../CONSTANT/javascript_algorithms/pascalTriangle';
 
 /**
  * @param {number} width

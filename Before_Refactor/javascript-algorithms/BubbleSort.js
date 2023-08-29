@@ -1,4 +1,4 @@
-import Sort from '../../CONSTANT/javascript-algorithms/Sort';
+import Sort from '../../CONSTANT/javascript_algorithms/Sort';
 
 export default class BubbleSort extends Sort {
   sort(originalArray) {
