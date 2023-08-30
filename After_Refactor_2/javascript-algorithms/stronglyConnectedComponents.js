@@ -10,7 +10,7 @@
 
 // Here's the refactored code with the above improvements:
 
-import Stack from '../../CONSTANT/javascript-algorithms/Stack';
+import Stack from '../../CONSTANT/javascript_algorithms/Stack';
 import depthFirstSearch from '../../Before_Refactor/javascript-algorithms/depthFirstSearch';
 
 /**

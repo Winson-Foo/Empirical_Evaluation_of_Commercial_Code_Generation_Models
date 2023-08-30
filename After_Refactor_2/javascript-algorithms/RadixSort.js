@@ -22,7 +22,7 @@
 // Here's the refactored code with some improvements:
 
 // ```javascript
-import Sort from '../../CONSTANT/javascript-algorithms/Sort';
+import Sort from '../../CONSTANT/javascript_algorithms/Sort';
 
 const BASE_CHAR_CODE = 97;
 const NUMBER_OF_POSSIBLE_DIGITS = 10;

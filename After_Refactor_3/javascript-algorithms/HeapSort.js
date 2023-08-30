@@ -9,8 +9,8 @@
 // With these principles in mind, here's a refactored version of the code:
 
 // ```javascript
-import Sort from '../../CONSTANT/javascript-algorithms/Sort';
-import MinHeap from '../../CONSTANT/javascript-algorithms/MinHeap';
+import Sort from '../../CONSTANT/javascript_algorithms/Sort';
+import MinHeap from '../../CONSTANT/javascript_algorithms/MinHeap';
 
 export default class HeapSort extends Sort {
   sort(originalArray) {

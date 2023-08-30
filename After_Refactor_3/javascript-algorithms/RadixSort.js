@@ -16,7 +16,7 @@
 // Here is the refactored code with the above improvements:
 
 // ```javascript
-import Sort from '../../CONSTANT/javascript-algorithms/Sort';
+import Sort from '../../CONSTANT/javascript_algorithms/Sort';
 
 const ASCII_OFFSET = 97;
 const NUMBER_OF_DIGITS = 10;

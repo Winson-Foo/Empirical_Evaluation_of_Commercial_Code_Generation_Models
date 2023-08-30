@@ -54,13 +54,13 @@ import {
   reverseArr,
   sortedArr,
   SortTester,
-} from '../../../CONSTANT/javascript-algorithms/SortTester';
-import Graph from '../../../CONSTANT/javascript-algorithms/Graph'
-import GraphEdge from '../../../CONSTANT/javascript-algorithms/GraphEdge'
-import GraphVertex from '../../../CONSTANT/javascript-algorithms/GraphVertex'
-import ComplexNumber from '../../../CONSTANT/javascript-algorithms/ComplexNumber';
-import Stack from '../../../CONSTANT/javascript-algorithms/Stack'
-import LinkedList from '../../../CONSTANT/javascript-algorithms/LinkedList';
+} from '../../../CONSTANT/javascript_algorithms/SortTester';
+import Graph from '../../../CONSTANT/javascript_algorithms/Graph'
+import GraphEdge from '../../../CONSTANT/javascript_algorithms/GraphEdge'
+import GraphVertex from '../../../CONSTANT/javascript_algorithms/GraphVertex'
+import ComplexNumber from '../../../CONSTANT/javascript_algorithms/ComplexNumber';
+import Stack from '../../../CONSTANT/javascript_algorithms/Stack'
+import LinkedList from '../../../CONSTANT/javascript_algorithms/LinkedList';
 
 describe('zAlgorithm', () => {
   test('should find word positions in given text', () => { expect(zAlgorithm('abcbcglx', 'abca')).toEqual([]) });

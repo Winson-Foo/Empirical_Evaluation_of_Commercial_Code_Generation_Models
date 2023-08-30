@@ -9,7 +9,7 @@
 // Here is the refactored code:
 
 // ```javascript
-import QueenPosition from '../../CONSTANT/javascript-algorithms/QueenPosition';
+import QueenPosition from '../../CONSTANT/javascript_algorithms/QueenPosition';
 
 function isPositionSafe(queens, row, col) {
   const newPosition = new QueenPosition(row, col);

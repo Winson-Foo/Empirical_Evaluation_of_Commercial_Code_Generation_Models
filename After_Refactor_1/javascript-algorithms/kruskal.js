@@ -1,8 +1,8 @@
 // To improve the maintainability of the codebase, consider the following refactored code:
 
-import Graph from '../../CONSTANT/javascript-algorithms/Graph';
+import Graph from '../../CONSTANT/javascript_algorithms/Graph';
 import QuickSort from '../../Before_Refactor/javascript-algorithms/QuickSort';
-import DisjointSet from '../../CONSTANT/javascript-algorithms/DisjointSet';
+import DisjointSet from '../../CONSTANT/javascript_algorithms/DisjointSet';
 
 /**
  * @param {Graph} graph

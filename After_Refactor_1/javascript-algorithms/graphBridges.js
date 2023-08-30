@@ -83,7 +83,7 @@
 
 // The refactored code is as follows:
 // ```javascript
-import depthFirstSearch from '../../Before_Refactor/javascript-algorithms/depthFirstSearch';
+import depthFirstSearch from '../../Before_Refactor/javascript_algorithms/depthFirstSearch';
 import VisitMetadata from './VisitMetadata';
 
 function updateLowDiscoveryTime(currentVertex, previousVertex) {

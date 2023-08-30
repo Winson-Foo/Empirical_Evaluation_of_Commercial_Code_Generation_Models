@@ -9,7 +9,7 @@
 // Here is the refactored code:
 
 // ```javascript
-import Comparator from '../../CONSTANT/javascript-algorithms/Comparator';
+import Comparator from '../../CONSTANT/javascript_algorithms/Comparator';
 
 /**
  * Performs binary search on a sorted array to find the index of a specified element.

@@ -6,7 +6,7 @@
 
 // Here is the refactored code:
 
-import Stack from '../../CONSTANT/javascript-algorithms/Stack';
+import Stack from '../../CONSTANT/javascript_algorithms/Stack';
 
 /**
  * Recursive helper function for solving the Tower of Hanoi puzzle.

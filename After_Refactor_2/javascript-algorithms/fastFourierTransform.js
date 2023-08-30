@@ -11,8 +11,8 @@
 // Here's the refactored code with the mentioned improvements:
 
 // ```javascript
-import ComplexNumber from '../../CONSTANT/javascript-algorithms/ComplexNumber';
-import bitLength from '../../CONSTANT/javascript-algorithms/bitLength';
+import ComplexNumber from '../../CONSTANT/javascript_algorithms/ComplexNumber';
+import bitLength from '../../CONSTANT/javascript_algorithms/bitLength';
 
 /**
  * Returns the number which is the flipped binary representation of input.

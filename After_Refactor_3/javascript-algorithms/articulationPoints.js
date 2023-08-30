@@ -13,7 +13,7 @@
 // Here is the refactored code:
 
 // ```javascript
-import depthFirstSearch from "../../CONSTANT/javascript-algorithms/depthFirstSearch";
+import depthFirstSearch from "../../CONSTANT/javascript_algorithms/depthFirstSearch";
 
 class VisitMetadata {
   constructor(discoveryTime, lowDiscoveryTime) {

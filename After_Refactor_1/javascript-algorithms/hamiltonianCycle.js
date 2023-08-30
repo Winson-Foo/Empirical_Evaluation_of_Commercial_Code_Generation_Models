@@ -63,7 +63,7 @@
 // Here is the refactored code:
 
 // ```javascript
-import GraphVertex from '../../CONSTANT/javascript-algorithms/GraphVertex';
+import GraphVertex from '../../CONSTANT/javascript_algorithms/GraphVertex';
 
 const INFINITY = Infinity;
 

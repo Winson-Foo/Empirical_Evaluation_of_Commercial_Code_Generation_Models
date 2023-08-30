@@ -1,7 +1,7 @@
 // Here is the refactored codebase with improved maintainability:
 
 // ```javascript
-import GraphVertex from '../../CONSTANT/javascript-algorithms/GraphVertex';
+import GraphVertex from '../../CONSTANT/javascript_algorithms/GraphVertex';
 
 function isAdjacent(adjacencyMatrix, verticesIndices, vertexA, vertexB) {
   const vertexAIndex = verticesIndices[vertexA.getKey()];

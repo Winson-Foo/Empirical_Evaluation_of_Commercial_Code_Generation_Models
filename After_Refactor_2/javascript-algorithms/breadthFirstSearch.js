@@ -7,7 +7,7 @@
 // Here is the refactored code:
 
 // ```javascript
-import Queue from '../../CONSTANT/javascript-algorithms/Queue';
+import Queue from '../../CONSTANT/javascript_algorithms/Queue';
 import Graph from 'path-to-graph';
 import GraphVertex from 'path-to-graph-vertex';
 

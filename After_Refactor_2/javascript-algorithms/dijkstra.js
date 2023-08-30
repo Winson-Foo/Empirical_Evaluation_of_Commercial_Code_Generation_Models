@@ -13,7 +13,7 @@
 // Here is the refactored code:
 
 // ```javascript
-import PriorityQueue from '../../CONSTANT/javascript-algorithms/PriorityQueue';
+import PriorityQueue from '../../CONSTANT/javascript_algorithms/PriorityQueue';
 
 /**
  * @typedef {Object} ShortestPaths

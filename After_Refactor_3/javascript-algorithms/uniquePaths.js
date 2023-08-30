@@ -8,7 +8,7 @@
 
 // The refactored code will look like this:
 
-import pascalTriangle from '../../CONSTANT/javascript-algorithms/pascalTriangle';
+import pascalTriangle from '../../CONSTANT/javascript_algorithms/pascalTriangle';
 
 /**
  * Calculates the number of unique paths in a grid.

@@ -13,7 +13,7 @@
 // Here is the refactored code with the above improvements:
 
 // ```javascript
-import Stack from '../../CONSTANT/javascript-algorithms/Stack';
+import Stack from '../../CONSTANT/javascript_algorithms/Stack';
 
 export default function hanoiTower(numberOfDiscs, moveCallback, fromPole = new Stack(), withPole = new Stack(), toPole = new Stack()) {
   // Each of three poles of Tower of Hanoi puzzle is represented as a stack

@@ -18,7 +18,7 @@
 // Here is the refactored code:
 
 // ```javascript
-import Stack from '../../CONSTANT/javascript-algorithms/Stack';
+import Stack from '../../CONSTANT/javascript_algorithms/Stack';
 import depthFirstSearch from '../../Before_Refactor/javascript-algorithms/depthFirstSearch';
 
 function enterVertex({ currentVertex, visitedVertices, notVisitedVertices }) {

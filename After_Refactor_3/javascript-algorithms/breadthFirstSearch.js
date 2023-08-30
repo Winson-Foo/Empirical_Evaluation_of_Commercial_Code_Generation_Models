@@ -3,7 +3,7 @@
 // 1. Move the `initCallbacks` function outside of the `breadthFirstSearch` function to improve readability and separation of concerns.
 
 // ```javascript
-import Queue from '../../CONSTANT/javascript-algorithms/Queue';
+import Queue from '../../CONSTANT/javascript_algorithms/Queue';
 
 function initCallbacks(callbacks = {}) {
   const initiatedCallbacks = {
