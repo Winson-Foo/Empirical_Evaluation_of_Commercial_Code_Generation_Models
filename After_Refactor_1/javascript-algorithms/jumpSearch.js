@@ -8,7 +8,7 @@
 // Here is the refactored code:
 
 // ```javascript
-import Comparator from '../../../utils/comparator/Comparator';
+import Comparator from '../../CONSTANT/javascript_algorithms/Comparator';
 
 /**
  * Jump (block) search implementation.

@@ -114,7 +114,7 @@
 // Here's the refactored code:
 
 // ```javascript
-import Comparator from '../../../utils/comparator';
+import Comparator from '../../CONSTANT/javascript_algorithms/Comparator';
 
 export default function jumpSearch(sortedArray, seekElement, comparatorCallback) {
   const comparator = new Comparator(comparatorCallback);

@@ -9,8 +9,8 @@
 // Here's the refactored code:
 
 // ```javascript
-import { zeros } from '../../math/matrix/Matrix';
-import euclideanDistance from '../../math/euclidean-distance/euclideanDistance';
+import { zeros } from '../../CONSTANT/javascript_algorithms/Matrix';
+import euclideanDistance from '../../CONSTANT/javascript_algorithms/euclideanDistance';
 
 /**
  * Classifies the point in space based on k-Means algorithm.

@@ -12,7 +12,7 @@
 
 // Here is the refactored code with the above improvements:
 
-import Sort from '../Sort';
+import Sort from '../../CONSTANT/javascript_algorithms/Sort';
 
 export default class BubbleSort extends Sort {
   sort(originalArray) {

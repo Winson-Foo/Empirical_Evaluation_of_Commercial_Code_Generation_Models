@@ -1,4 +1,4 @@
-import Stack from '../../../data-structures/stack/Stack';
+import Stack from '../../CONSTANT/javascript_algorithms/Stack';
 
 /**
  * @param {number} numberOfDiscs

@@ -7,7 +7,7 @@
 // Here's the refactored code:
 
 // ```javascript
-import Sort from '../Sort';
+import Sort from '../../CONSTANT/javascript_algorithms/Sort';
 
 export default class MergeSort extends Sort {
   sort(originalArray) {

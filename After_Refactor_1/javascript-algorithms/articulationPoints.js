@@ -24,7 +24,7 @@
 // export default VisitMetadata;
 
 // articulationPoints.js
-import depthFirstSearch from '../depth-first-search/depthFirstSearch';
+import depthFirstSearch from "../../CONSTANT/javascript_algorithms/depthFirstSearch";
 
 /**
  * Tarjan's algorithm for finding articulation points in graph.

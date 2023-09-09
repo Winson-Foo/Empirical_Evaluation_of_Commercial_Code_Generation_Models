@@ -1,4 +1,4 @@
-import Queue from '../../../data-structures/queue/Queue';
+import Queue from '../../CONSTANT/javascript_algorithms/Queue';
 
 /**
  * @typedef {Object} Callbacks

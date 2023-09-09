@@ -1,5 +1,5 @@
-import Graph from '../../../data-structures/graph/Graph';
-import PriorityQueue from '../../../data-structures/priority-queue/PriorityQueue';
+import Graph from '../../CONSTANT/javascript_algorithms/Graph';
+import PriorityQueue from '../../CONSTANT/javascript_algorithms/PriorityQueue';
 
 /**
  * @param {Graph} graph

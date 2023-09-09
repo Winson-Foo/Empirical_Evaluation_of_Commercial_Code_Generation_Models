@@ -1,7 +1,7 @@
 // To improve the maintainability of this codebase, I would suggest the following refactored code:
 
 // ```javascript
-import Queue from '../../../data-structures/queue/Queue';
+import Queue from '../../CONSTANT/javascript_algorithms/Queue';
 
 /**
  * @typedef {Object} Callbacks

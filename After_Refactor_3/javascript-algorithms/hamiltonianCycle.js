@@ -8,7 +8,7 @@
 // Here is the refactored code:
 
 // ```javascript
-import GraphVertex from '../../../data-structures/graph/GraphVertex';
+import GraphVertex from '../../CONSTANT/javascript_algorithms/GraphVertex';
 
 function isSafe(adjacencyMatrix, verticesIndices, cycle, vertexCandidate) {
   const endVertex = cycle[cycle.length - 1];

@@ -8,8 +8,8 @@
 // Here is the refactored code:
 
 // ```javascript
-import Sort from '../Sort';
-import MinHeap from '../../../data-structures/heap/MinHeap';
+import Sort from '../../CONSTANT/javascript_algorithms/Sort';
+import MinHeap from '../../CONSTANT/javascript_algorithms/MinHeap';
 
 export default class HeapSort extends Sort {
   sort(originalArray) {

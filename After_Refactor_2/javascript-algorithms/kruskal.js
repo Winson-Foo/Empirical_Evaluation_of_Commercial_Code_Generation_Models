@@ -11,9 +11,9 @@
 // Here's the refactored code:
 
 // ```javascript
-import Graph from '../../../data-structures/graph/Graph';
-import QuickSort from '../../sorting/quick-sort/QuickSort';
-import DisjointSet from '../../../data-structures/disjoint-set/DisjointSet';
+import Graph from '../../CONSTANT/javascript_algorithms/Graph';
+import QuickSort from '../../Before_Refactor/javascript-algorithms/QuickSort';
+import DisjointSet from '../../CONSTANT/javascript_algorithms/DisjointSet';
 
 /**
  * @param {Graph} graph

@@ -10,8 +10,8 @@
 
 // Here's the refactored code with the above improvements:
 
-import Stack from '../../../data-structures/stack/Stack';
-import depthFirstSearch from '../depth-first-search/depthFirstSearch';
+import Stack from '../../CONSTANT/javascript_algorithms/Stack';
+import depthFirstSearch from '../../Before_Refactor/javascript-algorithms/depthFirstSearch';
 
 /**
  * Get vertices sorted by DFS finish time.

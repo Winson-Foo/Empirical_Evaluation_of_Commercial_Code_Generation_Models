@@ -1,7 +1,7 @@
 // To improve the maintainability of the codebase, we can refactor it by separating the logic into smaller functions and using more descriptive variable and function names. Here is the refactored code:
 
 // ```javascript
-import depthFirstSearch from '../depth-first-search/depthFirstSearch';
+import depthFirstSearch from '../../Before_Refactor/javascript-algorithms/depthFirstSearch';
 
 /**
  * Detect cycle in directed graph using Depth First Search.

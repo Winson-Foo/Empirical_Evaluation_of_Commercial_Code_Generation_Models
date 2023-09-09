@@ -9,8 +9,8 @@
 // Here is the refactored code:
 
 // ```javascript
-import Stack from "../../../data-structures/stack/Stack";
-import depthFirstSearch from "../depth-first-search/depthFirstSearch";
+import Stack from '../../CONSTANT/javascript_algorithms/Stack';
+import depthFirstSearch from '../../Before_Refactor/javascript-algorithms/depthFirstSearch';
 
 /**
  * Performs a depth-first search traversal on the graph and returns a stack of vertices

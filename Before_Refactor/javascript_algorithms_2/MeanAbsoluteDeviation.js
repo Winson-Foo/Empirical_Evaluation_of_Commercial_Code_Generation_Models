@@ -1,4 +1,4 @@
-import { mean } from './AverageMean.js'
+import { mean } from '../../CONSTANT/javascript_algorithm_2/AverageMean'
 /**
  *@function meanAbsoluteDeviation
  *@description Calculates the mean absolute deviation of list of numbers
