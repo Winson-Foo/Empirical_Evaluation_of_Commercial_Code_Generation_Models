@@ -5,12 +5,9 @@ from .load_testdata import load_json_testcases
 from .test_node import Node
 
 import sys
-import os
-import pathlib
 
-target_path = pathlib.Path(os.path.abspath(__file__)).parents[3]
-target_path = str(target_path) + "\Before_Refactor\QuixBugs"
-sys.path.append(target_path)
+sys.path.append('C:/Users/fatty/Desktop/Empirical_Evaluation_of_Commercial_Code_Generation_Models/Before_Refactor/QuixBugs')  
+
 ###
 # Testing bitcount
 import bitcount
