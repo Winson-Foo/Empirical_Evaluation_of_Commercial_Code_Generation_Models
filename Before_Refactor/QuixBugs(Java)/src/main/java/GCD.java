@@ -1,4 +1,4 @@
-package java_programs;
+package correct_java_programs;
 import java.util.*;
 
 /*
@@ -16,7 +16,7 @@ public class GCD {
         if (b == 0) {
             return a;
         } else {
-            return gcd(a % b, b);
+            return gcd(b, a%b);
         }
     }
 }

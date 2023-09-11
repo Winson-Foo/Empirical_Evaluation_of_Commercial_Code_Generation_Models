@@ -1,4 +1,5 @@
-package java_programs;
+package correct_java_programs;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -17,7 +18,7 @@ public class FIND_IN_SORTED {
         if (x < arr[mid]) {
             return binsearch(arr, x, start, mid);
         } else if (x > arr[mid]) {
-            return binsearch(arr, x, mid, end);
+            return binsearch(arr, x, mid+1, end);
         } else {
             return mid;
         }
