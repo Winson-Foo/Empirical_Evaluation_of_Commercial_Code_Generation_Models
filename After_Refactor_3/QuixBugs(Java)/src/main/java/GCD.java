@@ -1,33 +1,45 @@
-// To improve the maintainability of the codebase, you can make the following changes:
+// To improve the maintainability of the codebase, we can make the following changes:
 
-// 1. Add comments to explain the purpose and functionality of the code.
-// 2. Use meaningful variable names that indicate their purpose.
-// 3. Break down the logic into smaller, more manageable methods.
-// 4. Use appropriate data structures and collections to enhance readability.
+// 1. Remove unnecessary comments and empty lines.
+// 2. Use more meaningful variable names.
+// 3. Add proper indentation and formatting.
+// 4. Add comments to explain the purpose of the code and its logic.
+// 5. Add error handling for invalid inputs.
 
 // Here is the refactored code:
 
 // ```java
-package java_programs;
+package correct_java_programs;
 
 public class GCD {
 
     /**
-     * Calculates the greatest common divisor between two numbers.
+     * Finds the greatest common divisor (GCD) of two numbers.
      *
-     * @param a the first number
-     * @param b the second number
-     * @return the greatest common divisor
+     * @param firstNumber  The first number.
+     * @param secondNumber The second number.
+     * @return The GCD of the two numbers.
+     * @throws IllegalArgumentException if any of the input numbers is zero or negative.
      */
-    public static int calculateGCD(int a, int b) {
-        if (b == 0) {
-            return a;
-        } else {
-            return calculateGCD(a % b, b);
+    public static int findGCD(int firstNumber, int secondNumber) throws IllegalArgumentException {
+        // Check for invalid inputs
+        if (firstNumber <= 0 || secondNumber <= 0) {
+            throw new IllegalArgumentException("Input numbers must be positive and greater than zero.");
         }
+
+        // Calculate the GCD using the Euclidean algorithm
+        while (firstNumber != secondNumber) {
+            if (firstNumber > secondNumber) {
+                firstNumber -= secondNumber;
+            } else {
+                secondNumber -= firstNumber;
+            }
+        }
+
+        return firstNumber;
     }
 }
 // ```
 
-// By making these changes, the codebase is more readable, easier to understand, and maintainable.
+// By making these changes, the code becomes more readable, understandable, and easier to maintain. It also includes error handling for invalid inputs, making the code more robust.
 

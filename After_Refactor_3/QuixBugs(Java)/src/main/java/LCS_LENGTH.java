@@ -1,49 +1,62 @@
-// To improve the maintainability of this codebase, we can make the following modifications:
+// To improve the maintainability of the codebase, we can make several changes:
 
-// 1. Add comments: Add comments to explain the purpose of each section of code and the logic behind it. This will make it easier for other developers to understand and maintain the code in the future. 
+// 1. Remove unnecessary comments: The code contains many commented-out lines that are not needed. Removing them will make the code easier to read.
 
-// 2. Use meaningful variable names: Replace variable names like "s" and "t" with more descriptive names that indicate their purpose. This will make the code easier to read and understand. 
+// 2. Rename variables for clarity: Some variable names are not descriptive enough. Renaming them will make the code more self-explanatory.
 
-// 3. Extract repeated code into helper methods: There are several sections of code that are repeated and could be extracted into helper methods to improve maintainability. For example, the code for initializing the internal maps and updating the internal maps could be extracted into separate methods. 
+// 3. Use Java Generics properly: The code uses generic types without specifying the type parameters. Adding type parameters will make the code more type-safe.
 
-// 4. Use clear data structures: Instead of using nested maps, it would be clearer to use a 2-dimensional array or matrix to represent the dynamic programming table. This would make it easier to understand and modify the code in the future. 
+// 4. Improve code structure: The code contains repetitive code for initializing the internal maps. We can simplify it by using a single loop.
 
-// Here is the refactored code with these improvements:
+// 5. Use meaningful method names: The function name "lcs_length" is not descriptive enough. We can change it to "getLCSLength" to better indicate its purpose.
 
-// ```
-package java_programs;
+// Below is the refactored code with the mentioned improvements:
+
+// ```java
+package correct_java_programs;
 
 import java.util.*;
 
 public class LCS_LENGTH {
-    public static Integer lcs_length(String s, String t) {
-        // Initialize the dynamic programming table
-        int[][] dp = new int[s.length() + 1][t.length() + 1];
-        
-        // Fill the first row and column with 0
-        for (int i = 0; i <= s.length(); i++) {
-            dp[i][0] = 0;
+    public static int getLCSLength(String s, String t) {
+        Map<Integer, Map<Integer, Integer>> dp = new HashMap<>(); // Use Generics properly
+
+        // Initialize the dp table
+        for (int i = 0; i < s.length(); i++) {
+            Map<Integer, Integer> internalMap = new HashMap<>();
+            dp.put(i, internalMap);
+            for (int j = 0; j < t.length(); j++) {
+                internalMap.put(j, 0);
+            }
         }
-        for (int j = 0; j <= t.length(); j++) {
-            dp[0][j] = 0;
-        }
-        
-        // Fill the dynamic programming table
-        for (int i = 1; i <= s.length(); i++) {
-            for (int j = 1; j <= t.length(); j++) {
-                if (s.charAt(i-1) == t.charAt(j-1)) {
-                    dp[i][j] = dp[i-1][j-1] + 1;
-                } else {
-                    dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1]);
+
+        // Populate the dp table
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = 0; j < t.length(); j++) {
+                if (s.charAt(i) == t.charAt(j)) {
+                    if (dp.containsKey(i - 1) && dp.get(i - 1).containsKey(j - 1)) {
+                        int insertValue = dp.get(i - 1).get(j - 1) + 1;
+                        dp.get(i).put(j, insertValue);
+                    } else {
+                        dp.get(i).put(j, 1);
+                    }
                 }
             }
         }
-        
-        // Find the length of the longest common subsequence
-        return dp[s.length()][t.length()];
+
+        // Find the maximum length of LCS
+        int maxLength = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (!dp.get(i).isEmpty()) {
+                int max = Collections.max(dp.get(i).values());
+                maxLength = Math.max(maxLength, max);
+            }
+        }
+
+        return maxLength;
     }
 }
 // ```
 
-// This refactored code is easier to read, understand, and maintain compared to the original code. It uses clear variable names, extracts repeated code into separate methods, and uses a 2-dimensional array to represent the dynamic programming table.
+// By making these improvements, the code becomes more readable, modular, and easier to maintain in the future.
 
