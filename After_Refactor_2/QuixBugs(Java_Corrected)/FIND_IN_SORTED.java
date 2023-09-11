@@ -1,13 +1,13 @@
-To improve the maintainability of this codebase, we can make the following changes:
+// To improve the maintainability of this codebase, we can make the following changes:
 
-1. Give more descriptive names to the variables and methods to improve readability.
-2. Add comments to explain the purpose and functionality of the code.
-3. Use more appropriate parameter names and eliminate redundant variables.
-4. Include error handling for edge cases.
+// 1. Give more descriptive names to the variables and methods to improve readability.
+// 2. Add comments to explain the purpose and functionality of the code.
+// 3. Use more appropriate parameter names and eliminate redundant variables.
+// 4. Include error handling for edge cases.
 
-Here is the refactored code:
+// Here is the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 public class FindInSorted {
@@ -35,7 +35,7 @@ public class FindInSorted {
         return binarySearch(arr, target, 0, arr.length);
     }
 }
-```
+// ```
 
-By making these changes, the code becomes more readable and easier to understand and maintain.
+// By making these changes, the code becomes more readable and easier to understand and maintain.
 

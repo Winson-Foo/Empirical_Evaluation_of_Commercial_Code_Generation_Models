@@ -1,16 +1,16 @@
-To improve the maintainability of the codebase, we can make the following changes:
+// To improve the maintainability of the codebase, we can make the following changes:
 
-1. Use meaningful variable names: Replace the variable names "a", "b", and "k" with more descriptive names that indicate their purpose.
+// 1. Use meaningful variable names: Replace the variable names "a", "b", and "k" with more descriptive names that indicate their purpose.
 
-2. Add comments: Add comments to explain the purpose and functionality of the code.
+// 2. Add comments: Add comments to explain the purpose and functionality of the code.
 
-3. Use generics: Specify the type of objects that the ArrayList will contain to improve type safety and readability.
+// 3. Use generics: Specify the type of objects that the ArrayList will contain to improve type safety and readability.
 
-4. Break down complex operations: Break down complex operations into smaller, more manageable steps.
+// 4. Break down complex operations: Break down complex operations into smaller, more manageable steps.
 
-Here is the refactored code:
+// Here is the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.ArrayList;
@@ -46,7 +46,7 @@ public class Subsequences {
         return subsequences;
     }
 }
-```
+// ```
 
-These changes make the code more readable, maintainable, and easier to understand and modify in the future.
+// These changes make the code more readable, maintainable, and easier to understand and modify in the future.
 

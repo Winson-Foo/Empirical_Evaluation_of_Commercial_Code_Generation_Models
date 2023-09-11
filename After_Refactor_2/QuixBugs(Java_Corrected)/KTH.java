@@ -1,19 +1,19 @@
-To improve the maintainability of the codebase, we can make the following changes:
+// To improve the maintainability of the codebase, we can make the following changes:
 
-1. Improve code readability:
-- Add appropriate comments to explain the logic of the code.
-- Use descriptive variable names to make the code more self-explanatory.
+// 1. Improve code readability:
+// - Add appropriate comments to explain the logic of the code.
+// - Use descriptive variable names to make the code more self-explanatory.
 
-2. Encapsulate the logic into a separate class:
-- Create a new class called KthElementFinder to encapsulate the kth element finding logic.
-- This will make the code more modular and reusable.
+// 2. Encapsulate the logic into a separate class:
+// - Create a new class called KthElementFinder to encapsulate the kth element finding logic.
+// - This will make the code more modular and reusable.
 
-3. Use generics to make the code more flexible:
-- Change the ArrayList<Integer> to List<Integer> to allow for different types of lists to be passed in.
-- Use Comparable interface to allow for comparing elements of the list.
-- Update the method signature to return Integer instead of int to handle possible null values.
+// 3. Use generics to make the code more flexible:
+// - Change the ArrayList<Integer> to List<Integer> to allow for different types of lists to be passed in.
+// - Use Comparable interface to allow for comparing elements of the list.
+// - Update the method signature to return Integer instead of int to handle possible null values.
 
-Here's the refactored code:
+// Here's the refactored code:
 
 package correct_java_programs;
 import java.util.*;

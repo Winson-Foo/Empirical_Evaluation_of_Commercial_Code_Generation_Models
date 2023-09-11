@@ -1,18 +1,18 @@
-To improve the maintainability of this codebase, you can do the following:
+// To improve the maintainability of this codebase, you can do the following:
 
-1. Remove unnecessary comments: The commented lines in the code are not providing any useful information and should be removed.
+// 1. Remove unnecessary comments: The commented lines in the code are not providing any useful information and should be removed.
 
-2. Use meaningful variable names: Use more descriptive variable names instead of generic names like "left", "right", "arr", etc.
+// 2. Use meaningful variable names: Use more descriptive variable names instead of generic names like "left", "right", "arr", etc.
 
-3. Avoid magic numbers: Remove the hardcoded size of ArrayLists (e.g., new ArrayList<Integer>(100)). Instead, let the ArrayList dynamically resize itself as needed.
+// 3. Avoid magic numbers: Remove the hardcoded size of ArrayLists (e.g., new ArrayList<Integer>(100)). Instead, let the ArrayList dynamically resize itself as needed.
 
-4. Add proper spacing and indentation: Organize the code with consistent spacing and indentation to improve readability.
+// 4. Add proper spacing and indentation: Organize the code with consistent spacing and indentation to improve readability.
 
-5. Add proper error handling and input validation: The code currently assumes that the input ArrayList will always be valid. You can add proper error handling and input validation to handle unexpected scenarios.
+// 5. Add proper error handling and input validation: The code currently assumes that the input ArrayList will always be valid. You can add proper error handling and input validation to handle unexpected scenarios.
 
-Here's the refactored code with the suggested improvements:
+// Here's the refactored code with the suggested improvements:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.ArrayList;
@@ -53,7 +53,7 @@ public class MergeSort {
         }
     }
 }
-```
+// ```
 
-Note: This is just one way to improve the maintainability of the codebase. There may be other improvements specific to your project requirements.
+// Note: This is just one way to improve the maintainability of the codebase. There may be other improvements specific to your project requirements.
 

@@ -1,14 +1,14 @@
-To improve the maintainability of this codebase, you can make the following changes:
+// To improve the maintainability of this codebase, you can make the following changes:
 
-1. Include meaningful variable and method names: Rename variables and methods to accurately reflect their purpose. This will make the code easier to understand and maintain.
+// 1. Include meaningful variable and method names: Rename variables and methods to accurately reflect their purpose. This will make the code easier to understand and maintain.
 
-2. Use comments: Add comments to explain the logic and purpose of different sections of code. This will make it easier for other developers (including yourself in the future) to understand the code.
+// 2. Use comments: Add comments to explain the logic and purpose of different sections of code. This will make it easier for other developers (including yourself in the future) to understand the code.
 
-3. Add error handling: Currently, the code only returns -1 if the element is not found. Consider adding additional error handling to handle different scenarios, such as if the input array is null or empty.
+// 3. Add error handling: Currently, the code only returns -1 if the element is not found. Consider adding additional error handling to handle different scenarios, such as if the input array is null or empty.
 
-4. Format the code properly: Use consistent indentation and spacing to improve the readability of the code.
+// 4. Format the code properly: Use consistent indentation and spacing to improve the readability of the code.
 
-Here's an example of how the refactored code may look:
+// Here's an example of how the refactored code may look:
 
 package correct_java_programs;
 
@@ -45,5 +45,5 @@ public class FindFirstInSorted {
         return -1;
     }
 }
-Note: I have made a few assumptions in the refactored code. I assumed that the array is sorted in ascending order and that the input array and target element are of type int. Please adjust accordingly based on your specific requirements.
+// Note: I have made a few assumptions in the refactored code. I assumed that the array is sorted in ascending order and that the input array and target element are of type int. Please adjust accordingly based on your specific requirements.
 

@@ -1,6 +1,6 @@
-To improve the maintainability of the codebase, I would suggest the following refactored code:
+// To improve the maintainability of the codebase, I would suggest the following refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.*;
@@ -32,12 +32,12 @@ public class LIS {
         return longest;
     }
 }
-```
+// ```
 
-In this refactored code, I made the following changes to improve maintainability:
-1. Renamed the variable "i" to "index" for better clarity.
-2. Changed the variable name "val" to "value" for better understanding.
-3. Changed the variable name "prefix_lengths" to "prefixLengths" for better readability.
-4. Replaced the inline conditional operator with a full if-else statement for calculating the "length" variable.
-5. Added spacing and indentation to improve code readability.
+// In this refactored code, I made the following changes to improve maintainability:
+// 1. Renamed the variable "i" to "index" for better clarity.
+// 2. Changed the variable name "val" to "value" for better understanding.
+// 3. Changed the variable name "prefix_lengths" to "prefixLengths" for better readability.
+// 4. Replaced the inline conditional operator with a full if-else statement for calculating the "length" variable.
+// 5. Added spacing and indentation to improve code readability.
 

@@ -1,12 +1,12 @@
-To improve the maintainability of the codebase, I will make the following changes:
-1. Remove unnecessary imports and comments.
-2. Rename the class and methods to follow Java naming conventions.
-3. Extract repeated code into separate methods for better readability.
-4. Add appropriate access modifiers to methods and variables.
+// To improve the maintainability of the codebase, I will make the following changes:
+// 1. Remove unnecessary imports and comments.
+// 2. Rename the class and methods to follow Java naming conventions.
+// 3. Extract repeated code into separate methods for better readability.
+// 4. Add appropriate access modifiers to methods and variables.
 
-Here's the refactored code:
+// Here's the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.ArrayList;
@@ -64,7 +64,7 @@ public class ShortestPathLengths {
         return a + b;
     }
 }
-```
+// ```
 
-These changes should improve the maintainability of the codebase by reducing code duplication, improving readability, and adhering to Java naming conventions.
+// These changes should improve the maintainability of the codebase by reducing code duplication, improving readability, and adhering to Java naming conventions.
 

@@ -1,13 +1,13 @@
-To improve the maintainability of the codebase, here are some suggested changes:
+// To improve the maintainability of the codebase, here are some suggested changes:
 
-1. Add proper comments to explain the purpose and logic of the code.
-2. Use meaningful variable names for better understanding.
-3. Format the code properly using indentation and spacing.
-4. Use a more descriptive class name.
+// 1. Add proper comments to explain the purpose and logic of the code.
+// 2. Use meaningful variable names for better understanding.
+// 3. Format the code properly using indentation and spacing.
+// 4. Use a more descriptive class name.
 
-Here's the refactored code with the suggested changes:
+// Here's the refactored code with the suggested changes:
 
-```
+// ```
 package correct_java_programs;
 
 /*
@@ -32,5 +32,5 @@ public class BitCounter {
         return count;
     }
 }
-```
+// ```
 

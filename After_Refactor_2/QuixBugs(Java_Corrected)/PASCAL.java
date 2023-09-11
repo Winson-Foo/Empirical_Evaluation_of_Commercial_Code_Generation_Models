@@ -1,16 +1,16 @@
-To improve the maintainability of the codebase, we can do the following:
+// To improve the maintainability of the codebase, we can do the following:
 
-1. Add comments: Add comments to explain the purpose of each method and the logic behind it. This will make it easier for future developers to understand the code.
+// 1. Add comments: Add comments to explain the purpose of each method and the logic behind it. This will make it easier for future developers to understand the code.
 
-2. Use meaningful variable names: Use descriptive variable names that convey the purpose of the variable. This will make the code easier to read and understand.
+// 2. Use meaningful variable names: Use descriptive variable names that convey the purpose of the variable. This will make the code easier to read and understand.
 
-3. Break down long code lines: If a line of code is too long, break it down into multiple lines to improve readability.
+// 3. Break down long code lines: If a line of code is too long, break it down into multiple lines to improve readability.
 
-4. Extract helper methods: Extract repetitive and complex logic into separate methods to improve code organization and make it easier to understand.
+// 4. Extract helper methods: Extract repetitive and complex logic into separate methods to improve code organization and make it easier to understand.
 
-Here is the refactored code with the above improvements:
+// Here is the refactored code with the above improvements:
 
-```java
+// ```java
 package correct_java_programs;
 import java.util.ArrayList;
 
@@ -65,7 +65,7 @@ public class PascalTriangleGenerator {
         return triangle.get(row).get(column);
     }
 }
-```
+// ```
 
-Note: The class name has been changed from `PASCAL` to `PascalTriangleGenerator` to follow Java naming conventions.
+// Note: The class name has been changed from `PASCAL` to `PascalTriangleGenerator` to follow Java naming conventions.
 

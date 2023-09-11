@@ -1,14 +1,14 @@
-In order to improve the maintainability of this codebase, I would make the following changes:
+// In order to improve the maintainability of this codebase, I would make the following changes:
 
-1. Improve code readability by adding comments and indicating the purpose of each section of code.
-2. Use more descriptive names for variables and methods to enhance code understanding.
-3. Remove unnecessary imports.
-4. Use more efficient data structures and methods where applicable.
-5. Follow Java coding conventions, such as using camel case for method and variable names.
+// 1. Improve code readability by adding comments and indicating the purpose of each section of code.
+// 2. Use more descriptive names for variables and methods to enhance code understanding.
+// 3. Remove unnecessary imports.
+// 4. Use more efficient data structures and methods where applicable.
+// 5. Follow Java coding conventions, such as using camel case for method and variable names.
 
-Here is the refactored code:
+// Here is the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.ArrayList;
@@ -42,7 +42,7 @@ public class GetFactors {
         return new ArrayList<>(List.of(number));
     }
 }
-```
+// ```
 
-By making these changes, the codebase becomes more readable, maintainable, and adheres to Java coding conventions.
+// By making these changes, the codebase becomes more readable, maintainable, and adheres to Java coding conventions.
 

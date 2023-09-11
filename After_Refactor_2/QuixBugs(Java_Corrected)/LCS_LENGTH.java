@@ -1,16 +1,16 @@
-To improve the maintainability of this codebase, here are some suggestions:
+// To improve the maintainability of this codebase, here are some suggestions:
 
-1. Use meaningful variable and method names: Instead of using vague names like "s" and "t", use descriptive names like "firstString" and "secondString". Similarly, name the method something like "calculateLCSLength" instead of "lcs_length".
+// 1. Use meaningful variable and method names: Instead of using vague names like "s" and "t", use descriptive names like "firstString" and "secondString". Similarly, name the method something like "calculateLCSLength" instead of "lcs_length".
 
-2. Break down the code into smaller, reusable methods: Currently, the entire logic is written in a single method, making it difficult to read and understand. Break down the code into smaller methods with clear responsibilities, such as initializing the map, calculating the LCS length, and finding the maximum value.
+// 2. Break down the code into smaller, reusable methods: Currently, the entire logic is written in a single method, making it difficult to read and understand. Break down the code into smaller methods with clear responsibilities, such as initializing the map, calculating the LCS length, and finding the maximum value.
 
-3. Remove unnecessary comments and redundant code: The comments in the code seem to be outdated and not providing any additional information. Remove them to improve code readability. Additionally, there is redundant code for initializing the internal map in a nested loop. Remove the inner loop and initialize the internal map directly.
+// 3. Remove unnecessary comments and redundant code: The comments in the code seem to be outdated and not providing any additional information. Remove them to improve code readability. Additionally, there is redundant code for initializing the internal map in a nested loop. Remove the inner loop and initialize the internal map directly.
 
-4. Use generics for Map declaration: Instead of using raw types for the Map declaration, use generics to specify the types of keys and values. For example, use "Map<Integer, Map<Integer,Integer>>" instead of just "Map".
+// 4. Use generics for Map declaration: Instead of using raw types for the Map declaration, use generics to specify the types of keys and values. For example, use "Map<Integer, Map<Integer,Integer>>" instead of just "Map".
 
-Here is the refactored code with the suggested improvements:
+// Here is the refactored code with the suggested improvements:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.*;
@@ -64,7 +64,7 @@ public class LCSLengthCalculator {
         }
     }
 }
-```
+// ```
 
-Note: The refactored code assumes that the code is a part of a larger project and follows proper Java package naming conventions. Adjust the package name according to your project structure.
+// Note: The refactored code assumes that the code is a part of a larger project and follows proper Java package naming conventions. Adjust the package name according to your project structure.
 

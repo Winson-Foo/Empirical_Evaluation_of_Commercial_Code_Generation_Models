@@ -1,16 +1,16 @@
-To improve the maintainability of the codebase, we can make the following changes:
+// To improve the maintainability of the codebase, we can make the following changes:
 
-1. Use generics: The `tokens` parameter of the `rpn_eval` method should be updated to use generics for better type safety. Change `ArrayList tokens` to `ArrayList<?> tokens`.
+// 1. Use generics: The `tokens` parameter of the `rpn_eval` method should be updated to use generics for better type safety. Change `ArrayList tokens` to `ArrayList<?> tokens`.
 
-2. Use explicit type arguments for the `Stack` and `HashMap` declarations. Change `Stack stack = new Stack();` to `Stack<Double> stack = new Stack<>();` and `Map<String, BinaryOperator<Double>> op = new HashMap<String, BinaryOperator<Double>>();` to `Map<String, BinaryOperator<Double>> op = new HashMap<>();`.
+// 2. Use explicit type arguments for the `Stack` and `HashMap` declarations. Change `Stack stack = new Stack();` to `Stack<Double> stack = new Stack<>();` and `Map<String, BinaryOperator<Double>> op = new HashMap<String, BinaryOperator<Double>>();` to `Map<String, BinaryOperator<Double>> op = new HashMap<>();`.
 
-3. Use the diamond operator: Since Java 7, you can use the diamond operator to infer the generic type arguments. Remove the redundant type arguments from the `new HashMap<>()` and `new Stack<>()` statements.
+// 3. Use the diamond operator: Since Java 7, you can use the diamond operator to infer the generic type arguments. Remove the redundant type arguments from the `new HashMap<>()` and `new Stack<>()` statements.
 
-4. Add access modifiers: Add appropriate access modifiers (`public`, `private`, etc.) to the class and method declarations.
+// 4. Add access modifiers: Add appropriate access modifiers (`public`, `private`, etc.) to the class and method declarations.
 
-Here's the refactored code with the above improvements:
+// Here's the refactored code with the above improvements:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.*;
@@ -42,7 +42,7 @@ public class RPN_EVAL {
         return stack.pop();
     }
 }
-```
+// ```
 
-These changes make the code more readable, type-safe, and easier to maintain.
+// These changes make the code more readable, type-safe, and easier to maintain.
 

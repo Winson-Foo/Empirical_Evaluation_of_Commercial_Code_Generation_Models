@@ -1,18 +1,18 @@
-To improve the maintainability of the given codebase, here are some suggestions:
+// To improve the maintainability of the given codebase, here are some suggestions:
 
-1. Add proper comments: Add informative comments to explain the purpose and functionality of different parts of the code.
+// 1. Add proper comments: Add informative comments to explain the purpose and functionality of different parts of the code.
 
-2. Use meaningful variable names: Use descriptive names for variables to improve code readability and understanding.
+// 2. Use meaningful variable names: Use descriptive names for variables to improve code readability and understanding.
 
-3. Use generic types: Use generic types to make the code more flexible and avoid unnecessary type casting.
+// 3. Use generic types: Use generic types to make the code more flexible and avoid unnecessary type casting.
 
-4. Separate logic into smaller methods: Break down the code into smaller, manageable methods with specific functionalities. This will make it easier to understand and maintain.
+// 4. Separate logic into smaller methods: Break down the code into smaller, manageable methods with specific functionalities. This will make it easier to understand and maintain.
 
-5. Remove unnecessary code: Remove any dead or redundant code to make the codebase cleaner and more maintainable.
+// 5. Remove unnecessary code: Remove any dead or redundant code to make the codebase cleaner and more maintainable.
 
-Here is the refactored code with the above improvements:
+// Here is the refactored code with the above improvements:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.ArrayList;
@@ -57,7 +57,7 @@ public class PowersetGenerator {
         }
     }
 }
-```
+// ```
 
-By following these improvements, the codebase becomes more maintainable, readable, and easier to understand.
+// By following these improvements, the codebase becomes more maintainable, readable, and easier to understand.
 

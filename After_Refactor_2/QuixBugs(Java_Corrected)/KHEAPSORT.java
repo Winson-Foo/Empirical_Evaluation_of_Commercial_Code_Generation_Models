@@ -1,22 +1,22 @@
-To improve the maintainability of this codebase, you can perform the following refactorings:
+// To improve the maintainability of this codebase, you can perform the following refactorings:
 
-1. Improve code organization:
-- Move the comments explaining the code from the beginning to individual methods.
-- Remove the unnecessary template comments.
+// 1. Improve code organization:
+// - Move the comments explaining the code from the beginning to individual methods.
+// - Remove the unnecessary template comments.
 
-2. Improve variable and method names:
-- Change the name of the class from KHEAPSORT to KHeapsort to follow standard Java naming conventions.
-- Rename the variable "arr" to "input" for better clarity.
-- Rename the variable "k" to "kValue" for better clarity.
-- Rename the variable "x" to "value" for better clarity.
+// 2. Improve variable and method names:
+// - Change the name of the class from KHEAPSORT to KHeapsort to follow standard Java naming conventions.
+// - Rename the variable "arr" to "input" for better clarity.
+// - Rename the variable "k" to "kValue" for better clarity.
+// - Rename the variable "x" to "value" for better clarity.
 
-3. Add appropriate access modifiers:
-- Add private access modifier to the method "kheapsort" to indicate that it should only be accessed within the class.
+// 3. Add appropriate access modifiers:
+// - Add private access modifier to the method "kheapsort" to indicate that it should only be accessed within the class.
 
-4. Use generics for ArrayList and PriorityQueue:
-- Change ArrayList<Integer> to ArrayList<E> and PriorityQueue<Integer> to PriorityQueue<E> to make the code more flexible and reusable.
+// 4. Use generics for ArrayList and PriorityQueue:
+// - Change ArrayList<Integer> to ArrayList<E> and PriorityQueue<Integer> to PriorityQueue<E> to make the code more flexible and reusable.
 
-Here is the refactored code:
+// Here is the refactored code:
 
 package correct_java_programs;
 import java.util.*;

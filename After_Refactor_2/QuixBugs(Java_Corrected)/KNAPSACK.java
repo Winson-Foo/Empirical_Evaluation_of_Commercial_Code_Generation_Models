@@ -1,18 +1,18 @@
-To improve the maintainability of the codebase, you can:
+// To improve the maintainability of the codebase, you can:
 
-1. Add meaningful comments: Provide comments to explain the purpose and functionality of different parts of the code.
+// 1. Add meaningful comments: Provide comments to explain the purpose and functionality of different parts of the code.
 
-2. Use descriptive variable names: Instead of using generic names like "n" or "memo", use more descriptive names that convey their purpose.
+// 2. Use descriptive variable names: Instead of using generic names like "n" or "memo", use more descriptive names that convey their purpose.
 
-3. Split complex code into smaller functions: Break down the code into smaller functions for better readability and maintainability.
+// 3. Split complex code into smaller functions: Break down the code into smaller functions for better readability and maintainability.
 
-4. Use constants instead of hard-coded values: If there are any constant values used in the code, define them as constants to improve readability and make it easier to update them in the future.
+// 4. Use constants instead of hard-coded values: If there are any constant values used in the code, define them as constants to improve readability and make it easier to update them in the future.
 
-5. Remove unnecessary imports: Remove any unused imports to declutter the code and improve readability.
+// 5. Remove unnecessary imports: Remove any unused imports to declutter the code and improve readability.
 
-Here's a refactored version of the code with these improvements:
+// Here's a refactored version of the code with these improvements:
 
-```java
+// ```java
 package correct_java_programs;
 
 public class Knapsack {
@@ -39,7 +39,7 @@ public class Knapsack {
         return memo[n][capacity];
     }
 }
-```
+// ```
 
-By applying these improvements, the code becomes more readable and maintainable.
+// By applying these improvements, the code becomes more readable and maintainable.
 

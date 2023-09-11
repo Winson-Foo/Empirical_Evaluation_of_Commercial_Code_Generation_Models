@@ -1,16 +1,16 @@
-To improve the maintainability of this codebase, we can make the following changes:
+// To improve the maintainability of this codebase, we can make the following changes:
 
-1. Rename the class "POSSIBLE_CHANGE" to a more descriptive name, such as "CoinChangeCalculator".
+// 1. Rename the class "POSSIBLE_CHANGE" to a more descriptive name, such as "CoinChangeCalculator".
 
-2. Rename the method "possible_change" to a more descriptive name, such as "calculatePossibleChange".
+// 2. Rename the method "possible_change" to a more descriptive name, such as "calculatePossibleChange".
 
-3. Move the array copy logic to a separate method for reusability.
+// 3. Move the array copy logic to a separate method for reusability.
 
-4. Add comments to explain the purpose and functionality of the code.
+// 4. Add comments to explain the purpose and functionality of the code.
 
-Here is the refactored code:
+// Here is the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.Arrays;
@@ -47,7 +47,7 @@ public class CoinChangeCalculator {
         return remainingCoins;
     }
 }
-```
+// ```
 
-By following these changes, the code becomes more readable and maintainable, with clearer naming conventions and separation of concerns.
+// By following these changes, the code becomes more readable and maintainable, with clearer naming conventions and separation of concerns.
 

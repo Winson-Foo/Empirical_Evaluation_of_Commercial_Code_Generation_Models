@@ -1,16 +1,16 @@
-To improve the maintainability of this codebase, we can make the following changes:
+// To improve the maintainability of this codebase, we can make the following changes:
 
-1. Remove unnecessary comments and imports.
+// 1. Remove unnecessary comments and imports.
 
-2. Add proper indentation and spacing to improve code readability.
+// 2. Add proper indentation and spacing to improve code readability.
 
-3. Use more descriptive variable names to make the code easier to understand.
+// 3. Use more descriptive variable names to make the code easier to understand.
 
-4. Extract the logic to find the next permutation into separate methods for better organization and reusability.
+// 4. Extract the logic to find the next permutation into separate methods for better organization and reusability.
 
-Here is the refactored code:
+// Here is the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.ArrayList;
@@ -65,7 +65,7 @@ public class NextPermutation {
         }
     }
 }
-```
+// ```
 
-In the refactored code, the logic to find the index to swap and the index to replace has been extracted into separate methods for better code organization. The code has also been indented and spaced properly to improve readability. Descriptive variable names have been used to make the code more understandable.
+// In the refactored code, the logic to find the index to swap and the index to replace has been extracted into separate methods for better code organization. The code has also been indented and spaced properly to improve readability. Descriptive variable names have been used to make the code more understandable.
 

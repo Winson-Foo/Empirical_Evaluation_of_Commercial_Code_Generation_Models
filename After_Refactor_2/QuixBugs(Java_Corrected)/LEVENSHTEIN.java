@@ -1,12 +1,12 @@
-To improve the maintainability of the codebase, you can make a few changes:
+// To improve the maintainability of the codebase, you can make a few changes:
 
-1. Add comments to improve code readability.
-2. Use meaningful variable names to enhance understanding.
-3. Use helper methods to simplify the logic.
+// 1. Add comments to improve code readability.
+// 2. Use meaningful variable names to enhance understanding.
+// 3. Use helper methods to simplify the logic.
 
-Here's the refactored code with the mentioned improvements:
+// Here's the refactored code with the mentioned improvements:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.*;
@@ -33,7 +33,7 @@ public class Levenshtein {
         }
     }
 }
-```
+// ```
 
-This refactored code has improved maintainability by adding comments, using meaningful variable names, and breaking down the recursive call into separate helper methods. It enhances code readability and makes it easier to understand and maintain in the future.
+// This refactored code has improved maintainability by adding comments, using meaningful variable names, and breaking down the recursive call into separate helper methods. It enhances code readability and makes it easier to understand and maintain in the future.
 

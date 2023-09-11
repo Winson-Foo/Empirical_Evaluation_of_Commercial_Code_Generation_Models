@@ -1,13 +1,13 @@
-To improve the maintainability of the codebase, we can make the following changes:
+// To improve the maintainability of the codebase, we can make the following changes:
 
-1. Add comments to describe the purpose and functionality of the code.
-2. Remove unnecessary imports.
-3. Use more descriptive variable and method names.
-4. Format the code properly for readability.
+// 1. Add comments to describe the purpose and functionality of the code.
+// 2. Remove unnecessary imports.
+// 3. Use more descriptive variable and method names.
+// 4. Format the code properly for readability.
 
-Here is the refactored code:
+// Here is the refactored code:
 
-```
+// ```
 package correct_java_programs;
 
 /**
@@ -30,7 +30,7 @@ public class GCD {
         }
     }
 }
-```
+// ```
 
-By making these changes, the code becomes more self-explanatory and easier to understand and maintain.
+// By making these changes, the code becomes more self-explanatory and easier to understand and maintain.
 

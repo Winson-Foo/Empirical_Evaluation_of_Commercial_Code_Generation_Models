@@ -1,14 +1,14 @@
-To improve the maintainability of the codebase, you can do the following:
+// To improve the maintainability of the codebase, you can do the following:
 
-1. Remove unnecessary comments and imports - In this code, the import statement for java.util.* is not used. You can remove it. Also, remove the template comments.
+// 1. Remove unnecessary comments and imports - In this code, the import statement for java.util.* is not used. You can remove it. Also, remove the template comments.
 
-2. Add comments to explain the purpose of the code and the variables used.
+// 2. Add comments to explain the purpose of the code and the variables used.
 
-3. Use meaningful variable names - The variable "approx" can be renamed to "approximation" to make it more clear.
+// 3. Use meaningful variable names - The variable "approx" can be renamed to "approximation" to make it more clear.
 
-Here's the refactored code with the above improvements:
+// Here's the refactored code with the above improvements:
 
-```java
+// ```java
 package correct_java_programs;
 
 public class SQRT {
@@ -27,7 +27,7 @@ public class SQRT {
         return approximation;
     }
 }
-```
+// ```
 
-With these improvements, the codebase is easier to understand and maintain.
+// With these improvements, the codebase is easier to understand and maintain.
 

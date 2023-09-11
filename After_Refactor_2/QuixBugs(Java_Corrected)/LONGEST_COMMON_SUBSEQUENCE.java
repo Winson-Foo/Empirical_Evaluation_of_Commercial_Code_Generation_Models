@@ -1,15 +1,15 @@
-To improve the maintainability of the codebase, we can make the following changes:
+// To improve the maintainability of the codebase, we can make the following changes:
 
-1. Add comments to explain the purpose and functionality of the code.
-2. Rename variables and methods to have more meaningful names.
-3. Use descriptive variable names instead of single-letter names.
-4. Format the code properly with indentation and spacing for better readability.
-5. Use helper methods and break down complex logic into smaller, more manageable functions.
-6. Remove unnecessary imports and comments.
+// 1. Add comments to explain the purpose and functionality of the code.
+// 2. Rename variables and methods to have more meaningful names.
+// 3. Use descriptive variable names instead of single-letter names.
+// 4. Format the code properly with indentation and spacing for better readability.
+// 5. Use helper methods and break down complex logic into smaller, more manageable functions.
+// 6. Remove unnecessary imports and comments.
 
-Here's the refactored code:
+// Here's the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 public class LongestCommonSubsequence {
@@ -28,7 +28,7 @@ public class LongestCommonSubsequence {
     }
 
 }
-```
+// ```
 
-By following these improvements, the code becomes more readable, maintainable, and easier to understand and modify in the future.
+// By following these improvements, the code becomes more readable, maintainable, and easier to understand and modify in the future.
 

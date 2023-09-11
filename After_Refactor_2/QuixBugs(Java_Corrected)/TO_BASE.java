@@ -1,14 +1,14 @@
-To improve the maintainability of this codebase, we can do the following:
+// To improve the maintainability of this codebase, we can do the following:
 
-1. Rename the class and method names to be more descriptive.
-2. Add comments to explain the purpose of the code.
-3. Use meaningful variable names.
-4. Add error handling for invalid inputs.
-5. Format the code consistently.
+// 1. Rename the class and method names to be more descriptive.
+// 2. Add comments to explain the purpose of the code.
+// 3. Use meaningful variable names.
+// 4. Add error handling for invalid inputs.
+// 5. Format the code consistently.
 
-Here is the refactored code:
+// Here is the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 public class BaseConverter {
@@ -30,7 +30,7 @@ public class BaseConverter {
         return result;
     }
 }
-```
+// ```
 
-Note: In the original code, there was no input validation for negative numbers or bases outside the range of 2 to 36. I have added that validation in the refactored code and thrown an `IllegalArgumentException` for such cases.
+// Note: In the original code, there was no input validation for negative numbers or bases outside the range of 2 to 36. I have added that validation in the refactored code and thrown an `IllegalArgumentException` for such cases.
 
