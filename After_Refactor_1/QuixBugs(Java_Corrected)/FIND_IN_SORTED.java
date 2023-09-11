@@ -1,12 +1,12 @@
-To improve the maintainability of the codebase, we can make the following changes:
+// To improve the maintainability of the codebase, we can make the following changes:
 
-1. Remove unnecessary comments: The comments in the original code do not provide any additional information or clarification. We should remove them to keep the code clean and easier to read.
+// 1. Remove unnecessary comments: The comments in the original code do not provide any additional information or clarification. We should remove them to keep the code clean and easier to read.
 
-2. Rename variables and methods: The variable names in the original code are not descriptive. We should rename them to make their purpose clear. Additionally, the method names should follow Java naming conventions, where method names are written in camelCase.
+// 2. Rename variables and methods: The variable names in the original code are not descriptive. We should rename them to make their purpose clear. Additionally, the method names should follow Java naming conventions, where method names are written in camelCase.
 
-3. Add documentation: We should add comments and JavaDoc to the code to explain its functionality and provide instructions on how to use it.
+// 3. Add documentation: We should add comments and JavaDoc to the code to explain its functionality and provide instructions on how to use it.
 
-Here is the refactored code with the improvements mentioned above:
+// Here is the refactored code with the improvements mentioned above:
 
 package correct_java_programs;
 

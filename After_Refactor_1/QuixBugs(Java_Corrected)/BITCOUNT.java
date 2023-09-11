@@ -1,13 +1,13 @@
-To improve the maintainability of the codebase, we can make the following changes:
+// To improve the maintainability of the codebase, we can make the following changes:
 
-1. Add comments to explain the purpose and functionality of the code.
-2. Use more descriptive variable and method names.
-3. Format the code properly to improve readability.
-4. Split the bitcount() method into smaller, more focused methods for better modularity and maintainability.
+// 1. Add comments to explain the purpose and functionality of the code.
+// 2. Use more descriptive variable and method names.
+// 3. Format the code properly to improve readability.
+// 4. Split the bitcount() method into smaller, more focused methods for better modularity and maintainability.
 
-Here is the refactored code:
+// Here is the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 /**
@@ -30,7 +30,7 @@ public class BitCount {
         return count;
     }
 }
-```
+// ```
 
-By following these guidelines, we have made the code more understandable and maintainable.
+// By following these guidelines, we have made the code more understandable and maintainable.
 

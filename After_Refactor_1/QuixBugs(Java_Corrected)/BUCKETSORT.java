@@ -1,13 +1,13 @@
-To improve the maintainability of this codebase, we can take the following steps:
-1. Use more descriptive variable and method names to improve readability.
-2. Add comments to explain the purpose of each section of code.
-3. Extract repeated code into separate methods to improve code reusability.
-4. Use appropriate data structures and collections to simplify code logic.
-5. Use the proper access modifiers for methods and variables.
+// To improve the maintainability of this codebase, we can take the following steps:
+// 1. Use more descriptive variable and method names to improve readability.
+// 2. Add comments to explain the purpose of each section of code.
+// 3. Extract repeated code into separate methods to improve code reusability.
+// 4. Use appropriate data structures and collections to simplify code logic.
+// 5. Use the proper access modifiers for methods and variables.
 
-Here's the refactored code:
+// Here's the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.ArrayList;
@@ -39,7 +39,7 @@ public class BucketSort {
         return sortedArr;
     }
 }
-```
+// ```
 
-Note that the code assumes that the input ArrayList `arr` only contains non-negative integers.
+// Note that the code assumes that the input ArrayList `arr` only contains non-negative integers.
 

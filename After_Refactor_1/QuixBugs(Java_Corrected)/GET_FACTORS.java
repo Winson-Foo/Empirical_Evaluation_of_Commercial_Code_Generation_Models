@@ -1,14 +1,14 @@
-To improve the maintainability of the codebase, we can make the following changes:
+// To improve the maintainability of the codebase, we can make the following changes:
 
-1. Add meaningful comments to explain the purpose and logic of the code.
-2. Use descriptive variable names to make it easier to understand the code.
-3. Format the code properly with indentation and spacing to improve readability.
-4. Separate the logic into separate functions for better modularity.
-5. Remove unnecessary comments and import statements.
+// 1. Add meaningful comments to explain the purpose and logic of the code.
+// 2. Use descriptive variable names to make it easier to understand the code.
+// 3. Format the code properly with indentation and spacing to improve readability.
+// 4. Separate the logic into separate functions for better modularity.
+// 5. Remove unnecessary comments and import statements.
 
-Refactored code:
+// Refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.ArrayList;
@@ -38,7 +38,7 @@ public class GET_FACTORS {
         return new ArrayList<>(List.of(n));
     }
 }
-```
+// ```
 
-The refactored code is more readable, has better variable names, and separates the logic into a more modular structure.
+// The refactored code is more readable, has better variable names, and separates the logic into a more modular structure.
 

@@ -1,14 +1,14 @@
-To improve the maintainability of this codebase, we can make the following changes:
+// To improve the maintainability of this codebase, we can make the following changes:
 
-1. Add comments to explain the purpose and functionality of each section of code.
-2. Use meaningful variable names to improve code readability.
-3. Extract the logic for calculating the knapsack value into a separate method.
-4. Remove unused imports.
-5. Format the code properly to enhance readability.
+// 1. Add comments to explain the purpose and functionality of each section of code.
+// 2. Use meaningful variable names to improve code readability.
+// 3. Extract the logic for calculating the knapsack value into a separate method.
+// 4. Remove unused imports.
+// 5. Format the code properly to enhance readability.
 
-Here's the refactored code:
+// Here's the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 public class Knapsack {
@@ -45,7 +45,7 @@ public class Knapsack {
         return memo[n][capacity];
     }
 }
-```
+// ```
 
-Please note that I have made assumptions about the intention of the code based on the provided code snippet. It would be beneficial to have more context or requirements to provide a more accurate refactored code.
+// Please note that I have made assumptions about the intention of the code based on the provided code snippet. It would be beneficial to have more context or requirements to provide a more accurate refactored code.
 

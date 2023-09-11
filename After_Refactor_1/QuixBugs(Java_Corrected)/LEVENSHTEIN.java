@@ -1,8 +1,8 @@
-To improve the maintainability of the codebase, we can start by organizing the code and adding documentation to improve readability. Additionally, we can optimize the code by storing the results of previously computed subproblems to avoid redundant calculations.
+// To improve the maintainability of the codebase, we can start by organizing the code and adding documentation to improve readability. Additionally, we can optimize the code by storing the results of previously computed subproblems to avoid redundant calculations.
 
-Here is the refactored code:
+// Here is the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.*;
@@ -56,7 +56,7 @@ public class LEVENSHTEIN {
         return memo[m][n];
     }
 }
-```
+// ```
 
-In the refactored code, we have added comments to describe the purpose and functionality of each method. We have also introduced a memoization technique to avoid redundant calculations by storing the results of previously computed subproblems in the memo array. This optimization improves the performance of the code.
+// In the refactored code, we have added comments to describe the purpose and functionality of each method. We have also introduced a memoization technique to avoid redundant calculations by storing the results of previously computed subproblems in the memo array. This optimization improves the performance of the code.
 

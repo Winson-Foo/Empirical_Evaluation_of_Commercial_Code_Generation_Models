@@ -1,14 +1,14 @@
-To improve the maintainability of the codebase, we can make the following changes:
+// To improve the maintainability of the codebase, we can make the following changes:
 
-1. Rename the class to a more descriptive name, following the naming conventions.
-2. Rename the method to a more descriptive name, following the naming conventions.
-3. Use clearer variable names to improve code readability.
-4. Add comments to explain the logic and purpose of the code.
-5. Indent the code properly.
+// 1. Rename the class to a more descriptive name, following the naming conventions.
+// 2. Rename the method to a more descriptive name, following the naming conventions.
+// 3. Use clearer variable names to improve code readability.
+// 4. Add comments to explain the logic and purpose of the code.
+// 5. Indent the code properly.
 
-Here is the refactored code:
+// Here is the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 import java.util.*;
 
@@ -47,7 +47,7 @@ public class ParenthesisValidator {
         return depth == 0;
     }
 }
-```
+// ```
 
-By following these improvements, the code becomes more readable, understandable, and maintainable.
+// By following these improvements, the code becomes more readable, understandable, and maintainable.
 

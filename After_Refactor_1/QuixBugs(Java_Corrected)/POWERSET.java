@@ -1,25 +1,25 @@
-To improve the maintainability of the codebase, we can make the following changes:
+// To improve the maintainability of the codebase, we can make the following changes:
 
-1. Use meaningful variable names: 
-- Change "arr" to "input" to make it clear that it represents the input ArrayList.
+// 1. Use meaningful variable names: 
+// - Change "arr" to "input" to make it clear that it represents the input ArrayList.
 
-2. Use generics for ArrayList:
-- Change ArrayList to ArrayList<Object> to specify the type of items in the ArrayList.
+// 2. Use generics for ArrayList:
+// - Change ArrayList to ArrayList<Object> to specify the type of items in the ArrayList.
 
-3. Remove unnecessary comments and unused imports:
-- Remove the comment at the top of the file as it is not providing any useful information.
-- Remove the import statements that are not being used.
+// 3. Remove unnecessary comments and unused imports:
+// - Remove the comment at the top of the file as it is not providing any useful information.
+// - Remove the import statements that are not being used.
 
-4. Use enhanced for loop:
-- Instead of using a standard for loop, use an enhanced for loop to iterate through the ArrayList.
+// 4. Use enhanced for loop:
+// - Instead of using a standard for loop, use an enhanced for loop to iterate through the ArrayList.
 
-5. Extract functionality into separate methods:
-- Extract the code inside the else block into a separate method called "getEmptySet".
-- Extract the code inside the if block into a separate method called "getPowerSet".
+// 5. Extract functionality into separate methods:
+// - Extract the code inside the else block into a separate method called "getEmptySet".
+// - Extract the code inside the if block into a separate method called "getPowerSet".
 
-Here is the refactored code:
+// Here is the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.ArrayList;
@@ -56,7 +56,7 @@ public class PowerSet {
         return emptySet;
     }
 }
-```
+// ```
 
-By making these changes, the codebase becomes more readable, maintainable, and easier to understand.
+// By making these changes, the codebase becomes more readable, maintainable, and easier to understand.
 

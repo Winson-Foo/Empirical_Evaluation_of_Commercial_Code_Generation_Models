@@ -1,20 +1,20 @@
-To improve the maintainability of the codebase, the following changes can be made:
+// To improve the maintainability of the codebase, the following changes can be made:
 
-1. Use meaningful variable names: 
-   - Renaming variables like 'a', 'b', 'k', 'ret', 'base' to more descriptive names will make the code more readable and maintainable.
+// 1. Use meaningful variable names: 
+//    - Renaming variables like 'a', 'b', 'k', 'ret', 'base' to more descriptive names will make the code more readable and maintainable.
 
-2. Use generics for ArrayList: 
-   - Instead of using raw types for ArrayList, use generics to indicate the type of elements being stored. This will provide compile-time type safety.
+// 2. Use generics for ArrayList: 
+//    - Instead of using raw types for ArrayList, use generics to indicate the type of elements being stored. This will provide compile-time type safety.
 
-3. Avoid magic numbers: 
-   - Replace the magic numbers in the code with constants or variables with descriptive names. This will make the code more understandable and easier to modify.
+// 3. Avoid magic numbers: 
+//    - Replace the magic numbers in the code with constants or variables with descriptive names. This will make the code more understandable and easier to modify.
 
-4. Improve code formatting: 
-   - Proper indentation, spacing, and line breaks should be used to improve code readability.
+// 4. Improve code formatting: 
+//    - Proper indentation, spacing, and line breaks should be used to improve code readability.
 
-Here is the refactored code:
+// Here is the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.ArrayList;
@@ -41,7 +41,7 @@ public class Subsequences {
         return result;
     }
 }
-```
+// ```
 
-The refactored code uses more descriptive variable names, improves code formatting, and uses generics for the ArrayList to indicate the type of elements being stored. These changes make the code easier to understand and maintain.
+// The refactored code uses more descriptive variable names, improves code formatting, and uses generics for the ArrayList to indicate the type of elements being stored. These changes make the code easier to understand and maintain.
 

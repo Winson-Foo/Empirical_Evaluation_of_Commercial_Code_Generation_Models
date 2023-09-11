@@ -1,16 +1,16 @@
-To improve the maintainability of this codebase, we can do the following:
+// To improve the maintainability of this codebase, we can do the following:
 
-1. Add meaningful comments: Add comments to explain the purpose of each section of the code, especially for any complex or non-obvious logic.
+// 1. Add meaningful comments: Add comments to explain the purpose of each section of the code, especially for any complex or non-obvious logic.
 
-2. Break down the code into smaller methods: Break down the logic into smaller, more manageable methods. This will make it easier to understand and maintain the code.
+// 2. Break down the code into smaller methods: Break down the logic into smaller, more manageable methods. This will make it easier to understand and maintain the code.
 
-3. Use appropriate variable and method names: Use descriptive variable and method names that represent their purpose and functionality.
+// 3. Use appropriate variable and method names: Use descriptive variable and method names that represent their purpose and functionality.
 
-4. Add error handling: Add appropriate error handling mechanisms, such as try-catch blocks, to handle any exceptions that may occur during execution.
+// 4. Add error handling: Add appropriate error handling mechanisms, such as try-catch blocks, to handle any exceptions that may occur during execution.
 
-5. Optimize the code: Use efficient algorithms and data structures to improve the performance of the code.
+// 5. Optimize the code: Use efficient algorithms and data structures to improve the performance of the code.
 
-Here's the refactored code with these improvements:
+// Here's the refactored code with these improvements:
 
 package correct_java_programs;
 import java.util.*;
@@ -53,5 +53,5 @@ public class PascalTriangle {
     }
 }
 
-Note: This refactored code includes proper indentation and a main method to demonstrate the functionality of the Pascal Triangle generation. You can adjust the value of "n" in the main method to generate Pascal Triangles of different sizes.
+// Note: This refactored code includes proper indentation and a main method to demonstrate the functionality of the Pascal Triangle generation. You can adjust the value of "n" in the main method to generate Pascal Triangles of different sizes.
 

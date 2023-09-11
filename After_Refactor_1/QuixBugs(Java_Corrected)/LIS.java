@@ -1,20 +1,20 @@
-To improve the maintainability of this codebase, we can do the following:
+// To improve the maintainability of this codebase, we can do the following:
 
-1. Use meaningful variable names: 
-   - Instead of using single letter variable names like `arr`, `ends`, `val`, etc., use more descriptive names that convey the purpose or meaning of the variable.
+// 1. Use meaningful variable names: 
+//    - Instead of using single letter variable names like `arr`, `ends`, `val`, etc., use more descriptive names that convey the purpose or meaning of the variable.
 
-2. Break down long code lines: 
-   - Split long lines of code into multiple lines to improve readability and maintainability. For example, split the `for` loop into multiple lines or split long conditionals.
+// 2. Break down long code lines: 
+//    - Split long lines of code into multiple lines to improve readability and maintainability. For example, split the `for` loop into multiple lines or split long conditionals.
 
-3. Add comments: 
-   - Add comments to explain the purpose or functionality of certain sections of the code. This will make it easier for other developers to understand and maintain the code in the future.
+// 3. Add comments: 
+//    - Add comments to explain the purpose or functionality of certain sections of the code. This will make it easier for other developers to understand and maintain the code in the future.
 
-4. Encapsulate logic into methods: 
-   - Encapsulate specific functionality into separate methods. This will improve code organization and make it easier to understand and maintain.
+// 4. Encapsulate logic into methods: 
+//    - Encapsulate specific functionality into separate methods. This will improve code organization and make it easier to understand and maintain.
 
-Here's the refactored code:
+// Here's the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.*;
@@ -50,7 +50,7 @@ public class LIS {
         return prefixLengths;
     }
 }
-```
+// ```
 
-Please note that this refactored code may not fully address all maintainability issues, as it's only a starting point. Further improvements can be made based on the specific requirements and needs of the codebase.
+// Please note that this refactored code may not fully address all maintainability issues, as it's only a starting point. Further improvements can be made based on the specific requirements and needs of the codebase.
 

@@ -1,16 +1,16 @@
-To improve the maintainability of this codebase, we can make the following changes:
+// To improve the maintainability of this codebase, we can make the following changes:
 
-1. Add comments to explain the purpose of each section of code and provide documentation for the `max_sublist_sum` method.
+// 1. Add comments to explain the purpose of each section of code and provide documentation for the `max_sublist_sum` method.
 
-2. Rename variables to have more meaningful names that indicate their purpose in the code.
+// 2. Rename variables to have more meaningful names that indicate their purpose in the code.
 
-3. Use a traditional for loop instead of a for-each loop to improve readability.
+// 3. Use a traditional for loop instead of a for-each loop to improve readability.
 
-4. Separate the logic into smaller, more manageable methods.
+// 4. Separate the logic into smaller, more manageable methods.
 
-Here is the refactored code:
+// Here is the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.Arrays;
@@ -49,7 +49,7 @@ public class MaxSublistSum {
         System.out.println("Maximum sublist sum: " + maxSublistSum(arr));
     }
 }
-```
+// ```
 
-This refactored code separates the logic into two methods: `maxSublistSum`, which calculates the maximum sublist sum, and `main`, which is used for testing the `maxSublistSum` method. Additionally, the variable names have been renamed to be more descriptive, and comments have been added to explain the purpose of each section of code.
+// This refactored code separates the logic into two methods: `maxSublistSum`, which calculates the maximum sublist sum, and `main`, which is used for testing the `maxSublistSum` method. Additionally, the variable names have been renamed to be more descriptive, and comments have been added to explain the purpose of each section of code.
 

@@ -1,6 +1,6 @@
-To improve the maintainability of this codebase, we can follow some best practices such as adding comments, using meaningful variable names, organizing the code, and extracting reusable methods. Here's the refactored code:
+// To improve the maintainability of this codebase, we can follow some best practices such as adding comments, using meaningful variable names, organizing the code, and extracting reusable methods. Here's the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 /**
@@ -24,11 +24,11 @@ public class SQRT {
         return approximation;
     }
 }
-```
+// ```
 
-In the refactored code, we have added comments to explain the purpose of the class and the method. We have also used meaningful variable names to improve code readability. The code is now organized with proper indentation and spacing.
+// In the refactored code, we have added comments to explain the purpose of the class and the method. We have also used meaningful variable names to improve code readability. The code is now organized with proper indentation and spacing.
 
-Additionally, we have updated the method name to `calculateSquareRoot` to better describe its functionality. This can help future developers easily understand the purpose of the method.
+// Additionally, we have updated the method name to `calculateSquareRoot` to better describe its functionality. This can help future developers easily understand the purpose of the method.
 
-Overall, these changes make the code more maintainable by improving code readability and providing clear documentation.
+// Overall, these changes make the code more maintainable by improving code readability and providing clear documentation.
 

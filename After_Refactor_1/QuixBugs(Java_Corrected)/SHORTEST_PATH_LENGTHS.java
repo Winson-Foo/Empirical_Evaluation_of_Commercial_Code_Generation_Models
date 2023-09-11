@@ -1,16 +1,16 @@
-To improve the maintainability of this codebase, here are some changes:
+// To improve the maintainability of this codebase, here are some changes:
 
-1. Use meaningful variable and method names: Rename variables like `numNodes`, `length_by_edge`, and `length_by_path` to more descriptive names like `numberOfNodes`, `edgeLengths`, and `pathLengths`. This will make the code easier to understand.
+// 1. Use meaningful variable and method names: Rename variables like `numNodes`, `length_by_edge`, and `length_by_path` to more descriptive names like `numberOfNodes`, `edgeLengths`, and `pathLengths`. This will make the code easier to understand.
 
-2. Remove unnecessary imports: Remove the import statement for `java.lang.Math` since it is not being used in the code.
+// 2. Remove unnecessary imports: Remove the import statement for `java.lang.Math` since it is not being used in the code.
 
-3. Add comments to explain the code logic: Add comments to explain the purpose and functionality of each section of code. This will make it easier for someone else (or even yourself) to understand and maintain the code in the future.
+// 3. Add comments to explain the code logic: Add comments to explain the purpose and functionality of each section of code. This will make it easier for someone else (or even yourself) to understand and maintain the code in the future.
 
-4. Use constants instead of magic numbers: Declare a constant `INFINITY` instead of using the magic number `99999`. This will make it easier to understand the intent of the code.
+// 4. Use constants instead of magic numbers: Declare a constant `INFINITY` instead of using the magic number `99999`. This will make it easier to understand the intent of the code.
 
-Here's the refactored code with the improvements mentioned above:
+// Here's the refactored code with the improvements mentioned above:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.*;
@@ -55,7 +55,7 @@ public class ShortestPathLengths {
         return a + b;
     }
 }
-```
+// ```
 
-These changes improve the maintainability of the codebase by making it easier to read, understand, and modify in the future.
+// These changes improve the maintainability of the codebase by making it easier to read, understand, and modify in the future.
 

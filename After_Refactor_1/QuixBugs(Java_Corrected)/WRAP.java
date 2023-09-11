@@ -1,18 +1,18 @@
-To improve the maintainability of this codebase, I would recommend the following changes:
+// To improve the maintainability of this codebase, I would recommend the following changes:
 
-1. Add comments: Add comments to explain the purpose and functionality of each method and section of code. This will make it easier for other developers to understand and maintain the code in the future.
+// 1. Add comments: Add comments to explain the purpose and functionality of each method and section of code. This will make it easier for other developers to understand and maintain the code in the future.
 
-2. Use meaningful variable names: Rename variables to be more descriptive of their purpose. This will make the code easier to understand and maintain.
+// 2. Use meaningful variable names: Rename variables to be more descriptive of their purpose. This will make the code easier to understand and maintain.
 
-3. Extract magic numbers and strings: Instead of hardcoding values like "c" and 30, create constants to represent them. This will make the code more readable and maintainable.
+// 3. Extract magic numbers and strings: Instead of hardcoding values like "c" and 30, create constants to represent them. This will make the code more readable and maintainable.
 
-4. Use a for-each loop: Instead of using a while loop to iterate over the characters in the text, use a for-each loop to make the code more concise and readable.
+// 4. Use a for-each loop: Instead of using a while loop to iterate over the characters in the text, use a for-each loop to make the code more concise and readable.
 
-5. Use StringBuilder instead of String concatenation: Instead of using string concatenation to build the lines, use StringBuilder for better performance and maintainability.
+// 5. Use StringBuilder instead of String concatenation: Instead of using string concatenation to build the lines, use StringBuilder for better performance and maintainability.
 
-Here is the refactored code:
+// Here is the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.*;
@@ -49,7 +49,7 @@ public class WRAP {
         return lines;
     }
 }
-```
+// ```
 
-Note: The refactored code assumes that you want to wrap the text at spaces, based on the logic in the original code. If you have a specific wrapping criterion, please let me know and I can modify the code accordingly.
+// Note: The refactored code assumes that you want to wrap the text at spaces, based on the logic in the original code. If you have a specific wrapping criterion, please let me know and I can modify the code accordingly.
 

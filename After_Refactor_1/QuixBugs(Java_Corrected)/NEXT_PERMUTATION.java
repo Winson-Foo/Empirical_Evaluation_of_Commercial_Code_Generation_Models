@@ -1,14 +1,14 @@
-To improve the maintainability of the codebase, we can make the following changes:
+// To improve the maintainability of the codebase, we can make the following changes:
 
-1. Add proper comments to describe the purpose and functionality of each method and block of code.
-2. Rename variables and methods to be more descriptive.
-3. Use more meaningful variable names to enhance the readability and understanding of the code.
-4. Extract repetitive code into separate methods to improve modularity and reduce code duplication.
-5. Use the "this" keyword to improve clarity when referring to class variables.
+// 1. Add proper comments to describe the purpose and functionality of each method and block of code.
+// 2. Rename variables and methods to be more descriptive.
+// 3. Use more meaningful variable names to enhance the readability and understanding of the code.
+// 4. Extract repetitive code into separate methods to improve modularity and reduce code duplication.
+// 5. Use the "this" keyword to improve clarity when referring to class variables.
 
-Here is the refactored code:
+// Here is the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.ArrayList;
@@ -103,5 +103,5 @@ public class NextPermutation {
         }
     }
 }
-```
+// ```
 

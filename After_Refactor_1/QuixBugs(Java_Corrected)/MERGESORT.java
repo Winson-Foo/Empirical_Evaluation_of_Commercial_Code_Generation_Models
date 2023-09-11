@@ -1,13 +1,13 @@
-To improve the maintainability of the codebase, we can make the following changes:
+// To improve the maintainability of the codebase, we can make the following changes:
 
-1. Add comments to explain the purpose and logic of each method.
-2. Use meaningful variable and method names to improve code readability.
-3. Use a more generic type for the lists to make the code reusable.
-4. Remove unnecessary commented-out code and unused imports.
+// 1. Add comments to explain the purpose and logic of each method.
+// 2. Use meaningful variable and method names to improve code readability.
+// 3. Use a more generic type for the lists to make the code reusable.
+// 4. Remove unnecessary commented-out code and unused imports.
 
-Here is the refactored code:
+// Here is the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.ArrayList;
@@ -64,7 +64,7 @@ public class MergeSort {
         }
     }
 }
-```
+// ```
 
-Note: In the refactored code, I have used the generic type `T` to indicate that the lists can contain any type of elements as long as they implement the `Comparable` interface. This allows the code to be more flexible and reusable.
+// Note: In the refactored code, I have used the generic type `T` to indicate that the lists can contain any type of elements as long as they implement the `Comparable` interface. This allows the code to be more flexible and reusable.
 

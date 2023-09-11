@@ -1,13 +1,13 @@
-To improve the maintainability of this codebase, you can make the following changes:
+// To improve the maintainability of this codebase, you can make the following changes:
 
-1. Add proper comments to explain the purpose and functionality of each section of code.
-2. Use meaningful variable and method names to make the code more readable.
-3. Follow consistent indentation and formatting.
-4. Remove unnecessary imports and unused variables.
+// 1. Add proper comments to explain the purpose and functionality of each section of code.
+// 2. Use meaningful variable and method names to make the code more readable.
+// 3. Follow consistent indentation and formatting.
+// 4. Remove unnecessary imports and unused variables.
 
-Here's the refactored code:
+// Here's the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.ArrayList;
@@ -50,5 +50,5 @@ public class KTH {
         }
     }
 }
-```
+// ```
 

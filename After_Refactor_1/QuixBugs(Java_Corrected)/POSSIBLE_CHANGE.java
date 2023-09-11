@@ -1,6 +1,6 @@
-Here is the refactored code:
+// Here is the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 import java.util.*;
 
@@ -18,22 +18,22 @@ public class POSSIBLE_CHANGE {
         return possible_change(coins, total - first) + possible_change(rest, total);
     }
 }
-```
+// ```
 
-To improve the maintainability of this codebase, you can consider the following improvements:
+// To improve the maintainability of this codebase, you can consider the following improvements:
 
-1. Use more descriptive method and variable names:
-   - Rename `possible_change` method to something more descriptive like `getPossibleChangeCombinations`.
-   - Rename `coins` parameter to `coinDenominations`.
-   - Rename `total` parameter to `targetAmount`.
-   - Rename `first` variable to `currentCoinDenomination`.
-   - Rename `rest` variable to `remainingCoins`.
+// 1. Use more descriptive method and variable names:
+//    - Rename `possible_change` method to something more descriptive like `getPossibleChangeCombinations`.
+//    - Rename `coins` parameter to `coinDenominations`.
+//    - Rename `total` parameter to `targetAmount`.
+//    - Rename `first` variable to `currentCoinDenomination`.
+//    - Rename `rest` variable to `remainingCoins`.
 
-2. Add comments to explain the purpose and functionality of the code.
+// 2. Add comments to explain the purpose and functionality of the code.
 
-3. Separate the code into smaller, more focused methods or classes based on their responsibilities. For example, you can create a separate class for handling coin operations, such as `CoinUtil`, and move the `possible_change` method to that class.
+// 3. Separate the code into smaller, more focused methods or classes based on their responsibilities. For example, you can create a separate class for handling coin operations, such as `CoinUtil`, and move the `possible_change` method to that class.
 
-4. Handle invalid inputs and edge cases explicitly. For example, add error handling for negative `total` or empty `coinDenominations`.
+// 4. Handle invalid inputs and edge cases explicitly. For example, add error handling for negative `total` or empty `coinDenominations`.
 
-5. Consider using more advanced data structures or algorithms for better performance and readability if applicable.
+// 5. Consider using more advanced data structures or algorithms for better performance and readability if applicable.
 

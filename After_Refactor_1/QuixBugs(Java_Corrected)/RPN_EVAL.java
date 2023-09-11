@@ -1,14 +1,14 @@
-To improve the maintainability of the codebase, we can make the following changes:
+// To improve the maintainability of the codebase, we can make the following changes:
 
-1. Use generic types for the ArrayList and Stack to improve type safety.
-2. Extract the token processing logic into a separate method for better code organization.
-3. Use meaningful variable names for better readability.
-4. Add error handling for division by zero.
-5. Add comments to explain the code logic.
+// 1. Use generic types for the ArrayList and Stack to improve type safety.
+// 2. Extract the token processing logic into a separate method for better code organization.
+// 3. Use meaningful variable names for better readability.
+// 4. Add error handling for division by zero.
+// 5. Add comments to explain the code logic.
 
-Here's the refactored code:
+// Here's the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.ArrayList;
@@ -63,7 +63,7 @@ public class RPN_EVAL {
         return operators;
     }
 }
-```
+// ```
 
-This refactored code improves maintainability by providing better variable names, separating concerns into smaller methods, adding error handling, and adding comments to explain the code's logic.
+// This refactored code improves maintainability by providing better variable names, separating concerns into smaller methods, adding error handling, and adding comments to explain the code's logic.
 

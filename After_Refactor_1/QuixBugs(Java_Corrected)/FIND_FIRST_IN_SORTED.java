@@ -1,13 +1,13 @@
-To improve the maintainability of this codebase, the following modifications can be made:
+// To improve the maintainability of this codebase, the following modifications can be made:
 
-1. Add comments to indicate the purpose of each section of code.
-2. Use meaningful variable names to enhance code understanding.
-3. Extract magic numbers and hard-coded values into named constants.
-4. Format the code to follow proper indentation and coding standards.
+// 1. Add comments to indicate the purpose of each section of code.
+// 2. Use meaningful variable names to enhance code understanding.
+// 3. Extract magic numbers and hard-coded values into named constants.
+// 4. Format the code to follow proper indentation and coding standards.
 
-Here is the refactored code:
+// Here is the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 /**
@@ -41,7 +41,7 @@ public class FindFirstInSorted {
         return -1;
     }
 }
-```
+// ```
 
-By making these changes, the code becomes more readable, maintainable, and easier to understand for future developers.
+// By making these changes, the code becomes more readable, maintainable, and easier to understand for future developers.
 

@@ -1,12 +1,12 @@
-To improve the maintainability of the codebase, we can make the following changes:
+// To improve the maintainability of the codebase, we can make the following changes:
 
-- Improve variable names to make them more descriptive and meaningful.
-- Add comments to explain the purpose and functionality of the code.
-- Use proper indentation and formatting to enhance readability.
+// - Improve variable names to make them more descriptive and meaningful.
+// - Add comments to explain the purpose and functionality of the code.
+// - Use proper indentation and formatting to enhance readability.
 
-Here's the refactored code:
+// Here's the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.ArrayList;
@@ -47,7 +47,7 @@ public class Kheapsort {
         return output;
     }
 }
-```
+// ```
 
-By making these changes, the readability and maintainability of the codebase are improved, making it easier to understand and modify in the future.
+// By making these changes, the readability and maintainability of the codebase are improved, making it easier to understand and modify in the future.
 

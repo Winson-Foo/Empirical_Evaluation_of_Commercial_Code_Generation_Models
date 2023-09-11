@@ -1,16 +1,16 @@
-To improve the maintainability of this codebase, we can make the following changes:
+// To improve the maintainability of this codebase, we can make the following changes:
 
-1. Change the class name to follow Java naming conventions: Instead of using "QUICKSORT", we can use "Quicksort" as the class name.
+// 1. Change the class name to follow Java naming conventions: Instead of using "QUICKSORT", we can use "Quicksort" as the class name.
 
-2. Use more descriptive variable names: Instead of using single-letter variable names like "arr", "x", "pivot", etc., we can use more descriptive names that indicate their purpose and improve readability.
+// 2. Use more descriptive variable names: Instead of using single-letter variable names like "arr", "x", "pivot", etc., we can use more descriptive names that indicate their purpose and improve readability.
 
-3. Use proper indentation and formatting: Provide consistent indentation and formatting by adding spaces and line breaks in the appropriate places.
+// 3. Use proper indentation and formatting: Provide consistent indentation and formatting by adding spaces and line breaks in the appropriate places.
 
-4. Add comments to explain the code: Add comments to explain the purpose of the different sections of the code and provide some context.
+// 4. Add comments to explain the code: Add comments to explain the purpose of the different sections of the code and provide some context.
 
-Here is the refactored code with these improvements:
+// Here is the refactored code with these improvements:
 
-```java
+// ```java
 package correct_java_programs;
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +49,7 @@ public class Quicksort {
         return sortedList;
     }
 }
-```
+// ```
 
-By making these changes, the codebase becomes more readable, easier to understand, and maintainability is improved.
+// By making these changes, the codebase becomes more readable, easier to understand, and maintainability is improved.
 
