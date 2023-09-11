@@ -1,15 +1,15 @@
-To improve the maintainability of the codebase, here are a few suggestions:
+// To improve the maintainability of the codebase, here are a few suggestions:
 
-1. Add meaningful comments to describe the purpose and functionality of each section of code.
-2. Use descriptive variable and method names to make the code more readable.
-3. Organize the code by separating the logic into smaller, manageable functions.
-4. Encapsulate the sorting logic into its own class or method to make it reusable.
-5. Use Java 8's stream API to simplify the code and make it more concise.
-6. Use try-with-resources to handle the closing of resources automatically.
+// 1. Add meaningful comments to describe the purpose and functionality of each section of code.
+// 2. Use descriptive variable and method names to make the code more readable.
+// 3. Organize the code by separating the logic into smaller, manageable functions.
+// 4. Encapsulate the sorting logic into its own class or method to make it reusable.
+// 5. Use Java 8's stream API to simplify the code and make it more concise.
+// 6. Use try-with-resources to handle the closing of resources automatically.
 
-Here is the refactored code:
+// Here is the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.ArrayList;
@@ -47,7 +47,7 @@ public class Kheapsort {
         return output;
     }
 }
-```
+// ```
 
-Note: It is assumed that the `correct_java_programs` package is the correct package for the `Kheapsort` class. If it is incorrect, please adjust it accordingly.
+// Note: It is assumed that the `correct_java_programs` package is the correct package for the `Kheapsort` class. If it is incorrect, please adjust it accordingly.
 

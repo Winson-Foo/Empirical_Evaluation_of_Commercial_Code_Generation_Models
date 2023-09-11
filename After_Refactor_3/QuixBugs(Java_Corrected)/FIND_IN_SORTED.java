@@ -1,13 +1,13 @@
-To improve the maintainability of the codebase, we can make the following changes:
+// To improve the maintainability of the codebase, we can make the following changes:
 
-1. Rename the class and method to follow Java naming conventions.
-2. Add comments to improve code readability.
-3. Use meaningful variable names to improve code comprehension.
-4. Handle the case where the target element is not found in the array.
+// 1. Rename the class and method to follow Java naming conventions.
+// 2. Add comments to improve code readability.
+// 3. Use meaningful variable names to improve code comprehension.
+// 4. Handle the case where the target element is not found in the array.
 
-Here's the refactored code:
+// Here's the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 public class BinarySearch {
@@ -47,7 +47,7 @@ public class BinarySearch {
         }
     }
 }
-```
+// ```
 
-With these changes, the code is now more readable and maintainable. It follows standard Java naming conventions, has commented explanations for each method, and handles the case where the target element is not found in the array.
+// With these changes, the code is now more readable and maintainable. It follows standard Java naming conventions, has commented explanations for each method, and handles the case where the target element is not found in the array.
 

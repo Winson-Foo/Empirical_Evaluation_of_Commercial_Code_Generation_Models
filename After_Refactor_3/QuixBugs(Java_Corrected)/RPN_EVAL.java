@@ -1,16 +1,16 @@
-To improve the maintainability of this codebase, we can make several changes:
+// To improve the maintainability of this codebase, we can make several changes:
 
-1. Add proper type declarations: Instead of using raw types like `ArrayList` and `Stack`, we can specify the type of elements they hold. This will make the code more readable and easier to understand.
+// 1. Add proper type declarations: Instead of using raw types like `ArrayList` and `Stack`, we can specify the type of elements they hold. This will make the code more readable and easier to understand.
 
-2. Use meaningful variable names: Instead of using generic names like `a`, `b`, and `c`, we can use more descriptive names that indicate their purpose.
+// 2. Use meaningful variable names: Instead of using generic names like `a`, `b`, and `c`, we can use more descriptive names that indicate their purpose.
 
-3. Extract the operator map initialization into a separate method: This will make the code more modular and easier to update if new operators need to be added.
+// 3. Extract the operator map initialization into a separate method: This will make the code more modular and easier to update if new operators need to be added.
 
-4. Change the method signature to use generics: By specifying the type of elements in the `ArrayList`, we can make the code more type-safe.
+// 4. Change the method signature to use generics: By specifying the type of elements in the `ArrayList`, we can make the code more type-safe.
 
-Here's the refactored code:
+// Here's the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.*;
@@ -48,7 +48,7 @@ public class RPN_EVAL {
         return operators;
     }
 }
-```
+// ```
 
-These changes improve the maintainability of the codebase by adding proper type declarations, using meaningful variable names, separating the operator map initialization, and making the code more type-safe with generics.
+// These changes improve the maintainability of the codebase by adding proper type declarations, using meaningful variable names, separating the operator map initialization, and making the code more type-safe with generics.
 

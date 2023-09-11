@@ -1,14 +1,14 @@
-To improve the maintainability of the codebase, we can make the following changes:
+// To improve the maintainability of the codebase, we can make the following changes:
 
-1. Use meaningful variable names: Rename variables to accurately reflect their purpose and improve code readability.
-2. Use generics: Update the code to use generics and specify the type of the ArrayList.
-3. Use enhanced for loop: Replace the traditional for loop with an enhanced for loop to iterate through the subsets.
-4. Separate logic into smaller methods: Extract the logic for creating and combining subsets into separate methods for better code organization.
-5. Use clear return statements: Instead of using multiple return statements, use clear and concise return statements.
+// 1. Use meaningful variable names: Rename variables to accurately reflect their purpose and improve code readability.
+// 2. Use generics: Update the code to use generics and specify the type of the ArrayList.
+// 3. Use enhanced for loop: Replace the traditional for loop with an enhanced for loop to iterate through the subsets.
+// 4. Separate logic into smaller methods: Extract the logic for creating and combining subsets into separate methods for better code organization.
+// 5. Use clear return statements: Instead of using multiple return statements, use clear and concise return statements.
 
-Here's the refactored code with the above improvements:
+// Here's the refactored code with the above improvements:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.ArrayList;
@@ -45,7 +45,7 @@ public class PowersetCalculator {
         }
     }
 }
-```
+// ```
 
-Note that the refactored code assumes that the input ArrayList contains Integers. If the data type of the ArrayList elements is different, you may need to adjust the code accordingly.
+// Note that the refactored code assumes that the input ArrayList contains Integers. If the data type of the ArrayList elements is different, you may need to adjust the code accordingly.
 

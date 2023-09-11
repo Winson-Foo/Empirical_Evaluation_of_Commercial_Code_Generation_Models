@@ -1,14 +1,14 @@
-To improve the maintainability of this codebase, we can make the following changes:
+// To improve the maintainability of this codebase, we can make the following changes:
 
-1. Add proper comments explaining the functionality of each method and block of code.
-2. Use meaningful variable names to improve code readability.
-3. Extract repeated code into separate methods to improve code reusability.
-4. Remove unnecessary comments and debug statements.
-5. Use standard coding conventions and formatting.
+// 1. Add proper comments explaining the functionality of each method and block of code.
+// 2. Use meaningful variable names to improve code readability.
+// 3. Extract repeated code into separate methods to improve code reusability.
+// 4. Remove unnecessary comments and debug statements.
+// 5. Use standard coding conventions and formatting.
 
-Here's the refactored code:
+// Here's the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.ArrayList;
@@ -70,7 +70,7 @@ public class MergeSort {
         }
     }
 }
-```
+// ```
 
-By following these improvements, the codebase becomes more readable, modular, and easier to maintain.
+// By following these improvements, the codebase becomes more readable, modular, and easier to maintain.
 

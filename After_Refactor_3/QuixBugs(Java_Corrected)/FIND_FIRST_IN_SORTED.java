@@ -1,14 +1,14 @@
-To improve the maintainability of the codebase, we can make the following changes:
+// To improve the maintainability of the codebase, we can make the following changes:
 
-1. Use meaningful variable names: Rename variables such as 'arr', 'x', 'lo', 'hi', 'mid' to more descriptive names that clarify their purpose and meaning.
+// 1. Use meaningful variable names: Rename variables such as 'arr', 'x', 'lo', 'hi', 'mid' to more descriptive names that clarify their purpose and meaning.
 
-2. Add comments: Add comments to explain the logic and purpose of the code at relevant places, making it easier for other developers to understand and maintain the code.
+// 2. Add comments: Add comments to explain the logic and purpose of the code at relevant places, making it easier for other developers to understand and maintain the code.
 
-3. Adjust array bounds: In the original code, the initial value of 'hi' is set to arr.length, which causes an out of bounds error when trying to access arr[mid]. To fix this, we should set 'hi' to arr.length - 1.
+// 3. Adjust array bounds: In the original code, the initial value of 'hi' is set to arr.length, which causes an out of bounds error when trying to access arr[mid]. To fix this, we should set 'hi' to arr.length - 1.
 
-4. Update the return statement: Instead of returning -1 when the element is not found, it is better to return a more meaningful value, such as -1 or a constant like NOT_FOUND.
+// 4. Update the return statement: Instead of returning -1 when the element is not found, it is better to return a more meaningful value, such as -1 or a constant like NOT_FOUND.
 
-Here's the refactored code with these improvements:
+// Here's the refactored code with these improvements:
 
 package correct_java_programs;
 import java.util.*;

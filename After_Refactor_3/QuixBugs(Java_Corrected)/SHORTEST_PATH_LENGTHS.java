@@ -1,6 +1,6 @@
-To improve the maintainability of the codebase, I would suggest the following refactored code:
+// To improve the maintainability of the codebase, I would suggest the following refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.*;
@@ -53,15 +53,15 @@ public class ShortestPathLengths {
         return a + b;
     }
 }
-```
+// ```
 
-Here are the improvements made:
-1. Renamed the class `SHORTEST_PATH_LENGTHS` to `ShortestPathLengths` to follow Java naming convention.
-2. Added proper JavaDoc comments for the class and methods.
-3. Made the class and methods `public` for better visibility and accessibility.
-4. Renamed variables to have meaningful names.
-5. Extracted the initialization of path lengths into a separate method for improved readability.
-6. Extracted the calculation of shortest paths into a separate method for improved readability.
-7. Changed the access modifier of the `sumLengths` method to `private` as it is only used within the class.
-8. Reorganized the code structure to have a clear separation of methods and improved indentation for better readability.
+// Here are the improvements made:
+// 1. Renamed the class `SHORTEST_PATH_LENGTHS` to `ShortestPathLengths` to follow Java naming convention.
+// 2. Added proper JavaDoc comments for the class and methods.
+// 3. Made the class and methods `public` for better visibility and accessibility.
+// 4. Renamed variables to have meaningful names.
+// 5. Extracted the initialization of path lengths into a separate method for improved readability.
+// 6. Extracted the calculation of shortest paths into a separate method for improved readability.
+// 7. Changed the access modifier of the `sumLengths` method to `private` as it is only used within the class.
+// 8. Reorganized the code structure to have a clear separation of methods and improved indentation for better readability.
 

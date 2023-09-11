@@ -1,16 +1,16 @@
-To improve the maintainability of the codebase, here are a few suggestions:
+// To improve the maintainability of the codebase, here are a few suggestions:
 
-1. Add comments: Add comments to explain the purpose of the code, the logic behind each step, and any assumptions made. This will make it easier for other developers to understand and maintain the code in the future.
+// 1. Add comments: Add comments to explain the purpose of the code, the logic behind each step, and any assumptions made. This will make it easier for other developers to understand and maintain the code in the future.
 
-2. Use meaningful variable names: Instead of using generic names like "arr" and "k", use more descriptive names that convey the purpose of the variables. This will make the code more self-documenting and easier to understand.
+// 2. Use meaningful variable names: Instead of using generic names like "arr" and "k", use more descriptive names that convey the purpose of the variables. This will make the code more self-documenting and easier to understand.
 
-3. Use proper indentation and formatting: Ensure that the code is properly indented and formatted according to standard coding conventions. This will make the code easier to read and navigate.
+// 3. Use proper indentation and formatting: Ensure that the code is properly indented and formatted according to standard coding conventions. This will make the code easier to read and navigate.
 
-4. Use try-catch blocks and handle exceptions: Since the code is currently not handling any exceptions, it could lead to runtime errors. Surround the code with try-catch blocks and handle any potential exceptions that can occur.
+// 4. Use try-catch blocks and handle exceptions: Since the code is currently not handling any exceptions, it could lead to runtime errors. Surround the code with try-catch blocks and handle any potential exceptions that can occur.
 
-Here is the refactored code with the suggested improvements:
+// Here is the refactored code with the suggested improvements:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.ArrayList;
@@ -61,7 +61,7 @@ public class Kth {
         }
     }
 }
-```
+// ```
 
-Note: This is just a refactored version of the code based on the given requirements. Depending on the specific requirements and context of the codebase, further improvements and modifications may be needed.
+// Note: This is just a refactored version of the code based on the given requirements. Depending on the specific requirements and context of the codebase, further improvements and modifications may be needed.
 

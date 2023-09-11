@@ -1,13 +1,13 @@
-To improve the maintainability of the codebase, we can make the following changes:
+// To improve the maintainability of the codebase, we can make the following changes:
 
-1. Add comments to explain the purpose and logic of the code.
-2. Use more descriptive variable names.
-3. Use helper methods to break down complex logic into smaller, more manageable parts.
-4. Add error handling to handle edge cases.
+// 1. Add comments to explain the purpose and logic of the code.
+// 2. Use more descriptive variable names.
+// 3. Use helper methods to break down complex logic into smaller, more manageable parts.
+// 4. Add error handling to handle edge cases.
 
-Here's the refactored code:
+// Here's the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 /**
@@ -43,7 +43,7 @@ public class LEVENSHTEIN {
                 levenshtein(source.substring(1), target));
     }
 }
-```
+// ```
 
-By adding comments, using descriptive variable names, breaking down the logic, and adding error handling, the code is now easier to understand and maintain.
+// By adding comments, using descriptive variable names, breaking down the logic, and adding error handling, the code is now easier to understand and maintain.
 

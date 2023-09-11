@@ -1,14 +1,14 @@
-To improve the maintainability of the codebase, we can make the following changes:
+// To improve the maintainability of the codebase, we can make the following changes:
 
-1. Remove unnecessary comments and empty lines.
-2. Use more meaningful variable names.
-3. Add proper indentation and formatting.
-4. Add comments to explain the purpose of the code and its logic.
-5. Add error handling for invalid inputs.
+// 1. Remove unnecessary comments and empty lines.
+// 2. Use more meaningful variable names.
+// 3. Add proper indentation and formatting.
+// 4. Add comments to explain the purpose of the code and its logic.
+// 5. Add error handling for invalid inputs.
 
-Here is the refactored code:
+// Here is the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 public class GCD {
@@ -39,7 +39,7 @@ public class GCD {
         return firstNumber;
     }
 }
-```
+// ```
 
-By making these changes, the code becomes more readable, understandable, and easier to maintain. It also includes error handling for invalid inputs, making the code more robust.
+// By making these changes, the code becomes more readable, understandable, and easier to maintain. It also includes error handling for invalid inputs, making the code more robust.
 

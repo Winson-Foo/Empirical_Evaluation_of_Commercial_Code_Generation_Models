@@ -1,14 +1,14 @@
-To improve the maintainability of the codebase, we can make the following changes:
+// To improve the maintainability of the codebase, we can make the following changes:
 
-1. Rename the class and method names to follow the Java naming conventions.
-2. Add comments to describe the purpose of the method and each section of the code.
-3. Use meaningful variable names to improve readability.
-4. Update the code formatting to make it consistent and easier to read.
-5. Add error handling for cases where either string is null or empty.
+// 1. Rename the class and method names to follow the Java naming conventions.
+// 2. Add comments to describe the purpose of the method and each section of the code.
+// 3. Use meaningful variable names to improve readability.
+// 4. Update the code formatting to make it consistent and easier to read.
+// 5. Add error handling for cases where either string is null or empty.
 
-Here is the refactored code:
+// Here is the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 /**
@@ -41,7 +41,7 @@ public class LongestCommonSubsequence {
         }
     }
 }
-```
+// ```
 
-The changes made in this refactoring should help improve the maintainability of the codebase by making it easier to understand and modify in the future.
+// The changes made in this refactoring should help improve the maintainability of the codebase by making it easier to understand and modify in the future.
 

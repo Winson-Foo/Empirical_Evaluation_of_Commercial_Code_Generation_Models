@@ -1,14 +1,14 @@
-To improve the maintainability of the codebase, here are a few suggestions:
+// To improve the maintainability of the codebase, here are a few suggestions:
 
-1. Add Proper Comments: Add comments to describe the purpose and functionality of the class and methods. This will make it easier for other developers (including future you) to understand the code and make changes if needed.
-2. Use Meaningful Variable and Method Names: Use descriptive names for variables and methods to improve readability and make the code self-explanatory.
-3. Add Input Validation: Validate the input parameters to ensure they are within acceptable ranges. For example, check if `x` is non-negative and `epsilon` is positive.
-4. Extract Constants: Extract any magic numbers or constants used in the code into named variables to improve code readability and maintainability.
-5. Organize Imports: Remove unused imports and reorganize the imports to follow a consistent order.
+// 1. Add Proper Comments: Add comments to describe the purpose and functionality of the class and methods. This will make it easier for other developers (including future you) to understand the code and make changes if needed.
+// 2. Use Meaningful Variable and Method Names: Use descriptive names for variables and methods to improve readability and make the code self-explanatory.
+// 3. Add Input Validation: Validate the input parameters to ensure they are within acceptable ranges. For example, check if `x` is non-negative and `epsilon` is positive.
+// 4. Extract Constants: Extract any magic numbers or constants used in the code into named variables to improve code readability and maintainability.
+// 5. Organize Imports: Remove unused imports and reorganize the imports to follow a consistent order.
 
-Here's the refactored code implementing these suggestions:
+// Here's the refactored code implementing these suggestions:
 
-```java
+// ```java
 package correct_java_programs;
 
 /**
@@ -49,7 +49,7 @@ public class Sqrt {
         return approx;
     }
 }
-```
+// ```
 
-By following these guidelines, the code becomes more readable, easier to understand, and maintainable.
+// By following these guidelines, the code becomes more readable, easier to understand, and maintainable.
 

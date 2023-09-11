@@ -1,14 +1,14 @@
-To improve the maintainability of the codebase, you can follow these steps:
+// To improve the maintainability of the codebase, you can follow these steps:
 
-1. Improve code readability by adding proper indentation and spacing.
-2. Add comments to explain the purpose of the code and any complex logic.
-3. Use meaningful variable and method names to enhance code understanding.
-4. Break down complex logic into smaller, more manageable functions.
-5. Apply proper coding conventions to ensure consistency and readability.
-6. Remove unnecessary comments and code.
-7. Perform error handling and exception handling to handle possible edge cases.
+// 1. Improve code readability by adding proper indentation and spacing.
+// 2. Add comments to explain the purpose of the code and any complex logic.
+// 3. Use meaningful variable and method names to enhance code understanding.
+// 4. Break down complex logic into smaller, more manageable functions.
+// 5. Apply proper coding conventions to ensure consistency and readability.
+// 6. Remove unnecessary comments and code.
+// 7. Perform error handling and exception handling to handle possible edge cases.
 
-Here's the refactored codebase with the above improvements:
+// Here's the refactored codebase with the above improvements:
 
 package correct_java_programs;
 

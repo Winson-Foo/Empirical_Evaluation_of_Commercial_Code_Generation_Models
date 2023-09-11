@@ -1,14 +1,14 @@
-To improve the maintainability of the codebase, we can make the following refactorings:
+// To improve the maintainability of the codebase, we can make the following refactorings:
 
-1. Use meaningful variable names: Instead of using single-letter variable names like "n", "r", and "c", use more descriptive names to improve the readability of the code.
+// 1. Use meaningful variable names: Instead of using single-letter variable names like "n", "r", and "c", use more descriptive names to improve the readability of the code.
 
-2. Extract repeated expressions into variables: Instead of calculating the values of "upleft" and "upright" inline, extract them into separate variables to improve code readability and avoid duplication.
+// 2. Extract repeated expressions into variables: Instead of calculating the values of "upleft" and "upright" inline, extract them into separate variables to improve code readability and avoid duplication.
 
-3. Use a for-each loop when iterating over the rows: Instead of using a traditional for loop to iterate over the rows, we can use a for-each loop to make the code more concise and readable.
+// 3. Use a for-each loop when iterating over the rows: Instead of using a traditional for loop to iterate over the rows, we can use a for-each loop to make the code more concise and readable.
 
-Here is the refactored code:
+// Here is the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 import java.util.ArrayList;
 
@@ -47,5 +47,5 @@ public class PASCAL {
         return rows;
     }
 }
-```
+// ```
 

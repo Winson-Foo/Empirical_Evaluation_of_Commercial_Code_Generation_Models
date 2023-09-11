@@ -1,14 +1,14 @@
-To improve the maintainability of the codebase, we can make the following changes:
+// To improve the maintainability of the codebase, we can make the following changes:
 
-1. Include comments to explain the purpose of the variables and methods.
-2. Rename the method and variables to be more descriptive.
-3. Use meaningful variable names.
-4. Remove unnecessary imports.
-5. Use a more modular approach by splitting the recursive logic into a separate private helper method.
+// 1. Include comments to explain the purpose of the variables and methods.
+// 2. Rename the method and variables to be more descriptive.
+// 3. Use meaningful variable names.
+// 4. Remove unnecessary imports.
+// 5. Use a more modular approach by splitting the recursive logic into a separate private helper method.
 
-Here's the refactored code:
+// Here's the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.ArrayList;
@@ -40,7 +40,7 @@ public class FactorsCalculator {
     }
 
 }
-```
+// ```
 
-By following these improvements, the codebase becomes more readable, self-explanatory, and easier to maintain.
+// By following these improvements, the codebase becomes more readable, self-explanatory, and easier to maintain.
 

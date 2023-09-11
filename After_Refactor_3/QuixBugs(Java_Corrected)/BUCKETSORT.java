@@ -1,13 +1,13 @@
-To improve the maintainability of the codebase, you can make the following changes:
+// To improve the maintainability of the codebase, you can make the following changes:
 
-1. Add proper comments to explain the purpose and functionality of the code.
-2. Use meaningful variable and method names to increase readability.
-3. Break down the code into smaller, reusable functions.
-4. Use consistent indentation and formatting.
-5. Handle edge cases and add appropriate error handling.
+// 1. Add proper comments to explain the purpose and functionality of the code.
+// 2. Use meaningful variable and method names to increase readability.
+// 3. Break down the code into smaller, reusable functions.
+// 4. Use consistent indentation and formatting.
+// 5. Handle edge cases and add appropriate error handling.
 
-Here is the refactored code:
-```java
+// Here is the refactored code:
+// ```java
 package correct_java_programs;
 
 import java.util.ArrayList;
@@ -47,7 +47,7 @@ public class BucketSort {
         return sortedArr;
     }
 }
-```
+// ```
 
-Note: This refactored code provides better readability and understandability. However, it may not be a complete solution as it does not handle edge cases or provide error handling. You may need to modify and further improve the code based on your specific requirements.
+// Note: This refactored code provides better readability and understandability. However, it may not be a complete solution as it does not handle edge cases or provide error handling. You may need to modify and further improve the code based on your specific requirements.
 

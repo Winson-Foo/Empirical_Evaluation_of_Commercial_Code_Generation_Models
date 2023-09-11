@@ -1,14 +1,14 @@
-To improve the maintainability of this codebase, we can make the following changes:
+// To improve the maintainability of this codebase, we can make the following changes:
 
-1. Add comments to explain the purpose and functionality of the code.
-2. Rename variables and functions to be more descriptive.
-3. Extract magic numbers and strings into meaningful constants.
-4. Format the code consistently with proper indentation and spacing.
-5. Consider using more meaningful variable names.
+// 1. Add comments to explain the purpose and functionality of the code.
+// 2. Rename variables and functions to be more descriptive.
+// 3. Extract magic numbers and strings into meaningful constants.
+// 4. Format the code consistently with proper indentation and spacing.
+// 5. Consider using more meaningful variable names.
 
-Here's the refactored code:
+// Here's the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 public class ToBaseConverter {
@@ -25,7 +25,7 @@ public class ToBaseConverter {
         return result;
     }
 }
-```
+// ```
 
-With these improvements, the codebase becomes easier to understand and maintain.
+// With these improvements, the codebase becomes easier to understand and maintain.
 

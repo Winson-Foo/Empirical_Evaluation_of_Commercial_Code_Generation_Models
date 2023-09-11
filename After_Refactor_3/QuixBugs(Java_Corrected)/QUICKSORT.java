@@ -1,13 +1,13 @@
-To improve the maintainability of this codebase, you can make the following changes:
+// To improve the maintainability of this codebase, you can make the following changes:
 
-1. Rename the class and method names to follow proper naming conventions.
-2. Use meaningful variable names to improve code readability.
-3. Utilize proper indentation and spacing for better code organization.
-4. Split the quicksort logic into smaller, more manageable methods for better code modularity.
+// 1. Rename the class and method names to follow proper naming conventions.
+// 2. Use meaningful variable names to improve code readability.
+// 3. Utilize proper indentation and spacing for better code organization.
+// 4. Split the quicksort logic into smaller, more manageable methods for better code modularity.
 
-Here's the refactored code:
+// Here's the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.ArrayList;
@@ -43,7 +43,7 @@ public class Quicksort {
         return lesser;
     }
 }
-```
+// ```
 
-By following these improvements, you can enhance the maintainability of the codebase, making it easier to understand and modify in the future.
+// By following these improvements, you can enhance the maintainability of the codebase, making it easier to understand and modify in the future.
 

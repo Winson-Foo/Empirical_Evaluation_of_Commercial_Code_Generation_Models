@@ -1,16 +1,16 @@
-To improve the maintainability of the codebase, we can make the following changes:
+// To improve the maintainability of the codebase, we can make the following changes:
 
-1. Add meaningful comments: Add comments to explain the purpose and functionality of the code, as well as any complex logic or algorithms used.
+// 1. Add meaningful comments: Add comments to explain the purpose and functionality of the code, as well as any complex logic or algorithms used.
 
-2. Use descriptive variable names: Change variable names to be more descriptive and reflect their purpose in the code.
+// 2. Use descriptive variable names: Change variable names to be more descriptive and reflect their purpose in the code.
 
-3. Extract magic numbers and strings to constants: Replace any hard-coded numbers or strings with named constants to improve readability and make it easier to update them in the future if needed.
+// 3. Extract magic numbers and strings to constants: Replace any hard-coded numbers or strings with named constants to improve readability and make it easier to update them in the future if needed.
 
-4. Separate logic into smaller methods: Break down the code into smaller, more focused methods to improve modularity and readability.
+// 4. Separate logic into smaller methods: Break down the code into smaller, more focused methods to improve modularity and readability.
 
-Here's the refactored code:
+// Here's the refactored code:
 
-```java
+// ```java
 package correct_java_programs;
 
 import java.util.*;
@@ -65,7 +65,7 @@ public class LIS {
         return prefixLengths;
     }
 }
-```
+// ```
 
-By following these refactorings, the code should be more maintainable, easier to understand, and less prone to errors or bugs.
+// By following these refactorings, the code should be more maintainable, easier to understand, and less prone to errors or bugs.
 

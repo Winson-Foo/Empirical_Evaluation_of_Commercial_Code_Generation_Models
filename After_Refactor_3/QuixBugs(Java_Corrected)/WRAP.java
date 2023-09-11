@@ -1,14 +1,14 @@
-To improve the maintainability of the codebase, we can make the following changes:
+// To improve the maintainability of the codebase, we can make the following changes:
 
-1. Use meaningful variable names: Instead of using single-letter or abbreviated variable names, we should use more descriptive names that clearly indicate their purpose. This will make the code easier to understand and maintain.
+// 1. Use meaningful variable names: Instead of using single-letter or abbreviated variable names, we should use more descriptive names that clearly indicate their purpose. This will make the code easier to understand and maintain.
 
-2. Add comments: It's important to add comments to explain the purpose and functionality of the code. This will make it easier for other developers (including yourself in the future) to understand the code and make changes if needed.
+// 2. Add comments: It's important to add comments to explain the purpose and functionality of the code. This will make it easier for other developers (including yourself in the future) to understand the code and make changes if needed.
 
-3. Use try-catch blocks: When working with code that can potentially throw exceptions, it's important to handle those exceptions in a proper way. We can wrap the code that might throw an exception in a try-catch block to handle any potential exceptions gracefully.
+// 3. Use try-catch blocks: When working with code that can potentially throw exceptions, it's important to handle those exceptions in a proper way. We can wrap the code that might throw an exception in a try-catch block to handle any potential exceptions gracefully.
 
-4. Use proper indentation: Indenting the code properly helps improve readability. It's important to consistently use indentation to make the code easier to understand.
+// 4. Use proper indentation: Indenting the code properly helps improve readability. It's important to consistently use indentation to make the code easier to understand.
 
-Here's the refactored code with the above improvements:
+// Here's the refactored code with the above improvements:
 
 package correct_java_programs;
 import java.util.ArrayList;
