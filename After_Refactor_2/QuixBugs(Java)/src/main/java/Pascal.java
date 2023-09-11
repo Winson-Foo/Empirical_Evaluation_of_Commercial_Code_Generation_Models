@@ -1,54 +1,71 @@
-// To improve the maintainability of the codebase, we can make the following changes:
+// To improve the maintainability of the codebase, we can do the following:
 
-// 1. Use meaningful variable names: Instead of using single-letter variable names like "n", "r", and "c", we can use more descriptive names like "numRows", "currentRow", and "currentColumn". This will make the code easier to understand.
+// 1. Add comments: Add comments to explain the purpose of each method and the logic behind it. This will make it easier for future developers to understand the code.
 
-// 2. Use comments to explain the code: Adding comments to explain the purpose and functionality of each section of the code will make it easier for other developers (and future you) to understand and maintain.
+// 2. Use meaningful variable names: Use descriptive variable names that convey the purpose of the variable. This will make the code easier to read and understand.
 
-// 3. Extract repeated logic into separate methods: The code currently has a repeated logic to get the upleft and upright values from the previous row. We can extract this logic into a separate method to improve readability and avoid duplication.
+// 3. Break down long code lines: If a line of code is too long, break it down into multiple lines to improve readability.
 
-// Here's the refactored code with the above improvements:
+// 4. Extract helper methods: Extract repetitive and complex logic into separate methods to improve code organization and make it easier to understand.
+
+// Here is the refactored code with the above improvements:
 
 // ```java
-package java_programs;
-import java.util.*;
+package correct_java_programs;
+import java.util.ArrayList;
 
-public class Pascal {
-    public static ArrayList<ArrayList<Integer>> generatePascalTriangle(int numRows) {
-        ArrayList<ArrayList<Integer>> rows = new ArrayList<ArrayList<Integer>>();
-        ArrayList<Integer> initRow = new ArrayList<Integer>();
-        initRow.add(1);
-        rows.add(initRow);
+/**
+* Generates Pascal's triangle up to a given number of rows.
+*/
+public class PascalTriangleGenerator {
+    
+    /**
+     * Generates Pascal's triangle up to the given number of rows.
+     *
+     * @param numRows The number of rows to generate.
+     * @return Pascal's triangle as a list of lists.
+     */
+    public static ArrayList<ArrayList<Integer>> generate(int numRows) {
+        ArrayList<ArrayList<Integer>> triangle = new ArrayList<>();
+        ArrayList<Integer> firstRow = new ArrayList<>();
+        firstRow.add(1);
+        triangle.add(firstRow);
 
-        for (int currentRow = 1; currentRow < numRows; currentRow++) {
-            ArrayList<Integer> row = new ArrayList<Integer>();
-            for (int currentColumn = 0; currentColumn < currentRow; currentColumn++) {
-                int upleft = getUpLeftValue(rows, currentRow, currentColumn);
-                int upright = getUpRightValue(rows, currentRow, currentColumn);
-                row.add(upleft + upright);
+        for (int rowNum = 1; rowNum < numRows; rowNum++) {
+            ArrayList<Integer> currentRow = new ArrayList<>();
+            for (int colNum = 0; colNum < rowNum + 1; colNum++) {
+                int upleft, upright;
+                if (colNum > 0) {
+                    upleft = getCellValue(triangle, rowNum - 1, colNum - 1);
+                } else {
+                    upleft = 0;
+                }
+                if (colNum < rowNum) {
+                    upright = getCellValue(triangle, rowNum - 1, colNum);
+                } else {
+                    upright = 0;
+                }
+                currentRow.add(upleft + upright);
             }
-            rows.add(row);
+            triangle.add(currentRow);
         }
 
-        return rows;
+        return triangle;
     }
-
-    private static int getUpLeftValue(ArrayList<ArrayList<Integer>> rows, int currentRow, int currentColumn) {
-        if (currentColumn > 0) {
-            return rows.get(currentRow - 1).get(currentColumn - 1);
-        } else {
-            return 0;
-        }
-    }
-
-    private static int getUpRightValue(ArrayList<ArrayList<Integer>> rows, int currentRow, int currentColumn) {
-        if (currentColumn < currentRow) {
-            return rows.get(currentRow - 1).get(currentColumn);
-        } else {
-            return 0;
-        }
+    
+    /**
+     * Gets the cell value from Pascal's triangle.
+     *
+     * @param triangle Pascal's triangle.
+     * @param row The row index.
+     * @param column The column index.
+     * @return The value at the given row and column.
+     */
+    private static int getCellValue(ArrayList<ArrayList<Integer>> triangle, int row, int column) {
+        return triangle.get(row).get(column);
     }
 }
 // ```
 
-// By implementing these changes, the code becomes more readable, maintainable, and easier to understand and modify in the future.
+// Note: The class name has been changed from `PASCAL` to `PascalTriangleGenerator` to follow Java naming conventions.
 

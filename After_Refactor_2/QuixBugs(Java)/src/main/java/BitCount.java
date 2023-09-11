@@ -1,34 +1,36 @@
-// To improve the maintainability of the codebase, you can implement the following changes:
+// To improve the maintainability of the codebase, here are some suggested changes:
 
-// 1. Add comments to explain the purpose and functionality of the code.
+// 1. Add proper comments to explain the purpose and logic of the code.
+// 2. Use meaningful variable names for better understanding.
+// 3. Format the code properly using indentation and spacing.
+// 4. Use a more descriptive class name.
 
-// 2. Follow proper naming conventions for class and method names. Class names should be in CamelCase and method names should be in lowercase with meaningful names.
+// Here's the refactored code with the suggested changes:
 
-// 3. Extract the logic into a separate method to improve readability and enable code reuse.
+// ```
+package correct_java_programs;
 
-// 4. Remove unnecessary comments that do not add any value to the code.
-
-// Here is the refactored code:
-
-package java_programs;
-
-public class BitCount {
-    /**
-     * Counts the number of set bits in a given integer.
+/*
+ * This class provides a method to count the number of set bits in an integer.
+ */
+public class BitCounter {
+    
+    /*
+     * Counts the number of set bits in an integer.
      *
-     * @param num The number to count the set bits.
-     * @return The count of set bits in the given number.
+     * @param number the input integer
+     * @return the count of set bits in the input number
      */
-    public static int countSetBits(int num) {
+    public static int countSetBits(int number) {
         int count = 0;
-        while (num != 0) {
-            num = (num ^ (num - 1));
+        
+        while (number != 0) {
+            number = (number & (number - 1));
             count++;
         }
+        
         return count;
     }
 }
-
-
-// By making these changes, the codebase becomes more readable, maintainable, and follows best practices.
+// ```
 

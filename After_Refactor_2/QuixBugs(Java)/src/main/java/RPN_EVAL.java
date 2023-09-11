@@ -1,56 +1,48 @@
-// Here is the refactored code with improved maintainability:
+// To improve the maintainability of the codebase, we can make the following changes:
+
+// 1. Use generics: The `tokens` parameter of the `rpn_eval` method should be updated to use generics for better type safety. Change `ArrayList tokens` to `ArrayList<?> tokens`.
+
+// 2. Use explicit type arguments for the `Stack` and `HashMap` declarations. Change `Stack stack = new Stack();` to `Stack<Double> stack = new Stack<>();` and `Map<String, BinaryOperator<Double>> op = new HashMap<String, BinaryOperator<Double>>();` to `Map<String, BinaryOperator<Double>> op = new HashMap<>();`.
+
+// 3. Use the diamond operator: Since Java 7, you can use the diamond operator to infer the generic type arguments. Remove the redundant type arguments from the `new HashMap<>()` and `new Stack<>()` statements.
+
+// 4. Add access modifiers: Add appropriate access modifiers (`public`, `private`, etc.) to the class and method declarations.
+
+// Here's the refactored code with the above improvements:
 
 // ```java
-package java_programs;
+package correct_java_programs;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Stack;
+import java.util.*;
 import java.util.function.BinaryOperator;
 
 public class RPN_EVAL {
-    public static Double rpn_eval(ArrayList<Object> tokens) {
-        Map<String, BinaryOperator<Double>> operators = createOperatorsMap();
+    public static Double rpn_eval(ArrayList<?> tokens) {
+        Map<String, BinaryOperator<Double>> op = new HashMap<>();
+        op.put("+", (a, b) -> a + b);
+        op.put("-", (a, b) -> a - b);
+        op.put("*", (a, b) -> a * b);
+        op.put("/", (a, b) -> a / b);
 
         Stack<Double> stack = new Stack<>();
 
         for (Object token : tokens) {
-            if (token instanceof Double) {
+            if (Double.class.isInstance(token)) {
                 stack.push((Double) token);
             } else {
-                String oper = (String) token;
+                token = (String) token;
                 Double a = stack.pop();
                 Double b = stack.pop();
-                Double result = calculate(operators.get(oper), a, b);
-                stack.push(result);
+                BinaryOperator<Double> bin_op = op.get(token);
+                Double c = bin_op.apply(b, a);
+                stack.push(c);
             }
         }
 
         return stack.pop();
     }
-
-    private static Map<String, BinaryOperator<Double>> createOperatorsMap() {
-        Map<String, BinaryOperator<Double>> operators = new HashMap<>();
-        operators.put("+", (a, b) -> a + b);
-        operators.put("-", (a, b) -> a - b);
-        operators.put("*", (a, b) -> a * b);
-        operators.put("/", (a, b) -> a / b);
-        return operators;
-    }
-
-    private static Double calculate(BinaryOperator<Double> operator, Double a, Double b) {
-        return operator.apply(a, b);
-    }
 }
 // ```
 
-// In the refactored code:
-// 1. The variable and method names are more informative and follow standard naming conventions.
-// 2. The "op" map has been renamed to "operators".
-// 3. The "stack" variable has been properly typed as Stack<Double> instead of just Stack.
-// 4. The type check for Double has been changed to "instanceof" instead of using "Double.class.isInstance()".
-// 5. The calculation logic has been moved to a separate method for improved readability.
-// 6. The creation of the operators map has been moved to a separate method for better organization.
-// 7. The imports have been sorted alphabetically for better readability.
+// These changes make the code more readable, type-safe, and easier to maintain.
 
