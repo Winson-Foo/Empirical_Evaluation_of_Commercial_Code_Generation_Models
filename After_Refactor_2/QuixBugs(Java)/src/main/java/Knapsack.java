@@ -15,7 +15,7 @@
 // ```java
 package correct_java_programs;
 
-public class Knapsack {
+public class KNAPSACK {
     public static int knapsack(int capacity, int[][] items) {
         int n = items.length;
         int[][] memo = new int[n + 1][capacity + 1];

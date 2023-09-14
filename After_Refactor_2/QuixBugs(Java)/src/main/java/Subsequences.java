@@ -16,7 +16,7 @@ package correct_java_programs;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Subsequences {
+public class SUBSEQUENCES {
     public static List<List<Integer>> computeSubsequences(int start, int end, int length) {
         // Base case: If length is 0, return an empty set
         if (length == 0) {

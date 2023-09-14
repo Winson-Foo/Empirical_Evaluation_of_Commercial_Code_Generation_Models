@@ -11,7 +11,7 @@ package correct_java_programs;
 
 import java.util.*;
 
-public class Levenshtein {
+public class LEVENSHTEIN {
     /**
      * Calculates the Levenshtein distance between two strings.
      *

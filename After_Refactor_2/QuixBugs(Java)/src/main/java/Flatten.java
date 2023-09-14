@@ -16,7 +16,7 @@
 package correct_java_programs;
 import java.util.*;
 
-public class Flatten {
+public class FLATTEN {
     public static List<Object> flatten(Object obj) {
         if (obj instanceof List<?>) {
             List<?> list = (List<?>) obj;

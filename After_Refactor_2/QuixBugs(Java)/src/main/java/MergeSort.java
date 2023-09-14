@@ -18,7 +18,7 @@ package correct_java_programs;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MergeSort {
+public class MERGESORT {
 
     public static List<Integer> merge(List<Integer> left, List<Integer> right) {
         List<Integer> result = new ArrayList<>();

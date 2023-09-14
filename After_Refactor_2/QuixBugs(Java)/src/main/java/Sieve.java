@@ -18,7 +18,7 @@ package correct_java_programs;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sieve {
+public class SIEVE {
 
     public static boolean all(List<Boolean> arr) {
         for (boolean value : arr) {

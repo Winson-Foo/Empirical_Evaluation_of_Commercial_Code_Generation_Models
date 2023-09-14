@@ -21,7 +21,7 @@
 package correct_java_programs;
 import java.util.*;
 
-public class KHeapsort {
+public class KHEAPSORT {
     
     /**
      * Sorts the input list using a K-Heapsort algorithm.

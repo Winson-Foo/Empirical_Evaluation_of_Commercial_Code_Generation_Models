@@ -15,7 +15,7 @@ package correct_java_programs;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class BucketSort {
+public class BUCKETSORT {
     public static ArrayList<Integer> bucketSort(ArrayList<Integer> inputArray, int maxValue) {
         ArrayList<Integer> counts = new ArrayList<Integer>(Collections.nCopies(maxValue + 1, 0));
 
