@@ -1,7 +1,7 @@
 package test.java;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import java_programs.GET_FACTORS;
+import correct_java_programs.GET_FACTORS;
 import main.java.constant.QuixFixOracleHelper;
 
 public class GET_FACTORS_TEST {

@@ -1,7 +1,7 @@
 package test.java;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import java_programs.FIND_FIRST_IN_SORTED;
+import correct_java_programs.FIND_FIRST_IN_SORTED;
 
 public class FIND_FIRST_IN_SORTED_TEST {
     @Test

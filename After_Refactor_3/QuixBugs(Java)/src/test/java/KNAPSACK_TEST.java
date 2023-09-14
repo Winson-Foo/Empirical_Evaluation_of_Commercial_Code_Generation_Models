@@ -4,13 +4,13 @@
 package test.java;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import java_programs.KNAPSACK;
+import correct_java_programs.KNAPSACK;
 
 public class KNAPSACK_TEST {
     @Test
     public void test_0() throws java.lang.Exception {
         int result = KNAPSACK.knapsack((int)100,new int[][]{{60,10},{50,8},{20,4},{20,4},{8,3},{3,2}});
-        assertEquals((int)1, result);
+        assertEquals((int)19, result);
     }
 
     @Test

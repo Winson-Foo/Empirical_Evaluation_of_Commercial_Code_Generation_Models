@@ -16,7 +16,7 @@ package correct_java_programs;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Flatten {
+public class FLATTEN {
     public static List<Object> flatten(Object arr) {
         if (arr instanceof List) {
             List<Object> narr = (List<Object>) arr;

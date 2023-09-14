@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java_programs.SHORTEST_PATH_LENGTHS;
+import correct_java_programs.SHORTEST_PATH_LENGTHS;
 
 
 public class SHORTEST_PATH_LENGTHS_TEST {

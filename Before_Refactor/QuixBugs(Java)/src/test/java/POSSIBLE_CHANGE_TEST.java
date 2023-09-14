@@ -1,7 +1,7 @@
 package test.java;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import java_programs.POSSIBLE_CHANGE;
+import correct_java_programs.POSSIBLE_CHANGE;
 
 public class POSSIBLE_CHANGE_TEST {
     @Test

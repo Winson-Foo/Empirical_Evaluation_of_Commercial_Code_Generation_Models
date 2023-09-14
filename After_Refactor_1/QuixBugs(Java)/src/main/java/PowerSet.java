@@ -24,7 +24,7 @@ package correct_java_programs;
 
 import java.util.ArrayList;
 
-public class PowerSet {
+public class POWERSET {
     public static ArrayList<ArrayList<Object>> powerset(ArrayList<Object> input) {
         if (!input.isEmpty()) {
             Object first = input.get(0);

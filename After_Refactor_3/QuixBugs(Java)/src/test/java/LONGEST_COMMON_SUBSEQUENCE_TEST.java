@@ -1,7 +1,7 @@
 package test.java;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import java_programs.LONGEST_COMMON_SUBSEQUENCE;
+import correct_java_programs.LONGEST_COMMON_SUBSEQUENCE;
 import main.java.constant.QuixFixOracleHelper;
 
 public class LONGEST_COMMON_SUBSEQUENCE_TEST {

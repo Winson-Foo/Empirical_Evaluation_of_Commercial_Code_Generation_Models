@@ -1,7 +1,7 @@
 package test.java;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import java_programs.MERGESORT;
+import correct_java_programs.MERGESORT;
 import main.java.constant.QuixFixOracleHelper;
 
 public class MERGESORT_TEST {

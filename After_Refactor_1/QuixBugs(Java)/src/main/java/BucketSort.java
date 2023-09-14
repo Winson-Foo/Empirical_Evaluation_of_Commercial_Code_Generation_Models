@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class BucketSort {
+public class BUCKETSORT {
     /**
      * Sorts an ArrayList of integers using the Bucket Sort algorithm.
      *

@@ -1,7 +1,7 @@
 package test.java;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import java_programs.LEVENSHTEIN;
+import correct_java_programs.LEVENSHTEIN;
 
 public class LEVENSHTEIN_TEST {
     @Test

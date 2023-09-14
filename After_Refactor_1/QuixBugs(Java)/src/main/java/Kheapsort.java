@@ -18,7 +18,7 @@ import java.util.PriorityQueue;
  * are sorted in ascending order, and the remaining elements are also sorted
  * in ascending order and appended to the already sorted k elements.
  */
-public class Kheapsort {
+public class KHEAPSORT {
 
     public static ArrayList<Integer> kheapsort(ArrayList<Integer> arr, int k) {
         // Create a priority queue (heap) to store the k smallest elements

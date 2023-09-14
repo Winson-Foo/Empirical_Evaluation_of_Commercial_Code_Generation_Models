@@ -13,7 +13,7 @@ package correct_java_programs;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MergeSort {
+public class MERGESORT {
     
     /**
      * Merge two sorted lists into a single sorted list.

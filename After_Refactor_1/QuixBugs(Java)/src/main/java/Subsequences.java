@@ -20,7 +20,7 @@ package correct_java_programs;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Subsequences {
+public class SUBSEQUENCES {
     public static List<List<Integer>> subsequences(int start, int end, int k) {
         if (k == 0) {
             List<List<Integer>> emptySet = new ArrayList<>();

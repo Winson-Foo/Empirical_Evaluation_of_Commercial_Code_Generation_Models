@@ -1,7 +1,7 @@
 package test.java;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import java_programs.KTH;
+import correct_java_programs.KTH;
 
 public class KTH_TEST {
     @Test

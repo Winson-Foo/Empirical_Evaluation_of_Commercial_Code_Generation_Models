@@ -15,7 +15,7 @@ package correct_java_programs;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Quicksort {
+public class QUICKSORT {
 
     public static List<Integer> quicksort(List<Integer> inputList) {
         if (inputList.isEmpty()) {

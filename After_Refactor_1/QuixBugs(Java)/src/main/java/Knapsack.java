@@ -11,7 +11,7 @@
 // ```java
 package correct_java_programs;
 
-public class Knapsack {
+public class KNAPSACK {
     /**
      * Calculates the maximum value that can be obtained by selecting items to fit in the given knapsack capacity.
      *

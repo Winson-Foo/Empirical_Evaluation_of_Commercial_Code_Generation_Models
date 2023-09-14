@@ -1,7 +1,7 @@
 package test.java;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import java_programs.LCS_LENGTH;
+import correct_java_programs.LCS_LENGTH;
 
 public class LCS_LENGTH_TEST {
     @Test

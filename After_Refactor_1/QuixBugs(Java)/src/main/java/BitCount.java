@@ -13,7 +13,7 @@ package correct_java_programs;
 /**
  * This class provides a method to count the number of bits set to 1 in a given integer.
  */
-public class BitCount {
+public class BITCOUNT {
     
     /**
      * Counts the number of bits set to 1 in the given integer.
