@@ -13,7 +13,7 @@ package correct_java_programs;
 
 import java.util.ArrayList;
 
-public class Sieve {
+public class SIEVE {
 
     public static boolean allPrimesFound(ArrayList<Boolean> primes) {
         for (boolean isPrime : primes) {

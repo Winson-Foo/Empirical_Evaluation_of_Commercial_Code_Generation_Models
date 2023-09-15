@@ -12,7 +12,7 @@ package correct_java_programs;
 
 import java.util.ArrayList;
 
-public class Quicksort {
+public class QUICKSORT {
 
     public static ArrayList<Integer> sort(ArrayList<Integer> arr) {
         if (arr.isEmpty()) {

@@ -18,7 +18,7 @@ import java.util.ArrayList;
 /**
  * Class to find the kth element in an ArrayList.
  */
-public class Kth {
+public class KTH {
     /**
      * Finds the kth element in the given ArrayList.
      *

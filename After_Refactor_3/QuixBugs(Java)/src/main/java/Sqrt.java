@@ -14,7 +14,7 @@ package correct_java_programs;
 /**
  * A utility class for performing square root calculations.
  */
-public class Sqrt {
+public class SQRT {
     private static final double DEFAULT_EPSILON = 0.0001;
 
     /**

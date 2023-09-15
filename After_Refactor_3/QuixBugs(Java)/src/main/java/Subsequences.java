@@ -11,7 +11,7 @@
 package correct_java_programs;
 import java.util.ArrayList;
 
-public class Subsequences {
+public class SUBSEQUENCES {
     public static ArrayList<ArrayList<Integer>> findSubsequences(int start, int end, int k) {
         if (k == 0) {
             ArrayList<ArrayList<Integer>> emptySet = new ArrayList<>();

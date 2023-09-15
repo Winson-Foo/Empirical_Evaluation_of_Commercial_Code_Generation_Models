@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test.java.QUICKSORT_TEST" tests="13" skipped="0" failures="0" errors="0" timestamp="2023-09-14T16:22:41" hostname="WINDOWS-NDL94MS" time="0.007">
+<testsuite name="test.java.QUICKSORT_TEST" tests="13" skipped="0" failures="0" errors="0" timestamp="2023-09-15T02:39:08" hostname="WINDOWS-NDL94MS" time="0.008">
   <properties/>
   <testcase name="test_10()" classname="test.java.QUICKSORT_TEST" time="0.001"/>
-  <testcase name="test_11()" classname="test.java.QUICKSORT_TEST" time="0.001"/>
-  <testcase name="test_12()" classname="test.java.QUICKSORT_TEST" time="0.0"/>
+  <testcase name="test_11()" classname="test.java.QUICKSORT_TEST" time="0.0"/>
+  <testcase name="test_12()" classname="test.java.QUICKSORT_TEST" time="0.001"/>
   <testcase name="test_0()" classname="test.java.QUICKSORT_TEST" time="0.0"/>
-  <testcase name="test_1()" classname="test.java.QUICKSORT_TEST" time="0.0"/>
+  <testcase name="test_1()" classname="test.java.QUICKSORT_TEST" time="0.001"/>
   <testcase name="test_2()" classname="test.java.QUICKSORT_TEST" time="0.0"/>
   <testcase name="test_3()" classname="test.java.QUICKSORT_TEST" time="0.001"/>
   <testcase name="test_4()" classname="test.java.QUICKSORT_TEST" time="0.0"/>
-  <testcase name="test_5()" classname="test.java.QUICKSORT_TEST" time="0.001"/>
-  <testcase name="test_6()" classname="test.java.QUICKSORT_TEST" time="0.0"/>
-  <testcase name="test_7()" classname="test.java.QUICKSORT_TEST" time="0.001"/>
+  <testcase name="test_5()" classname="test.java.QUICKSORT_TEST" time="0.0"/>
+  <testcase name="test_6()" classname="test.java.QUICKSORT_TEST" time="0.001"/>
+  <testcase name="test_7()" classname="test.java.QUICKSORT_TEST" time="0.0"/>
   <testcase name="test_8()" classname="test.java.QUICKSORT_TEST" time="0.0"/>
-  <testcase name="test_9()" classname="test.java.QUICKSORT_TEST" time="0.001"/>
+  <testcase name="test_9()" classname="test.java.QUICKSORT_TEST" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

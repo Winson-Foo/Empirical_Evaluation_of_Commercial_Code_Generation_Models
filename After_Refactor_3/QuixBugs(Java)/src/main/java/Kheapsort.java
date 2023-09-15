@@ -20,7 +20,7 @@ import java.util.PriorityQueue;
  * The KHeapsort class implements the K-Heapsort algorithm.
  * It sorts an ArrayList of integers using a priority queue with a specified value of k.
  */
-public class Kheapsort {
+public class KHEAPSORT {
   
     /**
      * Sorts an ArrayList of integers using the K-Heapsort algorithm.

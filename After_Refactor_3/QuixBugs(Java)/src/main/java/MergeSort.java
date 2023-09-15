@@ -16,7 +16,7 @@ import java.util.ArrayList;
 /**
  * Implements the Merge Sort algorithm to sort an ArrayList of integers.
  */
-public class MergeSort {
+public class MERGESORT {
 
     /**
      * Merges two sorted ArrayLists into a single sorted ArrayList.
