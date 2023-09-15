@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test.java.BITCOUNT_TEST" tests="9" skipped="0" failures="0" errors="0" timestamp="2023-09-15T02:55:59" hostname="WINDOWS-NDL94MS" time="0.024">
+<testsuite name="test.java.BITCOUNT_TEST" tests="9" skipped="0" failures="0" errors="0" timestamp="2023-09-15T03:05:01" hostname="WINDOWS-NDL94MS" time="0.01">
   <properties/>
-  <testcase name="test_0()" classname="test.java.BITCOUNT_TEST" time="0.015"/>
+  <testcase name="test_0()" classname="test.java.BITCOUNT_TEST" time="0.001"/>
   <testcase name="test_1()" classname="test.java.BITCOUNT_TEST" time="0.0"/>
   <testcase name="test_2()" classname="test.java.BITCOUNT_TEST" time="0.0"/>
   <testcase name="test_3()" classname="test.java.BITCOUNT_TEST" time="0.0"/>

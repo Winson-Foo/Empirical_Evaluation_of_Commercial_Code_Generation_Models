@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test.java.IS_VALID_PARENTHESIZATION_TEST" tests="3" skipped="0" failures="2" errors="0" timestamp="2023-09-15T02:55:59" hostname="WINDOWS-NDL94MS" time="0.008">
+<testsuite name="test.java.IS_VALID_PARENTHESIZATION_TEST" tests="3" skipped="0" failures="2" errors="0" timestamp="2023-09-15T03:05:01" hostname="WINDOWS-NDL94MS" time="0.023">
   <properties/>
-  <testcase name="test_0()" classname="test.java.IS_VALID_PARENTHESIZATION_TEST" time="0.001"/>
-  <testcase name="test_1()" classname="test.java.IS_VALID_PARENTHESIZATION_TEST" time="0.005">
+  <testcase name="test_0()" classname="test.java.IS_VALID_PARENTHESIZATION_TEST" time="0.016"/>
+  <testcase name="test_1()" classname="test.java.IS_VALID_PARENTHESIZATION_TEST" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;false&gt; but was: &lt;true&gt;
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -97,7 +97,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="test_2()" classname="test.java.IS_VALID_PARENTHESIZATION_TEST" time="0.002">
+  <testcase name="test_2()" classname="test.java.IS_VALID_PARENTHESIZATION_TEST" time="0.001">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;false&gt; but was: &lt;true&gt;
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
