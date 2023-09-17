@@ -1,7 +1,7 @@
 import os
 import imageio
 import numpy as np
-from ISR.utils.logger import get_logger
+from CONSTANT.logger import get_logger
 from typing import List, Dict, Tuple
 
 
