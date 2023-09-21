@@ -287,3 +287,19 @@ class DataHandlerTest(unittest.TestCase):
         self.assertTrue(len(batch) == 2)
         self.assertTrue(batch['hr'].shape == (24, patch_size * 2, patch_size * 2, 3))
         self.assertTrue(batch['lr'].shape == (24, patch_size, patch_size, 3))
+
+import tensorflow.keras.backend as K
+import utils_metrics
+
+class MetricsClassTest(unittest.TestCase):
+    def setUp(self):
+        pass
+    
+    def tearDown(self):
+        pass
+    
+    def test_PSNR_sanity(self):
+        A = K.ones((10, 10, 3))
+        B = K.zeros((10, 10, 3))
+        self.assertEqual(K.get_value(utils_metrics.PSNR(A, A)), np.inf)
+        self.assertEqual(K.get_value(utils_metrics.PSNR(A, B)), 0)
