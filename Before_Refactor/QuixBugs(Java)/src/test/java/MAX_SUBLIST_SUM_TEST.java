@@ -1,7 +1,7 @@
 package test.java;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import java_programs.MAX_SUBLIST_SUM;
+import correct_java_programs.MAX_SUBLIST_SUM;
 
 public class MAX_SUBLIST_SUM_TEST {
     @Test

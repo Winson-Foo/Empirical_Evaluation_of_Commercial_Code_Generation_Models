@@ -1,7 +1,7 @@
 package test.java;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import java_programs.BITCOUNT;
+import correct_java_programs.BITCOUNT;
 
 public class BITCOUNT_TEST {
     @Test

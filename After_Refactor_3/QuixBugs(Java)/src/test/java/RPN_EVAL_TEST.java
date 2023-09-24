@@ -1,7 +1,7 @@
 package test.java;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import java_programs.RPN_EVAL;
+import correct_java_programs.RPN_EVAL;
 
 public class RPN_EVAL_TEST {
     @Test

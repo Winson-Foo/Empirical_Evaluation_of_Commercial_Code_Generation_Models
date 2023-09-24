@@ -1,7 +1,7 @@
 package test.java;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import java_programs.SQRT;
+import correct_java_programs.SQRT;
 
 public class SQRT_TEST {
     @Test

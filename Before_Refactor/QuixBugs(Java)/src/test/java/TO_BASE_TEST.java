@@ -1,7 +1,7 @@
 package test.java;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import java_programs.TO_BASE;
+import correct_java_programs.TO_BASE;
 import main.java.constant.QuixFixOracleHelper;
 
 public class TO_BASE_TEST {

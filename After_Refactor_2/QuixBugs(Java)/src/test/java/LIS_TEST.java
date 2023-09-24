@@ -1,7 +1,7 @@
 package test.java;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import java_programs.LIS;
+import correct_java_programs.LIS;
 
 public class LIS_TEST {
     @Test

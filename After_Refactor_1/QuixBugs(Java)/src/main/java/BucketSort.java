@@ -1,53 +1,45 @@
-// To improve the maintainability of this codebase, we can make the following changes:
+// To improve the maintainability of this codebase, we can take the following steps:
+// 1. Use more descriptive variable and method names to improve readability.
+// 2. Add comments to explain the purpose of each section of code.
+// 3. Extract repeated code into separate methods to improve code reusability.
+// 4. Use appropriate data structures and collections to simplify code logic.
+// 5. Use the proper access modifiers for methods and variables.
 
-// 1. Modify the class name to follow Java naming conventions. Change "BUCKETSORT" to "BucketSort".
+// Here's the refactored code:
 
-// 2. Change the method name "bucketsort" to "bucketSort" to follow Java naming conventions.
+// ```java
+package correct_java_programs;
 
-// 3. Add proper comments to describe the purpose and functionality of the code.
-
-// 4. Use more meaningful variable names to increase code readability.
-
-// 5. Remove unnecessary import statements.
-
-// Here is the refactored code:
-
-package java_programs;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
-/**
- * Implementation of the Bucket Sort algorithm.
- */
-public class BucketSort {
-    
+public class BUCKETSORT {
     /**
-     * Sorts the given array using the Bucket Sort algorithm.
-     * 
-     * @param arr The array to be sorted.
-     * @param k The number of buckets.
-     * @return The sorted array.
+     * Sorts an ArrayList of integers using the Bucket Sort algorithm.
+     *
+     * @param arr The ArrayList to be sorted.
+     * @param k   The maximum value in the ArrayList.
+     * @return The sorted ArrayList.
      */
-    public static ArrayList<Integer> bucketSort(ArrayList<Integer> arr, int k) {
-        ArrayList<Integer> counts = new ArrayList<Integer>(Collections.nCopies(k,0));
-        
-        // Count the occurrences of each element
-        for (Integer num : arr) {
-            counts.set(num, counts.get(num) + 1);
+    public static List<Integer> bucketSort(List<Integer> arr, int k) {
+        List<Integer> counts = new ArrayList<>(Collections.nCopies(k + 1, 0));
+
+        // Count the occurrences of each element in the array
+        for (int x : arr) {
+            counts.set(x, counts.get(x) + 1);
         }
 
-        ArrayList<Integer> sortedArr = new ArrayList<Integer>();
-        int num = 0;
-        
-        // Create the sorted array
-        for (Integer count : counts) {
-            sortedArr.addAll(Collections.nCopies(count, num));
-            num++;
+        // Construct the sorted array based on the counts
+        List<Integer> sortedArr = new ArrayList<>();
+        for (int i = 0; i <= k; i++) {
+            sortedArr.addAll(Collections.nCopies(counts.get(i), i));
         }
 
         return sortedArr;
     }
 }
+// ```
 
-// These changes make the code more readable and maintainable, following Java naming conventions and adding comments to explain the purpose of the code.
+// Note that the code assumes that the input ArrayList `arr` only contains non-negative integers.
 

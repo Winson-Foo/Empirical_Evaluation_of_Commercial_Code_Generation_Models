@@ -1,7 +1,7 @@
 package test.java;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import java_programs.IS_VALID_PARENTHESIZATION;
+import correct_java_programs.IS_VALID_PARENTHESIZATION;
 import main.java.constant.QuixFixOracleHelper;
 
 public class IS_VALID_PARENTHESIZATION_TEST {
