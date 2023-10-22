@@ -1,4 +1,4 @@
-# Empirical_Evaluation_of_Commercial_Code_Generation_Models
+# Exploring ChatGPT: Evaluating its Code Generation Prowess for Refactoring Diverse Codebases
 
 Over the past year, Artificial Intelligence and Large Language Model have been making breakthroughs in many fields, which include deep fakes, text to speech, image generation and code generation. Since the advancement of these technologies will replace human work, their arrival has completely  shocked the world. While these technologies might be able to lessen our workload, can they deliver the required output on a par comparable to a human?  In our case, we will be evaluating the capability of the code generation model.
 
