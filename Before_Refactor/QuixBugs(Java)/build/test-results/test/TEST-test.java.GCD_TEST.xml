@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.java.GCD_TEST" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-09-14T07:30:50" hostname="WINDOWS-NDL94MS" time="0.003">
+  <properties/>
+  <testcase name="test_0()" classname="test.java.GCD_TEST" time="0.001"/>
+  <testcase name="test_1()" classname="test.java.GCD_TEST" time="0.0"/>
+  <testcase name="test_2()" classname="test.java.GCD_TEST" time="0.0"/>
+  <testcase name="test_3()" classname="test.java.GCD_TEST" time="0.0"/>
+  <testcase name="test_4()" classname="test.java.GCD_TEST" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
